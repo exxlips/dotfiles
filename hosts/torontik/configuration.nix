@@ -16,8 +16,6 @@
 
   {
     
-    { config, pkgs, ... }:
-
     # imports
     imports = [
       self.nixosModules.torontikHard
