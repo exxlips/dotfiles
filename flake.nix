@@ -18,6 +18,5 @@
       (inputs.import-tree [
           ./hosts
           ./modules
-      ]
-   );
+      ]);
 }
