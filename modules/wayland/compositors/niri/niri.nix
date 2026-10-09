@@ -6,18 +6,20 @@
 }:
 
 {
-  den.aspects.compositors.niri =
-  {
-    pkgs,
-    lib,
-    self',
-    ...
-  }:
+  den.aspects.compositors.niri = {
+    nixos =
+    {
+      pkgs,
+      lib,
+      self',
+      ...
+    }:
 
-  {
-    programs.niri = {
-      enable = true;
-      package = self'.packages.${pkgs.stdenv.hostPlatform.system}.niri;
+    {
+      programs.niri = {
+        enable = true;
+        package = self'.packages.niri;
+      };
     };
   };
   
@@ -30,6 +32,7 @@
 
   {
     packages.niri = inputs.wrapper-modules.wrappers.niri.wrap {
+      inherit pkgs;
       settings = {
         input.keyboard = {
           xkb.layout = "us,ru";
