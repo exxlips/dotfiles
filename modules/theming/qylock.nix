@@ -1,20 +1,16 @@
 {
   den,
+  inputs,
   ...
 }:
 
+let
+  qylockModule = inputs.qylock.nixosModules.default;
+in
 {
   den.aspects.theming.qylock = {
-    nixos =
-    {
-      inputs,
-      ...
-    }:
-
-    {
-      imports = [
-        inputs.qylock.nixosModules.default
-      ];
+    nixos = { pkgs, ... }: {
+      imports = [ qylockModule ];
 
       services.displayManager.sddm.enable = true;
       services.displayManager.sddm.wayland.enable = true;

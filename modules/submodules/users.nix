@@ -7,6 +7,7 @@
   den.aspects.submodules.users = {
     nixos =
     {
+      pkgs,
       ...
     }:
 

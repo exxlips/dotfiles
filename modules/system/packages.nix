@@ -7,6 +7,7 @@
   den.aspects.system.packages = {
     nixos =
     {
+      pkgs,
       ...
     }:
 

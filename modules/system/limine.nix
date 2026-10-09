@@ -7,6 +7,7 @@
   den.aspects.system.limine = {
     nixos =
     {
+      pkgs,
       ...
     }:
 

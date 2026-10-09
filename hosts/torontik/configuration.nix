@@ -13,6 +13,7 @@
     den.batteries.primary-user
     den.batteries.self'
     den.batteries.hostname
+    den.batteries.inputs'
   ];
 
   den.hosts.x86_64-linux.torontik = {

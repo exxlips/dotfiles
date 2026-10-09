@@ -17,15 +17,13 @@
   };
 
   outputs = inputs:
-  inputs.flake-parts.lib.mkFlake { inherit inputs; } {
-    imports = [
-      inputs.den.flakeModule
-      (inputs.import-tree [
-        ./hosts
-        ./modules
-      ])
-
-      ./modules/wayland/shells/noctalia/noctalia.nix
-    ];
-  };
+    inputs.flake-parts.lib.mkFlake { inherit inputs; } {
+      imports = [
+        inputs.den.flakeModule
+        (inputs.import-tree [
+          ./hosts
+          ./modules
+        ])
+      ];
+    };
 }
