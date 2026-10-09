@@ -16,19 +16,6 @@
     inputs.flake-parts.flakeModules.modules
   ];
 
-  den.hosts.x86_64-linux.torontik = {
-    users.vadya = {
-      userName = "vadya";
-    };
-
-    includes = [
-      den.batteries.self'
-      den.aspects.torontik.hardware
-      den.aspects.compositors.niri
-      den.aspects.torontik.configuration
-    ];
-  };
-
   den.default = {
     includes = [
       den.batteries.hostname

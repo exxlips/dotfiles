@@ -11,6 +11,7 @@
     den.url = "github:denful/den";
     qylock.url = "github:Darkkal44/qylock";
     hjem.url = "github:feel-co/hjem";
+    flatpak-nix.url = "github:gmodena/nix-flatpak";
     hjem-rum.url = "github:snugnug/hjem-rum";
     home-manager.url = "github:nix-community/home-manager";
   };
