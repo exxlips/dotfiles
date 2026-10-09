@@ -1,5 +1,6 @@
 {
   den,
+  inputs,
   ...
 }:
 
@@ -7,6 +8,7 @@
   perSystem =
   {
     pkgs,
+    lib,
     ...
   }:
 
@@ -21,7 +23,7 @@
         binds = {
           "Mod+T".spawn-sh = lib.getExe pkgs.kitty;
           "Mod+Q".close-window = {};
-        }
+        };
       };
     };
   };
