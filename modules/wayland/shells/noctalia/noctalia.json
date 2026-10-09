@@ -1,6 +1,6 @@
 {
   "settings": {
-   "settingsVersion": 59,
+  "settingsVersion": 59,
   "bar": {
     "barType": "framed",
     "position": "top",
@@ -75,6 +75,10 @@
           "textColor": "none",
           "useFixedWidth": false,
           "visualizerType": "linear"
+        },
+        {
+          "iconColor": "none",
+          "id": "WallpaperSelector"
         }
       ],
       "center": [
@@ -99,6 +103,13 @@
           "pinned": []
         },
         {
+          "displayMode": "onhover",
+          "iconColor": "none",
+          "id": "KeyboardLayout",
+          "showIcon": true,
+          "textColor": "none"
+        },
+        {
           "hideWhenZero": false,
           "hideWhenZeroUnread": false,
           "iconColor": "none",
@@ -107,16 +118,14 @@
           "unreadBadgeColor": "primary"
         },
         {
+          "id": "Spacer",
+          "width": 3
+        },
+        {
           "applyToAllMonitors": false,
           "displayMode": "onhover",
           "iconColor": "none",
           "id": "Brightness",
-          "textColor": "none"
-        },
-        {
-          "displayMode": "onhover",
-          "iconColor": "none",
-          "id": "Bluetooth",
           "textColor": "none"
         },
         {
@@ -136,8 +145,20 @@
           "showPowerProfiles": false
         },
         {
+          "displayMode": "onhover",
           "iconColor": "none",
-          "id": "Settings"
+          "id": "Bluetooth",
+          "textColor": "none"
+        },
+        {
+          "displayMode": "onhover",
+          "iconColor": "none",
+          "id": "Network",
+          "textColor": "none"
+        },
+        {
+          "id": "Spacer",
+          "width": 3
         },
         {
           "colorizeDistroLogo": false,
@@ -647,5 +668,5 @@
     "gridSnapScale": false,
     "monitorWidgets": []
   }
-  }
+ }
 }

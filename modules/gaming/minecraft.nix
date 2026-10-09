@@ -8,12 +8,13 @@
     nixos =
     {
       pkgs,
+      inputs',
       ...
     }:
 
     {
       environment.systemPackages = [
-        inputs.freesm.packages.${pkgs.system}.freesm
+        inputs'.freesm.packages.default
       ];
     };
   };

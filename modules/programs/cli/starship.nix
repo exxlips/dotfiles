@@ -20,14 +20,17 @@
     }:
 
     {
-   
+
+      # to make fish start starship:
+      programs.fish.enable = true;
+      
       # starship configuration
       programs = {
         starship = {
           enable = true;
           enableFishIntegration = true;
  
-          # settings for starship
+          # settings for starship (for example, settings, hostname, username, directory.)
           settings = {
             format = "$hostname$username$directory$git_branch$git_status$line_break$character";
 

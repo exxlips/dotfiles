@@ -34,9 +34,6 @@
 
         den.aspects.programs.gui.kitty
         den.aspects.programs.gui.throne
-
-        den.aspects.submodules.users
-        den.aspects.submodules.nix
       ];
     };
 
@@ -51,6 +48,7 @@
       den.aspects.submodules.users
       den.aspects.submodules.nix
       den.aspects.submodules.flatpak
+      den.aspects.submodules.virtualization
     
       den.aspects.system.audio
       den.aspects.system.limine
