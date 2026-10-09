@@ -11,7 +11,6 @@
     }:
 
     {
-  
       programs = {
         throne = {
          enable = true;

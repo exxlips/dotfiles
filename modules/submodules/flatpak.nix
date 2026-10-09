@@ -1,10 +1,11 @@
 {
   den,
+  inputs,
   ...
 }:
 
 let
-  flatpakModule = inputs.flatpak-nix.nixosModules.default;
+  flatpakModule = inputs.flatpak-nix.nixosModules.nix-flatpak;
 in
 {
   den.aspects.submodules.flatpak = {
@@ -14,7 +15,7 @@ in
     }:
 
     {
-      import = [ flatpakModule ];
+      imports = [ flatpakModule ];
       services.flatpak = {
         enable = true;
         packages = [
