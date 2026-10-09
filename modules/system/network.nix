@@ -4,7 +4,7 @@
 }:
 
 {
-  den.aspects.system.networking =
+  den.aspects.system.network =
   {
     pkgs,
     ...

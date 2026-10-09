@@ -4,7 +4,7 @@
 }:
 
 {
-  den.aspects.apps.gui.throne =
+  den.aspects.programs.gui.throne =
   {
     ...
   }:

@@ -12,6 +12,7 @@
   {
     homeManager =
     {
+      config,
       ...
     }:
     let

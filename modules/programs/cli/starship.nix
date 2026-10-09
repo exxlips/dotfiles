@@ -26,11 +26,11 @@
 
             hostname = {
               ssh_only = false;
-              format = "󱄅 [$hostname](#859c9e)"
+              format = "󱄅 [$hostname](#859c9e)";
             };
             username = {
               show_always = true;
-              format = "[$user](#7a8896)"
+              format = "[$user](#7a8896)";
             };
 
             directory = {
@@ -43,8 +43,8 @@
             };
 
             character = {
-              success_symbol = "[➜](#8c977d) ";
-              error_symbol = "[➜](#b66467) ";
+              success_symbol = "[➜](#8c977d)";
+              error_symbol = "[➜](#b66467)";
             };
           };
         };

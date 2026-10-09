@@ -6,6 +6,7 @@
 {
   den.aspects.system.limine =
   {
+    pkgs,
     ...
   }:
 
