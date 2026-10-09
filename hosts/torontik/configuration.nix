@@ -19,6 +19,10 @@
   den.hosts.x86_64-linux.torontik = {
     users.vadya = {
       userName = "vadya";
+      classes = [ "homeManager" ];
+      includes = [
+        den.aspects.home
+      ];
     };
 
     includes = [
@@ -28,8 +32,6 @@
       den.aspects.editors.helix.languages
       den.aspects.editors.helix.settings
       den.aspects.editors.helix.themes
-
-      den.aspects.home
 
       den.aspects.programs.cli.git
       den.aspects.programs.cli.starship

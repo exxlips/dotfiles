@@ -16,10 +16,12 @@
     inputs.flake-parts.flakeModules.modules
   ];
 
-  den.default = {
-    includes = [
-      den.batteries.hostname
-      den.batteries.primary-user
-    ];
+  den = {
+    default = {
+      includes = [
+        den.batteries.hostname
+        den.batteries.primary-user
+      ];
+    };
   };
 }

@@ -4,10 +4,26 @@
 }:
 
 {
-  den.aspects.home.homeManager = {
-    home.username = "vadya";
-    home.homeDirectory = "/home/vadya";
+  den.aspects.home = {
+    nixos =
+    {
+      ...
+    }:
 
-    home.stateVersion = "26.11";
+    {
+      home-manager.backupFileExtension = "hm-backup";
+    };
+
+    homeManager =
+    {
+      ...
+    }:
+
+    {
+      home.username = "vadya";
+      home.homeDirectory = "/home/vadya";
+
+      home.stateVersion = "26.11";
+    };
   };
 }
