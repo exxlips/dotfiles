@@ -4,12 +4,7 @@
 }:
 
 {
-  den.aspects.submodules.users =
-  {
-    pkgs,
-  }:
-
-  {
+  den.aspects.submodules.users = {
     nixos =
     {
       ...

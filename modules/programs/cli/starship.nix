@@ -4,12 +4,7 @@
 }:
 
 {
-  den.aspects.programs.cli.starship =
-  {
-    ...
-  }:
-
-  {
+  den.aspects.programs.cli.starship = {
     homeManager =
     {
       ...

@@ -4,12 +4,7 @@
 }:
 
 {
-  den.aspects.programs.gui.kitty =
-  {
-    ...
-  }:
-
-  {
+  den.aspects.programs.gui.kitty = {
     homeManager =
     {
       config,

@@ -4,13 +4,7 @@
 }:
 
 {
-  den.aspects.system.limine =
-  {
-    pkgs,
-    ...
-  }:
-
-  {
+  den.aspects.system.limine = {
     nixos =
     {
       ...

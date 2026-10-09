@@ -4,12 +4,7 @@
 }:
 
 {
-  den.aspects.theming.qylock =
-  {
-    ...
-  }:
-
-  {
+  den.aspects.theming.qylock = {
     nixos =
     {
       inputs,

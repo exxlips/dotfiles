@@ -4,12 +4,7 @@
 }:
 
 {
-  den.aspects.programs.cli.git =
-  {
-    ...
-  }:
-
-  {
+  den.aspects.programs.cli.git = {
     homeManager =
     {
       ...

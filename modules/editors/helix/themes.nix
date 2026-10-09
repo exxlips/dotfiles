@@ -214,7 +214,7 @@
               "variable.other.member" = colors.base0B;
               "warning" = colors.base09;
             };
+          };
         };
       };
-  };
 }

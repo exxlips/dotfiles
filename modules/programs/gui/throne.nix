@@ -4,16 +4,19 @@
 }:
 
 {
-  den.aspects.programs.gui.throne =
-  {
-    ...
-  }:
+  den.aspects.programs.gui.throne = {
+    nixos =
+    {
+      ...
+    }:
 
-  {
-    programs = {
-      throne = {
-        enable = true;
-        tunMode.enable = true;
+    {
+  
+      programs = {
+        throne = {
+         enable = true;
+           tunMode.enable = true;
+        };
       };
     };
   };

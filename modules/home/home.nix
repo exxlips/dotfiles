@@ -4,12 +4,7 @@
 }:
 
 {
-  den.aspects.home.homeManager =
-  {
-    ...
-  }:
-
-  {
+  den.aspects.home.homeManager = {
     home.username = "vadya";
     home.homeDirectory = "/home/vadya";
 

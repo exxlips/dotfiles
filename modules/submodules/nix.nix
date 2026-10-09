@@ -4,12 +4,7 @@
 }:
 
 {
-  den.aspects.submodules.nix =
-  {
-    ...
-  }:
-
-  {
+  den.aspects.submodules.nix = {
     nixos =
     {
       ...

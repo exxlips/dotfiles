@@ -4,13 +4,7 @@
 }:
 
 {
-  den.aspects.system.packages =
-  {
-    pkgs,
-    ...
-  }:
-
-  {
+  den.aspects.system.packages = {
     nixos =
     {
       ...

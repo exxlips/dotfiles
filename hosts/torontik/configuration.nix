@@ -12,7 +12,6 @@
   den.default.includes = [
     den.batteries.primary-user
     den.batteries.self'
-    den.batteries.inputs'
     den.batteries.hostname
   ];
 

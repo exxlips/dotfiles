@@ -4,12 +4,7 @@
 }:
 
 {
-  den.aspects.theming.stylix =
-  {
-    ...
-  }:
-
-  {
+  den.aspects.theming.stylix = {
     nixos =
     {
       config,

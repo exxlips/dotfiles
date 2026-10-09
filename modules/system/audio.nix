@@ -4,12 +4,7 @@
 }:
 
 {
-  den.aspects.system.audio =
-  {
-    ...
-  }:
-
-  {
+  den.aspects.system.audio = {
     nixos =
     {
       ...

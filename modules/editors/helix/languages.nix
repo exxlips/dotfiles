@@ -9,6 +9,7 @@
       {
         ...
       }:
+        
       {
         programs.helix.languages = {
           language =
