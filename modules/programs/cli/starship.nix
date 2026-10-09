@@ -32,24 +32,24 @@
  
           # settings for starship (for example, settings, hostname, username, directory.)
           settings = {
-            format = "$hostname$username$directory$git_branch$git_status$line_break$character";
+            format = "[$hostname$username$directory$git_branch$git_status$line_break$character](#8aa6a2)";
 
             hostname = {
               ssh_only = false;
-              format = " [$hostname](#859c9e) ";
+              format = " [$hostname] ";
             };
             username = {
               show_always = true;
-              format = "[$user](#7a8896) ";
+              format = "[$user] ";
             };
 
             directory = {
               truncation_length = 3;
-              format = "in [$path](#576082) ";
+              format = "in [$path] ";
             };
 
             git_branch = {
-              format = "[$symbol$branch](#5b5d8f) ";
+              format = "[$symbol$branch] ";
             };
 
             character = {
