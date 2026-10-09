@@ -26,11 +26,14 @@
         inputs.hjem.nixosModules.default
       ];
 
+      # CRITICAL
       programs.niri = {
         enable = true;
         package = self'.packages.niri;
       };
 
+
+      # portals for extra-compatibility
       xdg.portal = {
         enable = true;
         config = {
@@ -65,6 +68,7 @@
         nerd-fonts.caskaydia-cove
       ];
 
+      # needed pkgs
       environment.systemPackages = with pkgs; [
         gtk3
         xwayland-satellite
@@ -156,6 +160,8 @@
           "Mod+P".toggle-window-floating = {};
           "Mod+C".center-column = {};
 
+          "Mod+Print".spawn-sh = lib.getExe pkgs.grim;
+
           "Mod+H".focus-column-left = {};
           "Mod+L".focus-column-right = {};
           "Mod+K".focus-window-up = {};
@@ -192,6 +198,9 @@
           "Mod+Shift+8".move-column-to-workspace = 8;
           "Mod+Shift+9".move-column-to-workspace = 9;
           "Mod+Shift+0".move-column-to-workspace = 10;
+
+          "Mod+Equal".set-column-width = "+10%";
+          "Mod+Minus".set-column-width = "-10%";
         };
       };
     };
