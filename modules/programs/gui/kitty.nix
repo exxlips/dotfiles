@@ -70,7 +70,7 @@
 
           font = {
             name = "CaskaydiaCove Nerd Font";
-            size = 13;
+            size = 12;
           };
         };
       };

@@ -9,6 +9,7 @@
 }:
 
 {
+  # batteries
   den.default.includes = [
     den.batteries.primary-user
     den.batteries.self'
@@ -16,6 +17,7 @@
     den.batteries.inputs'
   ];
 
+  # homes
   den.hosts.x86_64-linux.torontik = {
     users.vadya = {
       userName = "vadya";
@@ -38,9 +40,13 @@
       ];
     };
 
+    # systems
     includes = [
       den.aspects.torontik.hardware
       den.aspects.torontik.configuration
+
+      den.aspects.gaming.supertuxkart
+      den.aspects.gaming.minecraft
 
       den.aspects.submodules.users
       den.aspects.submodules.nix
@@ -58,7 +64,10 @@
     ];
   };
 
+  # main configuration
   den.aspects.torontik.configuration = {
+
+    # type
     nixos =
       {
         pkgs,
@@ -90,3 +99,5 @@
       };
     };
 }
+
+# end

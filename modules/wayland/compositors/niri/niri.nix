@@ -122,8 +122,11 @@
         xwayland-satellite.path =
           lib.getExe pkgs.xwayland-satellite;
     
-        input.keyboard = {
-          xkb.layout = "us,ru";
+        input = {
+          focus-follows-mouse = {};
+          keyboard = {
+            xkb.layout = "us,ru";
+          };
         };
  
         window-rule = {
@@ -132,7 +135,7 @@
         };
 
         layout = {
-          gaps = 14;
+          gaps = 12;
           border = {
             off = {};
             width = 4;
