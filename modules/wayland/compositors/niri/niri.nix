@@ -111,6 +111,7 @@
 
       # vimjoyer forgot this shit in the vid lol
       inherit pkgs;
+
       settings = {
         prefer-no-csd = {};
 
@@ -124,6 +125,11 @@
         input.keyboard = {
           xkb.layout = "us,ru";
         };
+ 
+        window-rule = {
+          geometry-corner-radius = 12;
+          clip-to-geometry = true;
+        };
 
         layout = {
           gaps = 12;
@@ -135,7 +141,8 @@
             off = {};
           };
         };
-        
+
+        # binds
         binds = {
           "Mod+T".spawn-sh = lib.getExe pkgs.kitty;
           "Mod+Q".close-window = {};
