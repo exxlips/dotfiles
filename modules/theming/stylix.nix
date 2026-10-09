@@ -9,6 +9,15 @@ let
 in
 {
   den.aspects.theming.stylix = {
+    homeManager =
+    {
+      ...
+    }:
+
+    {
+      stylix.targets.helix.enable = false;
+    };
+    
     nixos =
       {
         config,

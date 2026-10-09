@@ -15,8 +15,8 @@
         git = {
           enable = true;
 
-          user.email = "noreply@vadyakk.codeberg.org";
-          user.name = "Vadik Vadikov Vadyakkovich";
+          userEmail = "noreply@vadyakk.codeberg.org";
+          userName = "Vadik Vadikov Vadyakkovich";
         };
       };
     };

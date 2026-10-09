@@ -22,22 +22,25 @@
       classes = [ "homeManager" ];
       includes = [
         den.aspects.home
+
+        den.aspects.editors.helix.languages
+        den.aspects.editors.helix.themes
+        den.aspects.editors.helix.settings
+
+        den.aspects.programs.cli.git
+        den.aspects.programs.cli.starship
+
+        den.aspects.programs.gui.kitty
+        den.aspects.programs.gui.throne
+
+        den.aspects.submodules.users
+        den.aspects.submodules.nix
       ];
     };
 
     includes = [
       den.aspects.torontik.hardware
       den.aspects.torontik.configuration
-
-      den.aspects.editors.helix.languages
-      den.aspects.editors.helix.settings
-      den.aspects.editors.helix.themes
-
-      den.aspects.programs.cli.git
-      den.aspects.programs.cli.starship
-
-      den.aspects.programs.gui.kitty
-      den.aspects.programs.gui.throne
 
       den.aspects.submodules.users
       den.aspects.submodules.nix

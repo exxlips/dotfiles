@@ -11,8 +11,12 @@
       }:
         
       {
-        programs.helix.settings = {
-          editor = {
+        stylix.targets.helix.enable = false;
+        
+        programs.helix = {
+          enable = true;
+          settings = {
+            editor = {
             auto-completion = true;
             auto-info = true;
             auto-pairs = true;
@@ -80,5 +84,6 @@
           };
         };
       };
+    };
   };
 }

@@ -14,6 +14,8 @@
       colors = config.lib.stylix.colors.withHashtag;
     in
     {
+      stylix.targets.kitty.enable = false;
+
       programs = {
         kitty = {
           enable = true;

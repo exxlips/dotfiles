@@ -118,6 +118,9 @@
             off = {};
             width = 4;
           };
+          focus-ring = {
+            off = {};
+          };
         };
         
         binds = {

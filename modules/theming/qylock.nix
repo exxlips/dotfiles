@@ -20,7 +20,6 @@ in
         theme = "terraria";
         sddm.enable = true;
         quickshell.enable = true;
-
         themeOptions = {
           terraria.backgroundMode = "time";
         };
