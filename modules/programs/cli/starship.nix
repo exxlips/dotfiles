@@ -36,20 +36,20 @@
 
             hostname = {
               ssh_only = false;
-              format = " [$hostname] ";
+              format = " $hostname ";
             };
             username = {
               show_always = true;
-              format = "[$user] ";
+              format = "$user ";
             };
 
             directory = {
               truncation_length = 3;
-              format = "in [$path] ";
+              format = "in $path ";
             };
 
             git_branch = {
-              format = "[$symbol$branch] ";
+              format = "$symbol$branch ";
             };
 
             character = {
