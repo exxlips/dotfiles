@@ -20,6 +20,8 @@
         ./hosts
         ./modules
       ])
+
+      ./modules/wayland/shells/noctalia/noctalia.nix
     ];
   };
 }
