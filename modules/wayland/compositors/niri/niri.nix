@@ -1,11 +1,16 @@
+# niri.nix..~
+
 {
   den,
   inputs,
   ...
 }:
 
+
+# main aspect
 {
   den.aspects.compositors.niri = {
+    # type
     nixos =
     {
       pkgs,
@@ -15,6 +20,8 @@
     }:
 
     {
+
+      # settings for niri, below (perSystem) is the main configuration (like config.kdl)
       imports = [
         inputs.hjem.nixosModules.default
       ];
@@ -44,6 +51,7 @@
         ];
       };
 
+      # ESSENTIAL
       environment.variables = {
         NIXOS_OZONE_WL = "1";
         ELECTRON_OZONE_PLATFORM_HINT = "wayland";
@@ -70,6 +78,7 @@
         papirus-icon-theme
       ];
 
+      # gtk tweaks
       hjem.users.vadya.files.".config/gtk-4.0/settings.ini".text = ''
         [Settings]
         gtk-theme-name=Yaru-remix-dark
@@ -86,6 +95,8 @@
     };
   };
 
+
+  # main niri configuration
   perSystem =
   {
     pkgs,
@@ -97,6 +108,8 @@
 
   {
     packages.niri = inputs.wrapper-modules.wrappers.niri.wrap {
+
+      # vimjoyer forgot this shit in the vid lol
       inherit pkgs;
       settings = {
         prefer-no-csd = {};
@@ -174,3 +187,5 @@
     };
   };
 }
+
+# end

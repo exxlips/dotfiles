@@ -1,18 +1,25 @@
+# settings.nix..~
+
 {
   den,
   ...
 }:
 
+# main aspect
 {
   den.aspects.editors.helix.settings = {
+    # type
     homeManager =
       {
         ...
       }:
         
       {
+
+        # make it so stylix wouldn't target helix (causes conflicts)
         stylix.targets.helix.enable = false;
-        
+
+        # main helix conf
         programs.helix = {
           enable = true;
           settings = {
@@ -87,3 +94,5 @@
     };
   };
 }
+
+# end

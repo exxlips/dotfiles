@@ -1,10 +1,16 @@
+# users.nix..~
+
 {
   den,
   ...
 }:
 
+
+# main aspect
 {
   den.aspects.submodules.users = {
+
+    # type
     nixos =
     {
       pkgs,
@@ -12,6 +18,8 @@
     }:
 
     {
+  
+      # user config
       users = {
         users = {
           vadya = {

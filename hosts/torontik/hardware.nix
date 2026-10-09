@@ -5,6 +5,7 @@
   ...
 }:
 
+# main den aspect
 {
   den.aspects.torontik.hardware =
   {
@@ -13,6 +14,7 @@
     ...
   }:
 
+  # type 
   {
     nixos =
     {

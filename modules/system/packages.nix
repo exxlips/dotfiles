@@ -1,17 +1,23 @@
+# packages.nix..~
+
 {
   den,
   ...
 }:
 
+# main aspect
 {
   den.aspects.system.packages = {
+   
+    # type
     nixos =
     {
       pkgs,
       ...
     }:
 
-    {
+    { 
+      # pkgs
       environment.systemPackages = with pkgs; [
         kdePackages.sddm
         qt6.qtdeclarative
@@ -36,3 +42,5 @@
     };
   };
 }
+
+# end

@@ -1,17 +1,23 @@
+# languages.nix..~
+
 {
   den,
   ...
 }:
 
+# main aspect
 {
   den.aspects.editors.helix.languages = {
+    # type
     homeManager =
       {
         ...
       }:
-        
+
+      # the main file
       {
         programs.helix.languages = {
+          # general
           language =
             map
               (
@@ -26,6 +32,7 @@
                 // params
               )
               [
+                # json
                 {
                   name = "json";
 
@@ -40,6 +47,7 @@
                     ];
                   };
                 }
+                # markdown (.md)
                 {
                   name = "markdown";
 
@@ -54,6 +62,8 @@
                     ];
                   };
                 }
+
+                # nix (.nix)
                 {
                   name = "nix";
 
@@ -63,6 +73,8 @@
                     command = "nixfmt";
                   };
                 }
+
+                # python (.py)
                 {
                   name = "python";
 
@@ -72,6 +84,8 @@
                     command = "black";
                   };
                 }
+
+                # rust (.rs)
                 {
                   name = "rust";
 
@@ -87,6 +101,7 @@
                     ];
                   };
                 }
+                # yaml (.yaml)
                 {
                   name = "yaml";
 
@@ -106,3 +121,5 @@
       };
   };
 }
+
+# end

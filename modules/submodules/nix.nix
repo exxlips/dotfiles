@@ -1,16 +1,24 @@
+# nix.nix..~
+
 {
   den,
   ...
 }:
 
+
+# main aspect
 {
   den.aspects.submodules.nix = {
+   
+    # type
     nixos =
     {
       ...
     }:
 
     { 
+ 
+      # nixpkgs/nix config
       nixpkgs.config.allowUnfree = true;
         nix.settings = {
           substituters = [
@@ -32,3 +40,5 @@
     };
   };
 }
+
+# end

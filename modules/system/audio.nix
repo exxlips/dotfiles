@@ -1,16 +1,23 @@
+# audio.nix..~
+
 {
   den,
   ...
 }:
 
+# main aspect
 {
   den.aspects.system.audio = {
+   
+    # type
     nixos =
     {
       ...
     }:
 
     {
+
+      # pipewire config (ANTI PULSEAUDIO TEAM)
       services = {
         pulseaudio.enable = false;
         pipewire = {
@@ -23,3 +30,5 @@
     };
   };
 }
+
+# end

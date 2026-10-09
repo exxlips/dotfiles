@@ -1,3 +1,5 @@
+# parts.nix for compatibility
+
 {
   config = {
     systems = [

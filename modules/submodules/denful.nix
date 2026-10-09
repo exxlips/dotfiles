@@ -1,9 +1,12 @@
+# denful.nix..~
+
 {
   inputs,
   den,
   ...
 }:
 
+# denful configuration
 {
   _module.args = {
     __findFile = den.lib.__findFile;
@@ -16,6 +19,8 @@
     inputs.flake-parts.flakeModules.modules
   ];
 
+
+  # for safety (its imported in configuration.nix anyway)
   den = {
     default = {
       includes = [
@@ -25,3 +30,5 @@
     };
   };
 }
+
+# end

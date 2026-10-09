@@ -1,10 +1,15 @@
+# limine.nix..~
+
 {
   den,
   ...
 }:
 
+# main aspect
 {
   den.aspects.system.limine = {
+
+    # type
     nixos =
     {
       pkgs,
@@ -12,6 +17,8 @@
     }:
 
     {
+ 
+      # boot config
       boot = {
         loader = {
           limine = {
@@ -26,3 +33,5 @@
     };
   };
 }
+
+# end

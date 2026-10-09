@@ -1,20 +1,27 @@
+# qylock.nix..~
+
 {
   den,
   inputs,
   ...
 }:
 
+
+# main module (with let in's)
 let
   qylockModule = inputs.qylock.nixosModules.default;
 in
 {
   den.aspects.theming.qylock = {
+
+    # type
     nixos = { pkgs, ... }: {
       imports = [ qylockModule ];
 
       services.displayManager.sddm.enable = true;
       services.displayManager.sddm.wayland.enable = true;
 
+      # cool collection of sddm themes
       programs.qylock = {
         enable = true;
         theme = "terraria";
@@ -27,3 +34,5 @@ in
     };
   };
 }
+
+# end

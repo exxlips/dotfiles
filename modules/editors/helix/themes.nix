@@ -1,10 +1,16 @@
+# themes.nix..~
+
 {
   den,
   ...
 }:
 
+
+# main aspect
 {
   den.aspects.editors.helix.themes = {
+
+    # type
     homeManager =
       {
         config,
@@ -12,6 +18,8 @@
       }:
         
       {
+
+        # main configuration
         programs.helix = {
           settings.theme = "base16-stylix";
 

@@ -1,16 +1,23 @@
+# home.nix..~
+
 {
   den,
   ...
 }:
 
+# main aspect
 {
   den.aspects.home = {
+
+    # type
     homeManager =
     {
       ...
     }:
 
     {
+      # home settings
+      
       home.username = "vadya";
       home.homeDirectory = "/home/vadya";
 

@@ -1,3 +1,5 @@
+# starship.nix..~
+
 {
   den,
   ...
@@ -5,17 +7,27 @@
 
 {
   den.aspects.programs.cli.starship = {
+    # cool description
+    description = ''
+      doesnt fucking work btw
+    '';
+
+
+    # type
     homeManager =
     {
       ...
     }:
 
     {
+   
+      # starship configuration
       programs = {
         starship = {
           enable = true;
           enableFishIntegration = true;
-
+ 
+          # settings for starship
           settings = {
             format = "$hostname$username$directory$git_branch$git_status$line_break$character";
 
@@ -47,3 +59,5 @@
     };
   };
 }
+
+# end
