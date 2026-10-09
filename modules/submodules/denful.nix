@@ -22,7 +22,9 @@
     };
 
     includes = [
+      den.batteries.self'
       den.aspects.torontik.hardware
+      den.aspects.compositors.niri
       den.aspects.torontik.configuration
     ];
   };
