@@ -4,13 +4,14 @@
   self,
   inputs,
   config,
+  den,
   ...
 }:
 
 {
   den.default.includes = [
-    "primary-user"
-    "hostname"
+    den.batteries.primary-user
+    den.batteries.hostname
   ];
 
   den.aspects.torontik.configuration = {
@@ -77,8 +78,12 @@
           extraGroups = [ "networkmanager" "wheel" ];
         };
  
-        # programs
+        # programs (for now, firefox and throne)
         programs.firefox.enable = true;
+        programs.throne = {
+          enable = true;
+          tunMode.enable = true;
+        };
 
         # pkgs
         environment.systemPackages = with pkgs; [
