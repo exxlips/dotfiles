@@ -44,7 +44,8 @@
 
       den.aspects.submodules.users
       den.aspects.submodules.nix
-
+      den.aspects.submodules.flatpak
+    
       den.aspects.system.audio
       den.aspects.system.limine
       den.aspects.system.network

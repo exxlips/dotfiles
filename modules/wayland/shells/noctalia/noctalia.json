@@ -2,7 +2,7 @@
   "settings": {
    "settingsVersion": 59,
   "bar": {
-    "barType": "floating",
+    "barType": "framed",
     "position": "top",
     "monitors": [],
     "density": "comfortable",
