@@ -9,6 +9,9 @@
     import-tree.url = "github:denful/import-tree";
     stylix.url = "github:nix-community/stylix";
     den.url = "github:denful/den";
+    qylock.url = "github:Darkkal44/qylock";
+    hjem.url = "github:feel-co/hjem";
+    hjem-rum.url = "github:snugnug/hjem-rum";
     home-manager.url = "github:nix-community/home-manager";
   };
 
