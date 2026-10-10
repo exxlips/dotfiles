@@ -662,11 +662,25 @@
     "customCommands": "[]"
   },
   "desktopWidgets": {
-    "enabled": false,
+    "enabled": true,
     "overviewEnabled": true,
     "gridSnap": false,
     "gridSnapScale": false,
-    "monitorWidgets": []
+    "monitorWidgets": [
+      {
+        "name": "eDP-1",
+        "widgets": [
+          {
+            "id": "Weather",
+            "roundedCorners": true,
+            "scale": 1.1467614855743955,
+            "showBackground": true,
+            "x": 21,
+            "y": 54
+          }
+        ]
+      }
+    ]
   }
  }
 }

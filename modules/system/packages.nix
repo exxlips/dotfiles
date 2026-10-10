@@ -38,6 +38,8 @@
         luau-lsp
         vim
         fastfetch
+        rojo
+        bat
       ];
     };
   };
