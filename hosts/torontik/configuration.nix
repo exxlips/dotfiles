@@ -56,8 +56,6 @@
       den.aspects.system.network
       den.aspects.system.packages
 
-      den.aspects.programs.cli.fetch
-
       den.aspects.theming.qylock
       den.aspects.theming.stylix
 
