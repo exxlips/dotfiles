@@ -46,6 +46,8 @@
       den.aspects.gaming.supertuxkart
       den.aspects.gaming.minecraft
 
+      den.aspects.programs.cli.helper
+
       den.aspects.submodules.users
       den.aspects.submodules.nix
       den.aspects.submodules.flatpak

@@ -20,9 +20,6 @@
     }:
 
     {
-
-      # to make fish start starship:
-      programs.fish.enable = true;
       
       # starship configuration
       programs = {
@@ -49,6 +46,7 @@
             };
 
             git_branch = {
+              symbol = " ";
               format = "$symbol$branch ";
             };
 

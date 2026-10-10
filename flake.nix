@@ -17,6 +17,7 @@
     flatpak-nix.url = "github:gmodena/nix-flatpak";
     hjem-rum.url = "github:snugnug/hjem-rum";
     home-manager.url = "github:nix-community/home-manager";
+    nh.url = "github:nix-community/nh";
 
     freesm.url = "github:FreesmTeam/FreesmLauncher";
   };
