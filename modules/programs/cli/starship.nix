@@ -21,6 +21,8 @@
 
     {
       
+      programs.fish.enable = true;
+
       # starship configuration
       programs = {
         starship = {
