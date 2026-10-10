@@ -4,7 +4,7 @@
 }:
 
 {
-  den.sapects.programs.cli.helper = {
+  den.aspects.programs.cli.helper = {
     nixos =
     {
       ...
