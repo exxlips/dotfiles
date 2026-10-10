@@ -31,10 +31,7 @@
         age.keyFile = "/var/lib/sops-nix/keys.txt";
 
         # secrets so sops could see the secrets lol
-        secrets.roblox = {
-          owner = "vadya";
-          mode = "0400";
-        };
+        secrets.roblox = {};
 
         secrets.codeberg_api = {
           owner = "vadya";
