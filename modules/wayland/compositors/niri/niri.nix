@@ -134,7 +134,7 @@
         };
  
         window-rule = {
-          geometry-corner-radius = 14;
+          geometry-corner-radius = 16;
           clip-to-geometry = true;
         };
 
@@ -160,8 +160,14 @@
           "Mod+P".toggle-window-floating = {};
           "Mod+C".center-column = {};
 
-          "Mod+Print".spawn-sh = lib.getExe pkgs.grim;
-
+          "Mod+Print".spawn-sh = ''
+            ${lib.getExe pkgs.grim} -g "$(${lib.getExe pkgs.slurp})" - | ${lib.getExe pkgs.wl-clipboard}
+          '';
+ 
+          "Print".spawn-sh = ''
+            ${lib.getExe pkgs.grim} - | ${lib.getExe pkgs.wl-clipboard}
+          '';
+ 
           "Mod+H".focus-column-left = {};
           "Mod+L".focus-column-right = {};
           "Mod+K".focus-window-up = {};
