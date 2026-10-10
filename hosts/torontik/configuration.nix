@@ -31,6 +31,7 @@
 
         den.aspects.programs.cli.git
         den.aspects.programs.cli.starship
+        den.aspects.programs.cli.fish
 
         den.aspects.programs.gui.kitty
         den.aspects.programs.gui.throne
