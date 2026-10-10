@@ -52,6 +52,8 @@
       den.aspects.submodules.nix
       den.aspects.submodules.flatpak
       den.aspects.submodules.virtualization
+
+      den.aspects.secrets.sops
     
       den.aspects.system.audio
       den.aspects.system.limine
