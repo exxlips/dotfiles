@@ -1,23 +1,36 @@
+# sops.nix..~
+
 {
   den,
+  inputs,
   ...
 }:
 
+
+# main aspect
 {
   den.aspects.secrets.sops = {
+
+    # type
     nixos =
     {
-      inputs',
       ...
     }:
 
+    # let-in
+    let
+      sopsModule = inputs.sops-nix.nixosModules.sops;
+    in
     {
-      imports = [ inputs'.sops-nix.nixosModules.sops ];
+
+      # sops settings
+      imports = [ sopsModule ];
 
       sops = {
         defaultSopsFile = ../../secrets/api-keys.yaml;
         age.keyFile = "/var/lib/sops-nix/keys.txt";
 
+        # secrets so sops could see the secrets lol
         secrets.roblox = {
           owner = "vadya";
           mode = "0400";
@@ -31,3 +44,5 @@
     };
   };
 }
+
+# end

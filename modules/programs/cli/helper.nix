@@ -1,10 +1,16 @@
+# helper.nix..~
+
 {
   den,
   ...
 }:
 
+
+# main aspect
 {
   den.aspects.programs.cli.helper = {
+
+    # type
     nixos =
     {
       ...
@@ -26,3 +32,5 @@
     };
   };
 }
+
+# end

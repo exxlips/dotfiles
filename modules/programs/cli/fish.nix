@@ -1,10 +1,16 @@
+# fish.nix..~
+
 {
   den,
   ...
 }:
 
+
+# main aspect
 {
   den.aspects.programs.cli.fish = {
+
+    # type (nixOs)
     nixos =
     {
       ...
@@ -18,6 +24,7 @@
       '';
     };
 
+    # type (homeManager)
     homeManager =
     {
       ...
@@ -30,3 +37,5 @@
     };
   };
 }
+
+# end
