@@ -17,6 +17,9 @@
     }:
 
     {
+
+      # stop stylix targeting limine
+      stylix.targets.limine.enable = false;
  
       # boot config
       boot = {
