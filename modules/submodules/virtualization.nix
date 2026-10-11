@@ -31,6 +31,21 @@
         };
       };
 
+      # settings for wifi in virtual-manager
+      networking = {
+        firewall = {
+          enable = true;
+          trustedInterfaces = [ "virbr0" "wlp0s20f3" ]; 
+        };
+
+        # nat support, essential
+        nat = {
+          enable = true;
+          internalInterfaces = [ "virbr0" ];
+          externalInterface = "wlp0s20f3";
+        };
+      };
+
       # waydroid cuz i feel like it
       virtualisation.waydroid.enable = true;
     };
