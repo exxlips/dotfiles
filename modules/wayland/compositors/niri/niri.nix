@@ -32,6 +32,7 @@
         package = self'.packages.niri;
       };
 
+      services.upower.enable = true;
 
       # portals for extra-compatibility
       xdg.portal = {
