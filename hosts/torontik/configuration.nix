@@ -57,6 +57,7 @@
     
       den.aspects.system.audio
       den.aspects.system.limine
+      den.aspects.system.battery
       den.aspects.system.network
       den.aspects.system.packages
 
