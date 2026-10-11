@@ -41,6 +41,7 @@
         rojo
         bat
         waydroid
+        discord
       ];
     };
   };
