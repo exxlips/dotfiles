@@ -40,6 +40,7 @@
         fastfetch
         rojo
         bat
+        waydroid
       ];
     };
   };

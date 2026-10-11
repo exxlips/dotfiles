@@ -30,6 +30,11 @@
           swtpm.enable = true;
         };
       };
+
+      # waydroid cuz i feel like it
+      virtualisation.waydroid.enable = true;
     };
   };
 }
+
+# end

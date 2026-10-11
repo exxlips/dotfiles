@@ -26,9 +26,10 @@
             maxGenerations = 15;
 
             style = {
-              wallpapers = [ ../../wallpapers/anime-nix.jpg ];
+              wallpapers = [ ../../wallpapers/anime-nix-1920x1080.jpg ];
             };
              extraConfig = ''
+               editor_enabled: yes
                term_margin: 0
                term_font_scale: 2x2
                term_backdrop: 661e1e2e
