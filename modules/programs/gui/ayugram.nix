@@ -7,13 +7,13 @@
   den.aspects.programs.gui.ayugram = {
     nixos =
     {
-      inputs',
+      pkgs,
       ...
     }:
 
     {
-      environment.systemPackages = [
-        inputs'.ayugram.packages.default
+      environment.systemPackages = with pkgs; [
+        ayugram-desktop
       ];
     };
   };
