@@ -48,6 +48,8 @@
 
       den.aspects.programs.cli.helper
 
+      den.aspects.programs.gui.ayugram
+
       den.aspects.submodules.users
       den.aspects.submodules.nix
       den.aspects.submodules.flatpak

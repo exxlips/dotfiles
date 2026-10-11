@@ -28,6 +28,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
+    ayugram.url = "ndfined-crp/ayugram-desktop";
     freesm.url = "github:FreesmTeam/FreesmLauncher";
   };
 
