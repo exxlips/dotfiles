@@ -29,7 +29,7 @@
             maxGenerations = 15;
 
             style = {
-              wallpapers = [ ../../wallpapers/anime-nix-1920x1080.jpg ];
+              wallpapers = [ ../../wallpapers/0f6oxa9y9jlb1.png ];
             };
              extraConfig = ''
                editor_enabled: yes
