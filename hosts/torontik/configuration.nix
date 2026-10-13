@@ -49,6 +49,7 @@
       den.aspects.programs.cli.helper
 
       den.aspects.programs.gui.ayugram
+      den.aspects.programs.gui.zen
 
       den.aspects.submodules.users
       den.aspects.submodules.nix
