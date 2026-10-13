@@ -18,7 +18,7 @@
     }:
 
     {
-      environment.systemPackages = with pkgs; [
+      environment.systemPackages = [
         inputs'.zen.packages.default
       ];
     };

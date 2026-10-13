@@ -1,5 +1,5 @@
 {
-  "settings": {
+ "settings": {
   "settingsVersion": 59,
   "bar": {
     "barType": "framed",
@@ -105,6 +105,10 @@
           "pinned": []
         },
         {
+          "iconColor": "none",
+          "id": "NightLight"
+        },
+        {
           "displayMode": "onhover",
           "iconColor": "secondary",
           "id": "KeyboardLayout",
@@ -183,7 +187,7 @@
     "showScreenCorners": true,
     "forceBlackScreenCorners": false,
     "scaleRatio": 0.9,
-    "radiusRatio": 1.71,
+    "radiusRatio": 2,
     "iRadiusRatio": 2,
     "boxRadiusRatio": 1,
     "screenRadiusRatio": 1.21,
@@ -453,9 +457,9 @@
     "position": "top",
     "displayMode": "auto_hide",
     "dockType": "floating",
-    "backgroundOpacity": 1,
+    "backgroundOpacity": 0.9500000000000001,
     "floatingRatio": 1,
-    "size": 1,
+    "size": 0.79,
     "onlySameOutput": true,
     "monitors": [
       "eDP-1"
@@ -473,13 +477,13 @@
     "groupContextMenuMode": "extended",
     "groupClickAction": "cycle",
     "groupIndicatorStyle": "dots",
-    "deadOpacity": 0.6,
-    "animationSpeed": 1,
+    "deadOpacity": 0.49,
+    "animationSpeed": 0.67,
     "sitOnFrame": false,
     "showDockIndicator": true,
     "indicatorThickness": 6,
-    "indicatorColor": "primary",
-    "indicatorOpacity": 0.6
+    "indicatorColor": "secondary",
+    "indicatorOpacity": 0.18
   },
   "network": {
     "bluetoothRssiPollingEnabled": false,
