@@ -19,6 +19,8 @@
     home-manager.url = "github:nix-community/home-manager";
     nh.url = "github:nix-community/nh";
 
+    zen.url = “github:0xc000022070/zen-browser-flake”;
+
     nur = {
       url = "github:nix-community/nur";
       inputs.nixpkgs.follows = "nixpkgs";
