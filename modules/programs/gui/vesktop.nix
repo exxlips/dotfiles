@@ -5,7 +5,7 @@
 
 {
   den.aspects.programs.gui.vesktop = {
-    nixos =
+    homeManager =
     {
       pkgs,
       ...
@@ -16,20 +16,19 @@
         pkgs.vesktop
       ];
 
-      programs.nixcord = {
+      programs.vesktop = {
         enable = true;
-        vesktop.enable = true;
 
-        vesktop.settings = {
-          discordBranch = "unstable";
+        settings = {
+          discordBranch = "stable";
           minimizeToTray = true;
         };
 
         vencord.settings.plugins = {
-          fakeNitro.enable = true;
-          voiceMessages.enable = true;
-          volumeBooster.enable = true;
-          shikiCodeblocks.enable = true;
+          fakeNitro.enabled = true;
+          shikiCodeblocks.enabled = true;
+          voiceMessages.enabled = true;
+          volumeBooster.enabled = true;
         };
       };
     };
