@@ -50,6 +50,7 @@
 
       den.aspects.programs.gui.ayugram
       den.aspects.programs.gui.zen
+      den.aspects.programs.gui.vesktop
 
       den.aspects.submodules.users
       den.aspects.submodules.nix
