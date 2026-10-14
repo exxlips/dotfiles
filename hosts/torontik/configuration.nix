@@ -33,6 +33,7 @@
         den.aspects.programs.cli.starship
         den.aspects.programs.cli.fish
 
+        den.aspects.programs.gui.vesktop
         den.aspects.programs.gui.kitty
         den.aspects.programs.gui.throne
       ];
@@ -50,7 +51,6 @@
 
       den.aspects.programs.gui.ayugram
       den.aspects.programs.gui.zen
-      den.aspects.programs.gui.vesktop
 
       den.aspects.submodules.users
       den.aspects.submodules.nix
