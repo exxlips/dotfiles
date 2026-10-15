@@ -33,7 +33,7 @@
         # secrets so sops could see the secrets lol
         secrets.roblox = {};
 
-        secrets.codeberg_api = {
+        secrets.github_pat = {
           owner = "vadya";
           mode = "0400";
         };
