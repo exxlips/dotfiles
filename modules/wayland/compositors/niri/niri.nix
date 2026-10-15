@@ -130,7 +130,11 @@
         input = {
           focus-follows-mouse = {};
           keyboard = {
-            xkb.layout = "us,ru";
+            xkb = {
+              layout = "us,ru";
+              variants = "";
+              options = "grp:alt_shift";
+            };
           };
         };
  
