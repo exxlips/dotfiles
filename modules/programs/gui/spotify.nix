@@ -1,42 +1,34 @@
-# spotify.nix..~
-
 {
   den,
+  inputs,
   ...
 }:
 
 {
-  # main aspect
   den.aspects.programs.gui.spotify = {
-
-    # type
     homeManager =
       {
-        inputs,
-        inputs',
         config,
+        pkgs,
         ...
       }:
-      # let-in?!..
       let
         colors = config.lib.stylix.colors;
-        spicetify = inputs'.spicetify-nix.legacyPackages;
+        spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.hostPlatform.system};
       in
-
       {
         imports = [
-          inputs.spicetify-nix.homeManagerModules.spicetify
+          inputs.spicetify-nix.homeManagerModules.default
         ];
 
-        # spicetify
         programs.spicetify = {
           enable = true;
 
           windowManagerPatch = true;
           wayland = true;
 
-          enabledExtensions = [
-            spicetify.extensions.adblock
+          enabledExtensions = with spicePkgs.extensions; [
+            adblock
           ];
 
           colorScheme = "custom";
@@ -90,7 +82,6 @@
         };
 
         stylix.targets.spicetify.enable = false;
-        };
-      };
+     };
   };
 }
