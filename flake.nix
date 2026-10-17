@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "https://channels.nixos.org/nixpkgs-unstable/nixexprs.tar.zst";
+
     flake-parts.url = "github:hercules-ci/flake-parts";
     flake-file.url = "github:denful/flake-file";
 
@@ -19,6 +20,7 @@
     home-manager.url = "github:nix-community/home-manager";
     nh.url = "github:nix-community/nh";
 
+    spicetify.url = "github:gerg-l/spicetify-nix";
     zen.url = "github:0xc000022070/zen-browser-flake";
 
     nur = {
