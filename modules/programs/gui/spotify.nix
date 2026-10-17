@@ -14,11 +14,11 @@
       }:
       let
         colors = config.lib.stylix.colors;
-        spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.hostPlatform.system};
+        spicePkgs = inputs.spicetify.legacyPackages.${pkgs.stdenv.hostPlatform.system};
       in
       {
         imports = [
-          inputs.spicetify-nix.homeManagerModules.default
+          inputs.spicetify.homeManagerModules.default
         ];
 
         programs.spicetify = {
