@@ -10,6 +10,7 @@
       {
         config,
         pkgs,
+        lib,
         ...
       }:
       let
