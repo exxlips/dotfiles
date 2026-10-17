@@ -8,6 +8,7 @@
     homeManager =
     {
       pkgs,
+      config,
       ...
     }:
     let
@@ -52,4 +53,5 @@
       };
     };
   };
+ };
 }
