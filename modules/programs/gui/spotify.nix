@@ -5,41 +5,42 @@
   ...
 }:
 
-
-# main aspect
 {
+  # main aspect
   den.aspects.programs.gui.spotify = {
+
     # type
     homeManager =
-    {
-      inputs',
-      inputs,
-      config,
-      ...
-    }:
+      {
+        inputs,
+        inputs',
+        config,
+        ...
+      }:
+      # let-in?!..
+      let
+        colors = config.lib.stylix.colors;
+        spicetify = inputs'.spicetify-nix.legacyPackages;
+      in
 
-    # ohayeshechki datebaeshechki
-    let
-      spicetify = inputs'.spicetify.legacyPackages;
-      stylix = config.lib.stylix.colors;
-    in
-    {
-      imports = [
-        inputs.spicetify.homeManagerModules.spicetify
-      ];
+      {
+        imports = [
+          inputs.spicetify-nix.homeManagerModules.spicetify
+        ];
 
-      stylix.targets.spicetify.enable = false;
+        # spicetify
+        programs.spicetify = {
+          enable = true;
 
-      # spicetify [main]
-      programs.spicetify = {
-        enable = true;
+          windowManagerPatch = true;
+          wayland = true;
 
-        windowManagerPatch = true;
-        wayland = true;
+          enabledExtensions = [
+            spicetify.extensions.adblock
+          ];
 
-        enabledExtensions = [ spicetify.extensions.adblock ];
+          colorScheme = "custom";
 
-         colorScheme = "custom";
           customColorScheme = {
             accent = colors.base03;
             accent-active = colors.base03;
@@ -87,7 +88,9 @@
             text = colors.base06;
           };
         };
+
+        stylix.targets.spicetify.enable = false;
+        };
       };
-    };
   };
 }
