@@ -36,6 +36,7 @@
       boot.initrd.kernelModules = [ "i915" ];
       boot.kernelModules = [ "kvm-intel" "thinkpad_acpi" ];
       boot.extraModulePackages = [];
+      hardware.bluetooth.enable = true;
  
       # filesystems/partitions
       fileSystems."/" = {
