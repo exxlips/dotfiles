@@ -96,8 +96,7 @@
         # services
         security.rtkit.enable = true;
 
-        # programs (for now, firefox and throne)
-        programs.firefox.enable = true;
+        # programs (for now, throne only)
         programs.throne = {
           enable = true;
           tunMode.enable = true;

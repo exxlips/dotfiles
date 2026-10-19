@@ -19,6 +19,17 @@
     inputs.flake-parts.flakeModules.modules
   ];
 
+  den.hosts.x86_64-linux = {
+    torontik = {
+      hostName = "torontik";
+      includes = [ den.aspects.system.hostname ];
+    };
+
+    boxik = {
+      hostName = "boxik";
+      includes = [ den.aspects.system.hostname ];
+    };
+  };
 
   # for safety (its imported in configuration.nix anyway)
   den = {
