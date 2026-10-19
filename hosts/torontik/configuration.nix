@@ -65,6 +65,7 @@
       den.aspects.system.battery
       den.aspects.system.network
       den.aspects.system.packages
+      den.aspects.system.hostname
 
       den.aspects.theming.qylock
       den.aspects.theming.stylix
