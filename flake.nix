@@ -99,13 +99,6 @@
       repo = "home-manager";
     };
 
-    flake-file.inputs.zen = {
-      type = "github";
-      owner = "0xc000022070";
-      repo = "zen-browser-flake";
-    };
-  };  
-
   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } {
     imports = [
       inputs.flake-file.flakeModules.default
