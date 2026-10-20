@@ -67,7 +67,7 @@
       type = "github";
       owner = "BirdeeHub";
       repo = "nix-wrapper-modules";
-    }
+    };
  
     flatpak = {
       type = "github";
