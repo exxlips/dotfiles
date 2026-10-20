@@ -9,7 +9,7 @@
 
 # main module (with let in's this time)
 let
-  flatpakModule = inputs.flatpak-nix.nixosModules.nix-flatpak;
+  flatpakModule = inputs.flatpak.nixosModules.nix-flatpak;
 in
 
 # the aspect
