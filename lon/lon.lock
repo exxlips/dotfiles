@@ -21,6 +21,16 @@
       "url": "https://github.com/hercules-ci/flake-parts/archive/024633cd702b10285db5cb19b40ad48d2399ba60.tar.gz",
       "hash": "sha256-zTwuwezD0w3hpga6a6P8emidzAZFyWqlNeRBlpWOOl8="
     },
+    "import-tree": {
+      "type": "GitHub",
+      "fetchType": "tarball",
+      "owner": "denful",
+      "repo": "import-tree",
+      "branch": "main",
+      "revision": "eb1b52eaecc57f7c136d07ae8a93e724dfecac46",
+      "url": "https://github.com/denful/import-tree/archive/eb1b52eaecc57f7c136d07ae8a93e724dfecac46.tar.gz",
+      "hash": "sha256-ljEMTXP/rH0tOvDzc9gzwww6KcHRPRnEHzd9lK48V7s="
+    },
     "nixpkgs": {
       "type": "GitHub",
       "fetchType": "tarball",

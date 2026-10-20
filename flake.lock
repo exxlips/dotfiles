@@ -1,25 +1,6 @@
 {
   "nodes": {
-    "flake-file": {
-      "locked": {
-        "lastModified": 1791955343,
-        "narHash": "sha256-yquDmN2vKAtSfwJLXcEwpq9z+4txQLtlPd+Hmxss+nM=",
-        "owner": "denful",
-        "repo": "flake-file",
-        "rev": "1281456a5218ac60ada6fcb40a8f894684940199",
-        "type": "github"
-      },
-      "original": {
-        "owner": "denful",
-        "repo": "flake-file",
-        "type": "github"
-      }
-    },
-    "root": {
-      "inputs": {
-        "flake-file": "flake-file"
-      }
-    }
+    "root": {}
   },
   "root": "root",
   "version": 7
