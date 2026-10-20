@@ -1,108 +1,35 @@
+# DO-NOT-EDIT. This file was auto-generated using github:denful/flake-file.
+# Use `nix run .#write-flake` to regenerate it.
 {
-  description = "best flake ever created (jk_)";
- 
+  outputs = inputs: import ./outputs.nix inputs;
+
   inputs = {
-    nixpkgs = {
-      url = "https://channels.nixos.org/nixpkgs-unstable/nixexprs.tar.zst";
-    };
-
-    flake-parts = {
+    flatpak-nix = {
       type = "github";
-      owner = "hercules-ci";
-      repo = "flake-parts";
+      owner = "gmodena";
+      repo = "flatpak-nix";
     };
-
-    flake-file = {
+    freesm = {
       type = "github";
-      owner = "vic";
-      repo = "flake-file";
+      owner = "FreesmTeam";
+      repo = "FreesmLauncher";
     };
-
-    sops = {
-      type = "github";
-      owner = "Mic92";
-      repo = "sops-nix";
-    };
-
-    import-tree = {
-      type = "github";
-      owner = "vic";
-      repo = "import-tree";
-    };
-
-    spicetify = {
-      type = "github";
-      owner = "Gerg-L";
-      repo = "spicetify-nix";
-    };
-
-    den = {
-      type = "github";
-      owner = "denful";
-      repo = "den";
-    };
-
     hjem = {
       type = "github";
       owner = "feel-co";
       repo = "hjem";
     };
-
-    hjem-rum = {
-      type = "github";
-      owner = "snugnug";
-      repo = "hjem-rum";
-    };
-
-    stylix = {
-      type = "github";
-      owner = "nix-community";
-      repo = "stylix";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-      };
-    };
-
-    wrapper-modules = {
-      type = "github";
-      owner = "BirdeeHub";
-      repo = "nix-wrapper-modules";
-    };
- 
-    flatpak = {
-      type = "github";
-      owner = "gmodena";
-      repo = "nix-flatpak";
-    };
-
-    nur = {
-      type = "github";
-      owner = "nix-community";
-      repo = "NUR";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-      };
-    };
-
     qylock = {
       type = "github";
       owner = "Darkkal44";
       repo = "qylock";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-      };
+      inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    home-manager = {
+    stylix = {
       type = "github";
       owner = "nix-community";
-      repo = "home-manager";
+      repo = "stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
-  };
-  outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } {
-    imports = [
-      inputs.flake-file.flakeModules.default
-      (inputs.import-tree [ ./hosts ./modules ])
-    ];
   };
 }

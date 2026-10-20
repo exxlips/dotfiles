@@ -12,7 +12,7 @@
   flake-file.inputs.flatpak-nix = {
     type = "github";
     owner = "gmodena";
-    repo = "flatpak-nix";
+    repo = "nix-flatpak";
   };
  
   den.aspects.programs.cli.flatpak = {
