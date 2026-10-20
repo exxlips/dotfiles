@@ -5,12 +5,6 @@
 }:
 
 {
-  flake-file.inputs.spicetify-nix = {
-    type = "github";
-    owner = "gerg-l";
-    repo = "spicetify-nix";
-  };
-
   den.aspects.programs.gui.spotify = {
     homeManager =
       {

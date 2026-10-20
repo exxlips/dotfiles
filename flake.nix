@@ -30,6 +30,12 @@
       repo = "import-tree";
     };
 
+    spicetify-nix = {
+      type = "github";
+      owner = "Gerg-L";
+      repo = "spicetify-nix";
+    };
+
     den = {
       type = "github";
       owner = "denful";
