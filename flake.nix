@@ -30,7 +30,7 @@
       repo = "import-tree";
     };
 
-    spicetify-nix = {
+    spicetify = {
       type = "github";
       owner = "Gerg-L";
       repo = "spicetify-nix";
@@ -62,6 +62,12 @@
         nixpkgs.follows = "nixpkgs";
       };
     };
+
+    wrapper-modules = {
+      type = "github";
+      owner = "BirdeeHub";
+      repo = "nix-wrapper-modules";
+    }
  
     flatpak = {
       type = "github";
