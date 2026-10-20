@@ -30,12 +30,6 @@
       repo = "den";
     };
 
-    qylock = {
-      type = "github";
-      owner = "Darkkal44";
-      repo = "qylock";
-    };
-
     hjem = {
       type = "github";
       owner = "feel-co";
