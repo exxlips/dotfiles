@@ -9,12 +9,6 @@
 
 # main aspect
 {
-  flake-file.inputs.sops-nix = {
-    type = "github";
-    owner = "Mic92";
-    repo = "sops-nix";
-  };
-
   den.aspects.secrets.sops = {
 
     # type
@@ -23,14 +17,10 @@
       ...
     }:
 
-    # let-in
-    let
-      sopsModule = inputs.sops-nix.nixosModules.sops;
-    in
     {
 
       # sops settings
-      imports = [ sopsModule ];
+      imports = [ inputs.sops.nixosModules.default ];
 
       sops = {
         defaultSopsFile = ../../secrets/api-keys.yaml;

@@ -18,6 +18,12 @@
       repo = "flake-file";
     };
 
+    sops = {
+      type = "github";
+      owner = "Mic92";
+      repo = "sops-nix";
+    };
+
     import-tree = {
       type = "github";
       owner = "vic";

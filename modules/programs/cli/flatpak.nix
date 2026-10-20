@@ -7,11 +7,6 @@
 }:
 
 
-# main module (with let in's this time)
-let
-  flatpakModule = inputs.flatpak.nixosModules.nix-flatpak;
-in
-
 # the aspect
 {
   flake-file.inputs.flatpak-nix = {
@@ -27,7 +22,7 @@ in
     }:
 
     {
-      imports = [ flatpakModule ];
+      imports = [ inputs.flatpak.nixosModules.nix-flatpak ];
       services.flatpak = {
         enable = true;
 
