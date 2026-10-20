@@ -9,6 +9,12 @@
 
 # main aspect
 {
+  flake-file.inputs.hjem = {
+    type = "github";
+    owner = "feel-co";
+    repo = "hjem";
+  };
+
   den.aspects.compositors.niri = {
     # type
     nixos =

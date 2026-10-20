@@ -12,6 +12,15 @@ let
   stylixModule = inputs.stylix.nixosModules.stylix;
 in
 {
+  flake-file.inputs.stylix = {
+    type = "github";
+    owner = "nix-community";
+    repo = "stylix";
+    inputs = {
+      nixpkgs.follows = "nixpkgs";
+    };
+  };
+
   den.aspects.theming.stylix = {
     # cool description
     description = ''

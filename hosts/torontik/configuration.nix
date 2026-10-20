@@ -49,13 +49,13 @@
       den.aspects.gaming.minecraft
 
       den.aspects.programs.cli.helper
+      den.aspects.programs.cli.flatpak
 
       den.aspects.programs.gui.ayugram
       den.aspects.programs.gui.zen
 
       den.aspects.submodules.users
       den.aspects.submodules.nix
-      den.aspects.submodules.flatpak
       den.aspects.submodules.virtualization
 
       den.aspects.secrets.sops

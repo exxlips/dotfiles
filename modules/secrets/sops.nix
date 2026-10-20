@@ -9,6 +9,12 @@
 
 # main aspect
 {
+  flake-file.inputs.sops-nix = {
+    type = "github";
+    owner = "Mic92";
+    repo = "sops-nix";
+  };
+
   den.aspects.secrets.sops = {
 
     # type

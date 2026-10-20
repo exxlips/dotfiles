@@ -40,12 +40,12 @@
       den.aspects.gaming.supertuxkart
 
       den.aspects.programs.cli.helper
+      den.aspects.programs.cli.flatpak
 
       den.aspects.programs.gui.ayugram
 
       den.aspects.submodules.users
       den.aspects.submodules.nix
-      den.aspects.submodules.flatpak
 
       den.aspects.secrets.sops
 

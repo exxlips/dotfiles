@@ -14,7 +14,13 @@ in
 
 # the aspect
 {
-  den.aspects.submodules.flatpak = {
+  flake-file.inputs.flatpak-nix = {
+    type = "github";
+    owner = "gmodena";
+    repo = "flatpak-nix";
+  };
+ 
+  den.aspects.programs.cli.flatpak = {
     nixos =
     {
       ...

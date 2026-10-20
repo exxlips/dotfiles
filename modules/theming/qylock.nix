@@ -12,6 +12,15 @@ let
   qylockModule = inputs.qylock.nixosModules.default;
 in
 {
+  flake-file.inputs.qylock = {
+    type = "github";
+    owner = "Darkkal44";
+    repo = "qylock";
+    inputs = {
+      nixpkgs.follows = "nixpkgs";
+    };
+  };
+  
   den.aspects.theming.qylock = {
 
     # type

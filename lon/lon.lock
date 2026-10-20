@@ -1,0 +1,35 @@
+{
+  "version": "1",
+  "sources": {
+    "den": {
+      "type": "GitHub",
+      "fetchType": "tarball",
+      "owner": "denful",
+      "repo": "den",
+      "branch": "main",
+      "revision": "436350eea1cde7d059877ed04bbd5d35852e3097",
+      "url": "https://github.com/denful/den/archive/436350eea1cde7d059877ed04bbd5d35852e3097.tar.gz",
+      "hash": "sha256-zvs+W7zVQj890E/f5tgiO2S39WdrZ6d7MbpmOlgcsBA="
+    },
+    "flake-parts": {
+      "type": "GitHub",
+      "fetchType": "tarball",
+      "owner": "hercules-ci",
+      "repo": "flake-parts",
+      "branch": "main",
+      "revision": "024633cd702b10285db5cb19b40ad48d2399ba60",
+      "url": "https://github.com/hercules-ci/flake-parts/archive/024633cd702b10285db5cb19b40ad48d2399ba60.tar.gz",
+      "hash": "sha256-zTwuwezD0w3hpga6a6P8emidzAZFyWqlNeRBlpWOOl8="
+    },
+    "nixpkgs": {
+      "type": "GitHub",
+      "fetchType": "tarball",
+      "owner": "NixOS",
+      "repo": "nixpkgs",
+      "branch": "nixos-unstable",
+      "revision": "09063bd1f2b36fd9fd793c36dfade7bd40a93dfc",
+      "url": "https://github.com/NixOS/nixpkgs/archive/09063bd1f2b36fd9fd793c36dfade7bd40a93dfc.tar.gz",
+      "hash": "sha256-Mh0PUaIv4nFY+8wAGonaEh8iBzwsmdNlwjVHmFg1Biw="
+    }
+  }
+}
