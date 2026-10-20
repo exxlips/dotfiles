@@ -37,6 +37,16 @@
             "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
           ];
         };
+      system.autoUpgrade = {
+        enable = true;
+
+        dates = "*-*-1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31 05:00:00";
+
+        flake = "/home/vadya/dotfiles";
+
+        allowReboot = false;
+        flags = [ "-L" ];
+      };
     };
   };
 }
