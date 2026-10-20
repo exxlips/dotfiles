@@ -9,6 +9,12 @@
       url = "https://channels.nixos.org/nixpkgs-unstable/nixexprs.tar.zst";
     };
 
+    with-inputs = {
+      type = "github";
+      owner = "unazikx"
+      repo = "with-inputs"; 
+    };
+
     wrapper-modules = {
       type = "github";
       owner = "BirdeeHub";
