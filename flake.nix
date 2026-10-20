@@ -68,6 +68,12 @@
         nixpkgs.follows = "nixpkgs";
       };
     };
+
+    home-manager = {
+      type = "github";
+      owner = "nix-community";
+      repo = "home-manager";
+    };
   };  
 
   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } {
