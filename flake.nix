@@ -102,7 +102,7 @@
     flake-file.inputs.zen = {
       type = "github";
       owner = "0xc000022070";
-      repo = "zen-browser-flake"
+      repo = "zen-browser-flake";
     };
   };  
 
