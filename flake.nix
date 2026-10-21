@@ -1,35 +1,85 @@
-# DO-NOT-EDIT. This file was auto-generated using github:denful/flake-file.
-# Use `nix run .#write-flake` to regenerate it.
 {
-  outputs = inputs: import ./outputs.nix inputs;
-
+  description = "best flake ever created (jk_)";
+ 
   inputs = {
-    flatpak-nix = {
-      type = "github";
-      owner = "gmodena";
-      repo = "flatpak-nix";
+    nixpkgs = {
+      url = "https://channels.nixos.org/nixpkgs-unstable/nixexprs.tar.zst";
     };
-    freesm = {
+
+    flake-parts = {
       type = "github";
-      owner = "FreesmTeam";
-      repo = "FreesmLauncher";
+      owner = "hercules-ci";
+      repo = "flake-parts";
     };
+
+    flake-file = {
+      type = "github";
+      owner = "vic";
+      repo = "flake-file";
+    };
+
+    import-tree = {
+      type = "github";
+      owner = "vic";
+      repo = "import-tree";
+    };
+
+    den = {
+      type = "github";
+      owner = "denful";
+      repo = "den";
+    };
+
     hjem = {
       type = "github";
       owner = "feel-co";
       repo = "hjem";
     };
-    qylock = {
+
+    hjem-rum = {
       type = "github";
-      owner = "Darkkal44";
-      repo = "qylock";
-      inputs.nixpkgs.follows = "nixpkgs";
+      owner = "snugnug";
+      repo = "hjem-rum";
     };
+
     stylix = {
       type = "github";
       owner = "nix-community";
       repo = "stylix";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+      };
     };
+
+    nur = {
+      type = "github";
+      owner = "nix-community";
+      repo = "NUR";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+      };
+    };
+
+    qylock = {
+      type = "github";
+      owner = "Darkkal44";
+      repo = "qylock";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+      };
+    };
+
+    home-manager = {
+      type = "github";
+      owner = "nix-community";
+      repo = "home-manager";
+    };
+  };  
+
+  outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } {
+    imports = [
+      inputs.flake-file.flakeModules.default
+      (inputs.import-tree [ ./hosts ./modules ])
+    ];
   };
 }
