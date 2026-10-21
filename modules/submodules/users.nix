@@ -22,6 +22,7 @@
   
       # user config
       users = {
+        mutableUsers = false;
         users = {
           vadya = {
             isNormalUser = true;
