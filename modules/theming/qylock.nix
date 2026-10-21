@@ -20,6 +20,8 @@ in
 
       services.displayManager.gdm.enable = false;
 
+      services.displayManager.defaultSession = "niri";
+
       services.displayManager.sddm.enable = true;
       services.displayManager.sddm.wayland.enable = true;
 
