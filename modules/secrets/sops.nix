@@ -23,7 +23,7 @@
     {
 
       # sops settings
-      imports = [ inputs.sops.nixosModules.default ];
+      imports = [ sopsModule ];
 
       sops = {
         defaultSopsFile = ../../secrets/api-keys.yaml;
