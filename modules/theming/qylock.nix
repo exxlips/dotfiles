@@ -18,6 +18,8 @@ in
     nixos = { pkgs, ... }: {
       imports = [ qylockModule ];
 
+      services.displayManager.gdm.enable = false;
+
       services.displayManager.sddm.enable = true;
       services.displayManager.sddm.wayland.enable = true;
 
