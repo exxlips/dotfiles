@@ -17,6 +17,9 @@
       ...
     }:
 
+    let
+      sopsModule = inputs.sops-nix.nixosModules.default;
+    in
     {
 
       # sops settings

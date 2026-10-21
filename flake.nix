@@ -74,6 +74,30 @@
       owner = "nix-community";
       repo = "home-manager";
     };
+
+    sops-nix = {
+      type = "github";
+      owner = "Mic92";
+      repo = "sops-nix";
+    };
+
+    flatpak-nix = {
+      type = "github";
+      owner = "gmodena";
+      repo = "nix-flatpak";
+    };
+
+    wrapper-modules = {
+      type = "github";
+      owner = "BirdeeHub";
+      repo = "nix-wrapper-modules";
+    };
+
+    spicetify-nix = {
+      type = "github";
+      owner = "Gerg-L";
+      repo = "spicetify-nix";
+    };
   };  
 
   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } {

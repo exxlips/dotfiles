@@ -7,12 +7,6 @@
 
 # main aspect
 {
-  flake-file.inputs.freesm = {
-    type = "github";
-    owner = "FreesmTeam";
-    repo = "FreesmLauncher";
-  };
-  
   den.aspects.gaming.minecraft = {
     description = ''
       amazing launcher
