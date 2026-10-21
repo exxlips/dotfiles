@@ -42,6 +42,24 @@
       repo = "hjem-rum";
     };
 
+    noctalia = {
+      type = "github";
+      owner = "noctalia-dev";
+      repo = "noctalia";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+      };
+    };
+
+    zen = {
+      type = "github";
+      owner = "0xc000022070";
+      repo = "zen-browser-flake";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+      };
+    };
+
     stylix = {
       type = "github";
       owner = "nix-community";
@@ -97,6 +115,12 @@
       type = "github";
       owner = "Gerg-L";
       repo = "spicetify-nix";
+    };
+
+    freesm = {
+      type = "github";
+      owner = "FreesmTeam";
+      repo = "FreesmLauncher";
     };
   };  
 

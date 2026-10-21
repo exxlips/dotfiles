@@ -3,6 +3,7 @@
 {
   den,
   inputs,
+  inputs',
   ...
 }:
 
@@ -24,6 +25,11 @@
       # settings for niri, below (perSystem) is the main configuration (like config.kdl)
       imports = [
         inputs.hjem.nixosModules.default
+      ];
+
+      # noctalia packages (switching from v4 to v5)
+      environment.systemPackages = [
+        inputs'.noctalia.packages.default;
       ];
 
       # CRITICAL
@@ -81,6 +87,8 @@
         gsettings-desktop-schemas
         bibata-cursors
         papirus-icon-theme
+
+        self'.packages.noctalia
       ];
 
       # gtk tweaks
@@ -158,7 +166,7 @@
           "Mod+T".spawn-sh = lib.getExe pkgs.kitty;
           "Mod+Q".close-window = {};
 
-          "Mod+Space".spawn-sh = "${lib.getExe self'.packages.noctalia} ipc call launcher toggle";
+          "Mod+Space".spawn-sh = "\${lib.getExe self'.packages.noctalia} msg panel-toggle launcher";
           "Mod+F".maximize-column = {};
           "Mod+Shift+F".fullscreen-window = {};
           "Mod+P".toggle-window-floating = {};

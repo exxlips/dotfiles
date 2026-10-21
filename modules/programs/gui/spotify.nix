@@ -15,7 +15,7 @@
       }:
       let
         colors = config.lib.stylix.colors;
-        spicePkgs = inputs.spicetify.legacyPackages.${pkgs.stdenv.hostPlatform.system};
+        spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.hostPlatform.system};
       in
       {
         nixpkgs.config.allowUnfreePredicate = pkg:
@@ -24,7 +24,7 @@
           ];
 
         imports = [
-          inputs.spicetify.homeManagerModules.default
+          inputs.spicetify-nix.homeManagerModules.default
         ];
 
         programs.spicetify = {
