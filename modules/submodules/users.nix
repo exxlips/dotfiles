@@ -14,6 +14,7 @@
     nixos =
     {
       pkgs,
+      lib,
       ...
     }:
 
@@ -24,7 +25,7 @@
         users = {
           vadya = {
             isNormalUser = true;
-            description = "vadyakk";
+            description = lib.mkForce "vadya";
             hashedPasswordFile = "/home/vadya/.secrets/vadya-password-hash";
             shell = pkgs.fishMinimal;
             extraGroups = [

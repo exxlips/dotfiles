@@ -2,6 +2,7 @@
 
 {
   den,
+  lib,
   inputs,
   ...
 }:
@@ -18,7 +19,7 @@ in
     nixos = { pkgs, ... }: {
       imports = [ qylockModule ];
 
-      services.displayManager.gdm.enable = false;
+      services.displayManager.gdm.enable = lib.mkForce false;
 
       services.displayManager.defaultSession = "niri";
 
