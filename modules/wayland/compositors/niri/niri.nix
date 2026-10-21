@@ -27,11 +27,6 @@
         inputs.hjem.nixosModules.default
       ];
 
-      # noctalia packages (switching from v4 to v5)
-      environment.systemPackages = [
-        inputs'.noctalia.packages.default;
-      ];
-
       # CRITICAL
       programs.niri = {
         enable = true;

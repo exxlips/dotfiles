@@ -25,6 +25,7 @@
           vadya = {
             isNormalUser = true;
             description = "vadyakk";
+            hashedPasswordFile = "/home/vadya/.secrets/vadya-password-hash";
             shell = pkgs.fishMinimal;
             extraGroups = [
               "wheel"
