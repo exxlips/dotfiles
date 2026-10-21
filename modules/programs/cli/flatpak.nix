@@ -9,12 +9,6 @@
 
 # the aspect
 {
-  flake-file.inputs.flatpak-nix = {
-    type = "github";
-    owner = "gmodena";
-    repo = "nix-flatpak";
-  };
- 
   den.aspects.programs.cli.flatpak = {
     nixos =
     {
@@ -22,7 +16,7 @@
     }:
 
     {
-      imports = [ inputs.flatpak.nixosModules.nix-flatpak ];
+      imports = [ inputs.flatpak-nix.nixosModules.nix-flatpak ];
       services.flatpak = {
         enable = true;
 
