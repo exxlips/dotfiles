@@ -8,12 +8,12 @@ This repository contains my personal dotfiles, used for everyday use!~
 - 'git' (the only mandatory one)
 
 
-Clone this repository:
-'''
-$ git clone https://gitlab.com/groups4042743/dotfiles.git
-$ cd dotfiles  
-'''
+Clone the `dotfiles`:
 
+```
+$ git clone https://github.com/void-linux/void-packages.git
+$ cd void-packages
+```
 
 
 ### The files n' folders:
