@@ -1,8 +1,11 @@
+# hostname.nix.
+
 {
   den,
   ...
 }:
 
+# main aspect
 {
   den.aspects.system.hostname = {
     nixos =
@@ -12,6 +15,8 @@
     }:
 
     {
+
+      # fuckass shit needed for multiple hosts
       networking.hostName = host.hostName;
     };
   };

@@ -5,6 +5,7 @@
   ...
 }:
 
+# main aspect
 {
   den.aspects.programs.cli.starship = {
     # cool description

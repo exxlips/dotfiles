@@ -1,11 +1,17 @@
+# spotify.nix..~
+
 {
   den,
   inputs,
   ...
 }:
 
+# main aspect
 {
   den.aspects.programs.gui.spotify = {
+    description = ''
+      spicetify IS TOP TIER
+    '';
     homeManager =
       {
         config,
@@ -13,11 +19,15 @@
         lib,
         ...
       }:
+
+      # omg let in
       let
         colors = config.lib.stylix.colors;
         spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.hostPlatform.system};
       in
       {
+
+        # removes the unfree-conflict
         nixpkgs.config.allowUnfreePredicate = pkg:
           builtins.elem (lib.getName pkg) [
             "spotify"
@@ -27,9 +37,11 @@
           inputs.spicetify-nix.homeManagerModules.default
         ];
 
+        # the main thing that keeps things working (eli5)
         programs.spicetify = {
           enable = true;
 
+          # settings needed for normal use
           windowManagerPatch = true;
           wayland = true;
 
@@ -39,6 +51,7 @@
 
           colorScheme = "custom";
 
+          # custom themes
           customColorScheme = {
             accent = colors.base03;
             accent-active = colors.base03;
@@ -91,3 +104,5 @@
      };
   };
 }
+
+# end

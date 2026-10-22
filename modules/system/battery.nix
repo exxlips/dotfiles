@@ -1,19 +1,29 @@
+# battery.nix..~
+
 {
   den,
   ...
 }:
 
+
+# main aspect
 {
   den.aspects.system.battery = {
+
+    # type
     nixos =
     {
       ...
     }:
 
     {
+      # tlp top tier
       services = {
+
+        # ppd protest
         power-profiles-daemon.enable = false;
 
+        # my beloved
         tlp = {
           enable = true;
           settings = {
