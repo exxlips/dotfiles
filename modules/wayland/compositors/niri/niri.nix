@@ -161,7 +161,7 @@
           "Mod+T".spawn-sh = lib.getExe pkgs.kitty;
           "Mod+Q".close-window = {};
 
-          "Mod+Space".spawn-sh = "\${lib.getExe self'.packages.noctalia} msg panel-toggle launcher";
+          "Mod+Space".spawn-sh = "${self'.packages.noctalia}/bin/noctalia msg panel-toggle launcher";
           "Mod+F".maximize-column = {};
           "Mod+Shift+F".fullscreen-window = {};
           "Mod+P".toggle-window-floating = {};

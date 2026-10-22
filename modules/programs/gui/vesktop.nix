@@ -24,7 +24,7 @@
         enable = true;
 
         settings = {
-          discordBranch = "stable";
+          discordBranch = "canary";
           nativeTitleBar = true;
           customTitleBar = false;
 

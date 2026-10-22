@@ -22,8 +22,8 @@
           enable = true;
 
           settings = {
-            user.email = "noreply@vadyakk.codeberg.org";
-            user.name = "Vadik Vadikov Vadyakkovich";
+            user.email = "nimodionik@proton.me";
+            user.name = "Vadik Vadyakkov Vadyakkovich";
           };
         };
       };
