@@ -40,12 +40,12 @@
 
             directory = {
               truncation_length = 3;
-              format = "in $path ( ";
+              format = "in $path from ";
             };
 
             git_branch = {
               symbol = " ";
-              format = "$symbol$branch ) ";
+              format = "$symbol$branch";
             };
 
             character = {
