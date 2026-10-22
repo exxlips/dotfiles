@@ -22,91 +22,95 @@
     users.vadya = {
       userName = "vadya";
       classes = [ "homeManager" ];
-      includes = [
-        den.aspects.home
-
-        den.aspects.editors.helix.languages
-        den.aspects.editors.helix.themes
-        den.aspects.editors.helix.settings
-
-        den.aspects.programs.cli.git
-        den.aspects.programs.cli.starship
-        den.aspects.programs.cli.fish
-
-        den.aspects.programs.gui.spotify
-        den.aspects.programs.gui.vesktop
-        den.aspects.programs.gui.kitty
-        den.aspects.programs.gui.throne
-      ];
     };
 
     # systems
-    includes = [
-      den.aspects.torontik.hardware
-      den.aspects.torontik.configuration
+    includes = with den.aspects; [
+      torontik.hardware
+      torontik.configuration
 
-      den.aspects.gaming.supertuxkart
-      den.aspects.gaming.minecraft
+      gaming.supertuxkart
+      gaming.minecraft
 
-      den.aspects.programs.cli.helper
-      den.aspects.programs.cli.flatpak
+      programs.cli.helper
+      programs.cli.flatpak
 
-      den.aspects.programs.gui.ayugram
-      den.aspects.programs.gui.zen
+      programs.gui.ayugram
+      programs.gui.zen
 
-      den.aspects.submodules.users
-      den.aspects.submodules.nix
-      den.aspects.submodules.virtualization
+      submodules.users
+      submodules.nix
+      submodules.virtualization
 
-      den.aspects.secrets.sops
+      secrets.sops
     
-      den.aspects.system.audio
-      den.aspects.system.limine
-      den.aspects.system.battery
-      den.aspects.system.network
-      den.aspects.system.packages
-      den.aspects.system.hostname
+      system.audio
+      system.limine
+      system.battery
+      system.network
+      system.packages
+      system.hostname
 
-      den.aspects.theming.qylock
-      den.aspects.theming.stylix
+      theming.qylock
+      theming.stylix
 
-      den.aspects.compositors.niri
+      compositors.niri
     ];
   };
 
   # main configuration
-  den.aspects.torontik.configuration = {
+  den.aspects = {
+    vadya.includes = with den.aspects; [
+      home
 
-    # type
-    nixos =
-      {
-        pkgs,
-        lib,
-        ...
-      }:
+      editors.helix.languages
+      editors.helix.themes
+      editors.helix.settings
 
-      {
+      programs.cli.git
+      programs.cli.starship
+      programs.cli.fish
+
+      programs.gui.spotify
+      programs.gui.vesktop
+      programs.gui.kitty
+      programs.gui.throne
+    ];
     
-        # main
-        system.stateVersion = "26.11";
-        time.timeZone = "Europe/Moscow";
+    torontik.configuration = {
 
-        # time/locales
-        i18n.defaultLocale = "en_US.UTF-8";
+      # type
+      nixos =
+        {
+          pkgs,
+          lib,
+          ...
+        }:
 
-        # services
-        security.rtkit.enable = true;
+        {
+    
+          # main
+          system.stateVersion = "26.11";
+          time.timeZone = "Europe/Moscow";
 
-        # programs (for now, throne only)
-        programs.throne = {
-          enable = true;
-          tunMode.enable = true;
+          # time/locales
+          i18n.defaultLocale = "en_US.UTF-8";
+
+          # services
+          security.rtkit.enable = true;
+
+          # programs (for now, throne only)
+          programs.throne = {
+            enable = true;
+            tunMode.enable = true;
+          };
+
+          # nixpkgs setting to prevent errors
+          nixpkgs.hostPlatform = lib.mkForce "x86_64-linux";
         };
-
-        # nixpkgs setting to prevent errors
-        nixpkgs.hostPlatform = lib.mkForce "x86_64-linux";
       };
-    };
+  };
 }
+
 
 # end

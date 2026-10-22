@@ -40,30 +40,30 @@
  
       # filesystems/partitions
       fileSystems."/" = {
-        device = "/dev/disk/by-uuid/187b6ccb-b277-4345-8fc1-dce72cf930b4";
+        device = "/dev/disk/by-uuid/56a12ba0-1857-4ba6-8a3f-fcc2441c2c72";
         fsType = "btrfs";
       };
 
       fileSystems."/home" = {
-        device = "/dev/disk/by-uuid/187b6ccb-b277-4345-8fc1-dce72cf930b4";
+        device = "/dev/disk/by-uuid/56a12ba0-1857-4ba6-8a3f-fcc2441c2c72";
         fsType = "btrfs";
         options = [ "subvol=home" ];
       };
 
       fileSystems."/nix" = {
-        device = "/dev/disk/by-uuid/187b6ccb-b277-4345-8fc1-dce72cf930b4";
+        device = "/dev/disk/by-uuid/56a12ba0-1857-4ba6-8a3f-fcc2441c2c72";
         fsType = "btrfs";
         options = [ "subvol=nix" ];
       };
 
       fileSystems."/boot" = {
-        device = "/dev/disk/by-uuid/1712-ED0E";
+        device = "/dev/disk/by-uuid/02AD-1BA2";
         fsType = "vfat";
         options = [ "fmask=0077" "dmask=0077" ];
       };
 
       swapDevices = [
-        { device = "/dev/disk/by-uuid/d0660382-bd2b-43f8-b3f2-f2e0ac0a82f9"; }
+        { device = "/dev/disk/by-uuid/cfa29b3b-6dce-4567-99a2-59ead840ffbf"; }
       ];
 
       # miscellaneous

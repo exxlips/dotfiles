@@ -28,6 +28,7 @@
       sops = {
         defaultSopsFile = ../../secrets/api-keys.yaml;
         age.keyFile = "/var/lib/sops-nix/keys.txt";
+        age.generateKey = true;
 
         # secrets so sops could see the secrets lol
         secrets.roblox = {};
