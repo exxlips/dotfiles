@@ -49,8 +49,8 @@
             };
 
             character = {
-              success_symbol = "[❯](#8c977d)";
-              error_symbol = "[❯](#b66467)";
+              success_symbol = " [❯](#8c977d)";
+              error_symbol = " [❯](#b66467)";
             };
           };
         };
