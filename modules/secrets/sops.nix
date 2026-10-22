@@ -32,11 +32,6 @@
 
         # secrets so sops could see the secrets lol
         secrets.roblox = {};
-
-        secrets.github_pat = {
-          owner = "vadya";
-          mode = "0400";
-        };
       };
     };
   };
