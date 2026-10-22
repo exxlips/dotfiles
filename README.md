@@ -5,7 +5,7 @@ This repository contains my personal dotfiles, used for everyday use!~
 > NOTE: Do not blindly 'git clone' this repository. It contains hardware-specific settings that your device may not support. Explore the files first and remove the things you dont need from my hardware.
 
 ### Requirements:
-- 'git' (the only mandatory one)
+- `git` (the only mandatory one)
 
 
 Clone the `dotfiles`:
