@@ -1,16 +1,26 @@
-# THIS IS THE NEW REPOSITORY FROM CODEBERG!!!
+## My dotfiles collection
 
-anyway...
+This repository contains my personal dotfiles, used for everyday use!~
 
-this is my github repository for nixos dotfiles. anyone can grab it, there's no license. edit it, RAT it, doesnt matter.
+> NOTE: Do not blindly 'git clone' this repository. It contains hardware-specific settings that your device may not support. Explore the files first and remove the things you dont need from my hardware.
 
-# folders/files
-./modules - The modules folder
+### Requirements:
+- 'git' (the only mandatory one)
 
-./hosts - The hosts folder (only one yet.)
 
-./wallpapers - The cool wallpaper folder
+Clone this repository:
+'''
+$ git clone https://gitlab.com/groups4042743/dotfiles.git
+$ cd dotfiles  
+'''
 
-./secrets - The secrets wallpaper
 
-./flake.nix - The fuh-lake
+
+### The files n' folders:
+
+- modules/ - The modules folder
+- hosts/ - The hosts folder
+- secrets/ - The sops-nix folder (secrets)
+- wallpapers/ - The cool wallpaper folder
+
+## [insert end] 
