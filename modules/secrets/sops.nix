@@ -31,7 +31,11 @@
         age.generateKey = true;
 
         # secrets so sops could see the secrets lol
-        secrets.roblox = {};
+        secrets = {
+          roblox = {};
+
+          gitlab_pat = {};
+        }; 
       };
     };
   };
