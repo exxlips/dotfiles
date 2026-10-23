@@ -47,7 +47,6 @@
       miscellaneous.users.main
 
       files.sops
-      files.files-flake
 
       hardware.audio
 
