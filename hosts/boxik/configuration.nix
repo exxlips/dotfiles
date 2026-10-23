@@ -39,8 +39,6 @@
 
       programs.gui.ayugram
 
-      secrets.sops
-
       hardware.audio
 
       hardware.boot.limine
