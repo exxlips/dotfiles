@@ -17,8 +17,8 @@
 * `boxik`: My grandpa toilet hp proone g1 400 aio **(its just really old)**
 
 ### Requirements:
-- `git` (the only mandatory one)
-- a working nix system
+* `git` (the only mandatory one)
+* a working nix system
 
 
 Clone the `dotfiles`:
@@ -30,13 +30,17 @@ $ cd dotfiles
 
 ### The files n' folders:
 
-- `./modules` - The modules folder
-- `./flake.nix` - The coolest flake
-- `./flake.lock` - The lock of the flake
-- `./README.md` - ... This file you're reading right now.
-- `./.sops.yaml` - The sops-nix file
-- `./hosts` - The hosts folder
-- `./secrets` - The sops-nix folder (secrets)
-- `./wallpapers` - The cool wallpaper folder
+* `./modules` - The modules folder
+* `./flake.nix` - The coolest flake
+* `./flake.lock` - The lock of the flake
+* `./README.md` - ... This file you're reading right now.
+* `./.sops.yaml` - The sops-nix file
+* `./hosts` - The hosts folder
+* `./secrets` - The sops-nix folder (secrets)
+* `./wallpapers` - The cool wallpaper folder
+
+### Aliases:
+* **ll** = `eza --tree`
+* **sops-edit** = `sudo -E SOPS_AGE_KEY_FILE=/var/lib/sops-nix/keys.txt`
 
 ### [insert end] 
