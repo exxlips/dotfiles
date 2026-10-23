@@ -78,8 +78,6 @@
   # main configuration
   den.aspects = {
     vadya.includes = with den.aspects; [
-      home
-
       editors.helix.languages
       editors.helix.themes
       editors.helix.settings
