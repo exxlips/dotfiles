@@ -11,7 +11,7 @@
       }:
       {
         imports = [
-          inputs.files.flakeModules.default
+          inputs.files.flakeModules
         ];
       };
   };
