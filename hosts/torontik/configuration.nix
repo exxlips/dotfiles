@@ -66,7 +66,7 @@
       hardware.bluetooth
       hardware.packages
       hardware.hostname
-      hardware.default
+      hardware
 
       styling.qylock
       styling.stylix
