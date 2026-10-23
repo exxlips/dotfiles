@@ -21,15 +21,23 @@
       boxik.hardware
       boxik.configuration
 
-      gaming.supertuxkart
+      games.supertuxkart
+
+      files.sops
+      files.files-flake
+      files.dag
+
+      miscellaneous.nur
+
+      miscellaneous.nix.settings
+      miscellaneous.nix.substituters
+
+      miscellaneous.users.main
 
       programs.cli.helper
       programs.cli.flatpak
 
       programs.gui.ayugram
-
-      submodules.users
-      submodules.nix
 
       secrets.sops
 
@@ -55,7 +63,7 @@
 
   den.aspects = {
     vadya.includes = with den.aspects; [
-      home
+      miscellaneous.home
 
       editors.helix.languages
       editors.helix.themes

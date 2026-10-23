@@ -63,7 +63,6 @@
       hardware.virtualization.podman
 
       hardware.battery
-      hardware.network
       hardware.bluetooth
       hardware.packages
       hardware.hostname
