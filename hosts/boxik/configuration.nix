@@ -1,8 +1,5 @@
 {
   den,
-  self,
-  inputs,
-  config,
   ...
 }:
 
@@ -18,71 +15,86 @@
     users.vadya = {
       userName = "vadya";
       classes = [ "homeManager" ];
-      includes = [
-        den.aspects.home
-
-        den.aspects.editors.helix.languages
-        den.aspects.editors.helix.themes
-        den.aspects.editors.helix.settings
-
-        den.aspects.programs.cli.git
-        den.aspects.programs.cli.fish
-
-        den.aspects.programs.gui.kitty
-        den.aspects.programs.gui.throne
-      ];
     };
 
-    includes = [
-      den.aspects.boxik.hardware
-      den.aspects.boxik.configuration
+    includes = with den.aspects; [
+      boxik.hardware
+      boxik.configuration
 
-      den.aspects.gaming.supertuxkart
+      gaming.supertuxkart
 
-      den.aspects.programs.cli.helper
-      den.aspects.programs.cli.flatpak
+      programs.cli.helper
+      programs.cli.flatpak
 
-      den.aspects.programs.gui.ayugram
+      programs.gui.ayugram
 
-      den.aspects.submodules.users
-      den.aspects.submodules.nix
+      submodules.users
+      submodules.nix
 
-      den.aspects.secrets.sops
+      secrets.sops
 
-      den.aspects.system.audio
-      den.aspects.system.limine
-      den.aspects.system.battery
-      den.aspects.system.network
-      den.aspects.system.packages
-      den.aspects.system.hostname
+      hardware.audio
 
-      den.aspects.theming.stylix
+      hardware.boot.limine
+      hardware.boot.plymouth
+      hardware.boot.kernel
+
+      hardware.networking.network
+      hardware.networking.zapret
+
+      hardware.battery
+      hardware.packages
+      hardware.hostname
+
+      styling.stylix
+      styling.qylock
+
+      compositors.niri
     ];
   };
 
-  den.aspects.boxik.configuration = {
-    nixos =
-    {
-      pkgs,
-      lib,
-      ...
-    }:
+  den.aspects = {
+    vadya.includes = with den.aspects; [
+      home
 
-    {
-      system.stateVersion = "26.05";
-      time.timeZone = "Europe/Moscow";
+      editors.helix.languages
+      editors.helix.themes
+      editors.helix.settings
 
-      i18n.defaultLocale = "en_US.UTF-8";
+      programs.cli.git
+      programs.cli.starship
+      programs.cli.fish
 
-      security.rtkit.enable = true;
+      programs.gui.spotify
+      programs.gui.vesktop
+      programs.gui.kitty
+      programs.gui.throne
+    ];
 
-      programs.firefox.enable = true;
-      programs.throne = {
-        enable = true;
-        tunMode.enable = true;
-      };
+    boxik.configuration = {
+      nixos =
+        {
+          pkgs,
+          lib,
+          ...
+        }:
 
-      nixpkgs.hostPlatform = lib.mkForce "x86_64-linux";
+        {
+          system.stateVersion = "26.05";
+          time.timeZone = "Europe/Moscow";
+
+          i18n.defaultLocale = "en_US.UTF-8";
+
+          security.rtkit.enable = true;
+
+          programs.firefox.enable = true;
+          programs.throne = {
+            enable = true;
+            tunMode.enable = true;
+          };
+
+          nixpkgs.hostPlatform = lib.mkForce "x86_64-linux";
+        };
     };
   };
 }

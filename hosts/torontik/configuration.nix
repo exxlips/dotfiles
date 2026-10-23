@@ -38,21 +38,39 @@
       programs.gui.ayugram
       programs.gui.zen
 
-      submodules.users
-      submodules.nix
-      submodules.virtualization
+      miscellaneous.home
+      miscellaneous.nur
 
-      secrets.sops
-    
-      system.audio
-      system.limine
-      system.battery
-      system.network
-      system.packages
-      system.hostname
+      miscellaneous.nix.settings
+      miscellaneous.nix.substituters
 
-      theming.qylock
-      theming.stylix
+      miscellaneous.users.main
+
+      files.sops
+      files.files-flake
+      files.dag
+
+      hardware.audio
+
+      hardware.boot.limine
+      hardware.boot.plymouth
+      hardware.boot.kernel
+
+      hardware.networking.network
+      hardware.networking.zapret
+
+      hardware.virtualization.main
+      hardware.virtualization.podman
+
+      hardware.battery
+      hardware.network
+      hardware.bluetooth
+      hardware.packages
+      hardware.hostname
+      hardware.default
+
+      styling.qylock
+      styling.stylix
 
       compositors.niri
     ];
@@ -76,7 +94,7 @@
       programs.gui.kitty
       programs.gui.throne
     ];
-    
+
     torontik.configuration = {
 
       # type
@@ -88,7 +106,7 @@
         }:
 
         {
-    
+
           # main
           system.stateVersion = "26.11";
           time.timeZone = "Europe/Moscow";
@@ -108,9 +126,8 @@
           # nixpkgs setting to prevent errors
           nixpkgs.hostPlatform = lib.mkForce "x86_64-linux";
         };
-      };
+    };
   };
 }
-
 
 # end
