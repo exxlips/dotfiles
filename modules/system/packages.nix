@@ -42,6 +42,19 @@
         bat
         waydroid
         discord
+
+        # formatters
+        nixfmt
+        prettier
+        black
+        rustfmt
+
+        # lsp-servers
+        nixd
+        python3Packages.python-lsp-server
+        rust-analyzer
+        yaml-language-server
+        vscode-langservers-extracted
       ];
     };
   };

@@ -82,9 +82,9 @@
               ];
 
               separator = "|";
-              mode.normal = "NORMAL";
-              mode.insert = "INSERT";
-              mode.select = "SELECT";
+              mode.normal = "norm";
+              mode.insert = "ins";
+              mode.select = "sel";
             };
 
             true-color = true;
