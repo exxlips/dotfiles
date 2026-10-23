@@ -22,12 +22,12 @@
   den.hosts.x86_64-linux = {
     torontik = {
       hostName = "torontik";
-      includes = [ den.aspects.system.hostname ];
+      includes = [ den.aspects.hardware.hostname ];
     };
 
     boxik = {
       hostName = "boxik";
-      includes = [ den.aspects.system.hostname ];
+      includes = [ den.aspects.hardware.hostname ];
     };
   };
 
