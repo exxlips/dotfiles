@@ -5,7 +5,6 @@
 {
   perSystem =
     {
-      dag,
       ...
     }:
 

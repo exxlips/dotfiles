@@ -1,12 +1,14 @@
 {
+  inputs,
   ...
 }:
 
 {
+  _module.args.dag = inputs.dag.lib { inherit (inputs.nixpkgs) lib; };
+
   den.aspects.files.dag = {
     nixos =
       {
-        inputs,
         ...
       }:
 
@@ -14,6 +16,7 @@
         imports = [
           inputs.dag.nixosModules.default
         ];
+
       };
   };
 }
