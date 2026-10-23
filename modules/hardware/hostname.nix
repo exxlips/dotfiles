@@ -7,17 +7,17 @@
 
 # main aspect
 {
-  den.aspects.system.hostname = {
+  den.aspects.hardware.hostname = {
     nixos =
-    {
-      host,
-      ...
-    }:
+      {
+        host,
+        ...
+      }:
 
-    {
+      {
 
-      # fuckass shit needed for multiple hosts
-      networking.hostName = host.hostName;
-    };
+        # fuckass shit needed for multiple hosts
+        networking.hostName = host.hostName;
+      };
   };
 }
