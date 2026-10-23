@@ -12,9 +12,8 @@
 
       {
         imports = [
-          inputs.dag.nixosModules.default
+          inputs.dag.flakeModules
         ];
-
       };
   };
 }
