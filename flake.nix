@@ -1,6 +1,6 @@
 {
   description = "best flake ever created (jk_)";
- 
+
   inputs = {
     nixpkgs = {
       url = "https://channels.nixos.org/nixpkgs-unstable/nixexprs.tar.zst";
@@ -10,6 +10,18 @@
       type = "github";
       owner = "hercules-ci";
       repo = "flake-parts";
+    };
+
+    dag = {
+      type = "github";
+      owner = "denful";
+      repo = "dag";
+    };
+
+    files = {
+      type = "github";
+      owner = "sini";
+      repo = "files";
     };
 
     flake-file = {
@@ -28,6 +40,13 @@
       type = "github";
       owner = "denful";
       repo = "den";
+    };
+
+    nixos-hardware = {
+      type = "github";
+      owner = "NixOS";
+      repo = "nixos-hardware";
+      ref = "master";
     };
 
     hjem = {
@@ -122,12 +141,17 @@
       owner = "FreesmTeam";
       repo = "FreesmLauncher";
     };
-  };  
-
-  outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } {
-    imports = [
-      inputs.flake-file.flakeModules.default
-      (inputs.import-tree [ ./hosts ./modules ])
-    ];
   };
+
+  outputs =
+    inputs:
+    inputs.flake-parts.lib.mkFlake { inherit inputs; } {
+      imports = [
+        inputs.flake-file.flakeModules.default
+        (inputs.import-tree [
+          ./hosts
+          ./modules
+        ])
+      ];
+    };
 }

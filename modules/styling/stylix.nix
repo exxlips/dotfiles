@@ -6,29 +6,28 @@
   ...
 }:
 
-
 # main module (with let in's)
 let
   stylixModule = inputs.stylix.nixosModules.stylix;
 in
 {
-  den.aspects.theming.stylix = {
+  den.aspects.styling.stylix = {
     # cool description
     description = ''
       great nix variant of matugen
     '';
-  
+
     # type
     homeManager =
-    {
-      ...
-    }:
+      {
+        ...
+      }:
 
-    {
+      {
 
-      # stop stylix targetting helix
-      stylix.targets.helix.enable = false;
-    };
+        # stop stylix targetting helix
+        stylix.targets.helix.enable = false;
+      };
 
     # another type
     nixos =
@@ -43,9 +42,9 @@ in
         colors = config.lib.stylix.colors;
       in
       {
- 
+
         # main stylix configuration
-        imports = [ stylixModule ]; 
+        imports = [ stylixModule ];
 
         stylix = {
           polarity = "dark";

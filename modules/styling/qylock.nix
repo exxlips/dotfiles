@@ -7,13 +7,12 @@
   ...
 }:
 
-
 # main module (with let in's)
 let
   qylockModule = inputs.qylock.nixosModules.default;
 in
 {
-  den.aspects.theming.qylock = {
+  den.aspects.styling.qylock = {
 
     # type
     nixos = { pkgs, ... }: {
