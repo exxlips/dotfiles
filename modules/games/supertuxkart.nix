@@ -5,11 +5,10 @@
   ...
 }:
 
-
 # main aspect
 {
-  den.aspects.gaming.supertuxkart = {
-   
+  den.aspects.games.supertuxkart = {
+
     # cool desc
     description = ''
       legendary game man
@@ -19,16 +18,16 @@
 
     # type
     nixos =
-    {
-      pkgs,
-      ...
-    }:
+      {
+        pkgs,
+        ...
+      }:
 
-    # ... just a package.
-    {
-      environment.systemPackages = with pkgs; [
-        supertuxkart
-      ];
-    };
+      # ... just a package.
+      {
+        environment.systemPackages = with pkgs; [
+          supertuxkart
+        ];
+      };
   };
 }
