@@ -24,8 +24,6 @@
       games.supertuxkart
 
       files.sops
-      files.files-flake
-      files.dag
 
       miscellaneous.nur
 

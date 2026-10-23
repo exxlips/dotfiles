@@ -48,7 +48,6 @@
 
       files.sops
       files.files-flake
-      files.dag
 
       hardware.audio
 
