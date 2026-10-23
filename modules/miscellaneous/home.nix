@@ -7,25 +7,25 @@
 
 # main aspect
 {
-  den.aspects.home = {
+  den.aspects.miscellaneous.home = {
 
     # type
     homeManager =
-    {
-      ...
-    }:
+      {
+        ...
+      }:
 
-    {
-      # home settings
-      
-      home.username = "vadya";
-      home.homeDirectory = "/home/vadya";
+      {
+        # home settings
 
-      xdg.configFile."gtk-3.0/settings.ini".force = true;
-      xdg.configFile."gtk-4.0/settings.ini".force = true;
-      xdg.configFile."fish/config.fish".force = true;
+        home.username = "vadya";
+        home.homeDirectory = "/home/vadya";
 
-      home.stateVersion = "26.11";
-    };
+        xdg.configFile."gtk-3.0/settings.ini".force = true;
+        xdg.configFile."gtk-4.0/settings.ini".force = true;
+        xdg.configFile."fish/config.fish".force = true;
+
+        home.stateVersion = "26.11";
+      };
   };
 }
