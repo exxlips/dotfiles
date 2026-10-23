@@ -29,8 +29,8 @@
       torontik.hardware
       torontik.configuration
 
-      gaming.supertuxkart
-      gaming.minecraft
+      games.supertuxkart
+      games.minecraft
 
       programs.cli.helper
       programs.cli.flatpak
