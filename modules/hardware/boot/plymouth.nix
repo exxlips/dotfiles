@@ -16,7 +16,7 @@
           plymouth = {
             enable = true;
 
-            logo = lib.contactStringsSep "/" [
+            logo = lib.conactStringsSep "/" [
               pkgs.nixos-icons
               "share"
               "icons"
