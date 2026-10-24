@@ -11,7 +11,7 @@
     den.batteries.inputs'
   ];
 
-  den.hosts.boxik = {
+  den.hosts.x86_64-linux.boxik = {
     users.vadya = {
       userName = "vadya";
       classes = [ "homeManager" ];
