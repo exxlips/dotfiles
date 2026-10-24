@@ -136,7 +136,7 @@
             keyboard = {
               xkb = {
                 layout = "us,ru";
-                options = "grp:alt_shift";
+                options = "grp:alt_shift_toggle";
               };
             };
           };
