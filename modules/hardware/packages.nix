@@ -32,6 +32,7 @@
           # someshit
           ripgrep
           fish
+          cargo
           eza
           tree
           neovim
