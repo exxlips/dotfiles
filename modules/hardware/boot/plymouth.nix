@@ -1,7 +1,6 @@
 {
   ...
 }:
-
 {
   den.aspects.hardware.boot.plymouth = {
     nixos =
@@ -10,7 +9,6 @@
         pkgs,
         ...
       }:
-
       {
         boot = {
           plymouth = {
