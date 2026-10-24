@@ -63,7 +63,7 @@
 
   den.aspects = {
     vadya.includes = with den.aspects; [
-      miscellaneous.home
+      misc.home
 
       editors.helix.languages
       editors.helix.themes

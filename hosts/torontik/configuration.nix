@@ -36,7 +36,6 @@
       programs.gui.ayugram
       programs.gui.zen
 
-      misc.home
       misc.nur
 
       misc.nix.settings
@@ -80,6 +79,8 @@
   # main configuration
   den.aspects = {
     vadya.includes = with den.aspects; [
+      misc.home
+
       editors.helix.languages
       editors.helix.themes
       editors.helix.settings
