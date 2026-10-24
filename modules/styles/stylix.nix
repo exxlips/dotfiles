@@ -11,7 +11,7 @@ let
   stylixModule = inputs.stylix.nixosModules.stylix;
 in
 {
-  den.aspects.styling.stylix = {
+  den.aspects.styles.stylix = {
     # cool description
     description = ''
       great nix variant of matugen

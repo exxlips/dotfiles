@@ -2,7 +2,7 @@
   ...
 }:
 {
-  den.aspects.styling.gtk = {
+  den.aspects.styles.gtk = {
     nixos =
       {
         ...

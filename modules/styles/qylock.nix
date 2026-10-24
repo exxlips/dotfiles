@@ -1,7 +1,6 @@
 # qylock.nix..~
 
 {
-  den,
   lib,
   inputs,
   ...
@@ -12,10 +11,10 @@ let
   qylockModule = inputs.qylock.nixosModules.default;
 in
 {
-  den.aspects.styling.qylock = {
+  den.aspects.styles.qylock = {
 
     # type
-    nixos = { pkgs, ... }: {
+    nixos = { ... }: {
       imports = [ qylockModule ];
 
       services.displayManager.gdm.enable = lib.mkForce false;

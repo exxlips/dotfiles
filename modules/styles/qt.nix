@@ -2,7 +2,7 @@
   ...
 }:
 {
-  den.aspects.styling.qt = {
+  den.aspects.styles.qt = {
     homeManager =
       {
         ...
