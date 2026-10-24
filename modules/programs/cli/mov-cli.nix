@@ -33,7 +33,6 @@ in
   den.aspects.programs.cli.mov-cli = {
     nixos =
       {
-        pkgs,
         ...
       }:
 
