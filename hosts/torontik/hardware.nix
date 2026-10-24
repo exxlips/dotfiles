@@ -8,67 +8,78 @@
 # main den aspect
 {
   den.aspects.torontik.hardware =
-  {
-    host,
-    user,
-    ...
-  }:
-
-  # type 
-  {
-    nixos =
     {
-      config,
-      lib,
-      pkgs,
-      modulesPath,
+      host,
+      user,
       ...
     }:
 
+    # type
     {
-      # imports
-      imports = [
-        (modulesPath + "/installer/scan/not-detected.nix")
-      ];
+      nixos =
+        {
+          config,
+          lib,
+          pkgs,
+          modulesPath,
+          ...
+        }:
 
-      # boot sets
-      boot.initrd.availableKernelModules = [ "xhci_pci" "nvme" "usbhid" "usb_storage" "sd_mod" ];
-      boot.initrd.kernelModules = [ "i915" ];
-      boot.kernelModules = [ "kvm-intel" "thinkpad_acpi" ];
-      boot.extraModulePackages = [];
-      hardware.bluetooth.enable = true;
- 
-      # filesystems/partitions
-      fileSystems."/" = {
-        device = "/dev/disk/by-uuid/56a12ba0-1857-4ba6-8a3f-fcc2441c2c72";
-        fsType = "btrfs";
-      };
+        {
+          # imports
+          imports = [
+            (modulesPath + "/installer/scan/not-detected.nix")
+          ];
 
-      fileSystems."/home" = {
-        device = "/dev/disk/by-uuid/56a12ba0-1857-4ba6-8a3f-fcc2441c2c72";
-        fsType = "btrfs";
-        options = [ "subvol=home" ];
-      };
+          # boot sets
+          boot.initrd.availableKernelModules = [
+            "xhci_pci"
+            "nvme"
+            "usbhid"
+            "usb_storage"
+            "sd_mod"
+          ];
+          boot.initrd.kernelModules = [ "i915" ];
+          boot.kernelModules = [
+            "kvm-intel"
+            "thinkpad_acpi"
+          ];
+          boot.extraModulePackages = [ ];
 
-      fileSystems."/nix" = {
-        device = "/dev/disk/by-uuid/56a12ba0-1857-4ba6-8a3f-fcc2441c2c72";
-        fsType = "btrfs";
-        options = [ "subvol=nix" ];
-      };
+          # filesystems/partitions
+          fileSystems."/" = {
+            device = "/dev/disk/by-uuid/56a12ba0-1857-4ba6-8a3f-fcc2441c2c72";
+            fsType = "btrfs";
+          };
 
-      fileSystems."/boot" = {
-        device = "/dev/disk/by-uuid/02AD-1BA2";
-        fsType = "vfat";
-        options = [ "fmask=0077" "dmask=0077" ];
-      };
+          fileSystems."/home" = {
+            device = "/dev/disk/by-uuid/56a12ba0-1857-4ba6-8a3f-fcc2441c2c72";
+            fsType = "btrfs";
+            options = [ "subvol=home" ];
+          };
 
-      swapDevices = [
-        { device = "/dev/disk/by-uuid/cfa29b3b-6dce-4567-99a2-59ead840ffbf"; }
-      ];
+          fileSystems."/nix" = {
+            device = "/dev/disk/by-uuid/56a12ba0-1857-4ba6-8a3f-fcc2441c2c72";
+            fsType = "btrfs";
+            options = [ "subvol=nix" ];
+          };
 
-      # miscellaneous
-      nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
-      hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+          fileSystems."/boot" = {
+            device = "/dev/disk/by-uuid/02AD-1BA2";
+            fsType = "vfat";
+            options = [
+              "fmask=0077"
+              "dmask=0077"
+            ];
+          };
+
+          swapDevices = [
+            { device = "/dev/disk/by-uuid/cfa29b3b-6dce-4567-99a2-59ead840ffbf"; }
+          ];
+
+          # miscellaneous
+          nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
+          hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+        };
     };
-  };
 }
