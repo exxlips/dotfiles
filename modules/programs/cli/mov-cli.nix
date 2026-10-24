@@ -11,6 +11,20 @@
       }:
 
       let
+        # nixpkgs passes makeWrapperArgs as one string, which the wrapper hook rejects
+        mov-cli-fixed = pkgs.mov-cli.overridePythonAttrs (old: {
+          makeWrapperArgs = [
+            "--prefix"
+            "PATH"
+            ":"
+            (pkgs.lib.makeBinPath [
+              pkgs.ffmpeg
+              pkgs.fzf
+              pkgs.mpv
+            ])
+          ];
+        });
+
         mov-cli-youtube = pkgs.python3Packages.buildPythonPackage rec {
           pname = "mov-cli-youtube";
           version = "1.3.8";
@@ -20,7 +34,7 @@
             owner = "mov-cli";
             repo = "mov-cli-youtube";
             tag = version;
-            hash = pkgs.lib.fakeHash;
+            hash = "sha256-2dc6EYy+6vCOCy+FZBVKWzeV3xFAswUaX9XfYk0jz1E=";
           };
 
           build-system = with pkgs.python3Packages; [
@@ -34,13 +48,13 @@
               pytubefix
               yt-dlp
             ]
-            ++ [ pkgs.mov-cli ];
+            ++ [ mov-cli-fixed ];
 
           doCheck = false;
         };
 
         mov-cli-with-plugins = pkgs.python3.withPackages (_: [
-          pkgs.mov-cli
+          mov-cli-fixed
           mov-cli-youtube
         ]);
       in
