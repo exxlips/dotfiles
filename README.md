@@ -2,7 +2,7 @@
 
 ## Good evening, viewers! This is my personal dotfile repository and collection on GitLab, hope you will like it!!~
 
-> NOTE: Do not blindly `git clone` this repository. It contains hardware-specific settings that your device may not support. Explore the files first and remove the things you dont need from my hardware. I'm also not responsible for anything that you've done wrong. Your hands don't depend on mine.
+> NOTE: Do not blindly `git clone` this repository. It contains hardware-specific settings that your device may not support. Explore the files first and remove the things you dont need from my hardware, especially that I use nixos-hardware. I'm also not responsible for anything that you've done wrong. Your hands don't depend on mine.
 
 ## What's on here?!
 
@@ -15,13 +15,13 @@
 
 ## Hosts:
 
-- `torontik`: My beloved x1 carbon gen 8
+- `torontik`: My space heater x1 carbon gen 8
 - `boxik`: My grandpa toilet hp proone g1 400 aio **(its just old)**
 
 ### Requirements:
 
 - `git`
-- a working nixOs system
+- a working nixOS system
 
 Clone the `dotfiles`:
 
@@ -33,12 +33,12 @@ $ cd dotfiles
 ### The files n' folders:
 
 - **./modules** - The modules folder
-- **./flake.nix** - The coolest flake
-- **./flake.lock** - The lock of the flake
+- **./flake.nix** - The coolest `flake.nix`
+- **./flake.lock** - The lock of the `flake.nix`
 - **./README.md** - ... This file you're reading right now.
-- **./.sops.yaml** - The sops-nix file
-- **./hosts** - The hosts folder
-- **./secrets** - The sops-nix folder (secrets)
+- **./.sops.yaml** - The `sops-nix` file
+- **./hosts** - The computer folder
+- **./secrets** - The `sops-nix` folder **(secrets)**
 - **./wallpapers** - The cool wallpaper folder
 
 ### Aliases:
