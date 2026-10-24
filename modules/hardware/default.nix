@@ -1,11 +1,11 @@
 {
+  inputs,
   ...
 }:
 {
   den.aspects.hardware = {
     nixos =
       {
-        inputs,
         ...
       }:
 
