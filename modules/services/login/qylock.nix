@@ -11,7 +11,7 @@ let
   qylockModule = inputs.qylock.nixosModules.default;
 in
 {
-  den.aspects.styles.qylock = {
+  den.aspects.services.login.qylock = {
 
     # type
     nixos = { ... }: {
