@@ -156,7 +156,7 @@
       imports = [
         inputs.flake-file.flakeModules.default
         (inputs.import-tree [
-          ./hosts
+          ./configurations
           ./modules
         ])
       ];
