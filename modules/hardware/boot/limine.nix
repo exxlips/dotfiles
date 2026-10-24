@@ -29,7 +29,7 @@
               maxGenerations = 15;
 
               style = {
-                wallpapers = [ ../../wallpapers/0f6oxa9y9jlb1.png ];
+                wallpapers = [ ../../../wallpapers/0f6oxa9y9jlb1.png ];
               };
               extraConfig = ''
                 default_entry: 1
