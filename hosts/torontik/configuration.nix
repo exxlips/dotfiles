@@ -59,7 +59,6 @@
       hardware.virtualization.main
       hardware.virtualization.podman
 
-      hardware.battery
       hardware.bluetooth
       hardware.packages
       hardware.hostname

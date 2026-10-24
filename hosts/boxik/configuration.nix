@@ -50,7 +50,6 @@
       services.login.qylock
       services.login.sddm
 
-      hardware.battery
       hardware.packages
       hardware.hostname
 
