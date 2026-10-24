@@ -15,28 +15,34 @@
           pname = "mov-cli-youtube";
           version = "1.3.8";
           pyproject = true;
-          build-system = with pkgs.python3Packages; [ setuptools ];
 
           src = pkgs.fetchFromGitHub {
             owner = "mov-cli";
             repo = "mov-cli-youtube";
-            rev = "v${version}";
+            tag = version;
             hash = pkgs.lib.fakeHash;
           };
 
-          dependencies = with pkgs.python3Packages; [
-            pytubefix
-            yt-dlp
+          build-system = with pkgs.python3Packages; [
+            setuptools
+            setuptools-scm
           ];
+
+          dependencies =
+            with pkgs.python3Packages;
+            [
+              pytubefix
+              yt-dlp
+            ]
+            ++ [ pkgs.mov-cli ];
 
           doCheck = false;
         };
 
-        mov-cli-with-plugins = pkgs.mov-cli.override {
-          pythonPackages = pkgs.python3Packages // {
-            inherit mov-cli-youtube;
-          };
-        };
+        mov-cli-with-plugins = pkgs.python3.withPackages (_: [
+          pkgs.mov-cli
+          mov-cli-youtube
+        ]);
       in
       {
         environment.systemPackages = [ mov-cli-with-plugins ];
