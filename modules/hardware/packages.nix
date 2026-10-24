@@ -44,6 +44,8 @@
           discord
           mpv
           vlc
+          adb
+          fastboot
 
           # formatters
           nixfmt

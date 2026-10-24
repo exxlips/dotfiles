@@ -56,6 +56,8 @@
         # ESSENTIAL
         environment.variables = {
           NIXOS_OZONE_WL = "1";
+          XCURSOR_THEME = "Bibata-Modern-Ice";
+          XCURSOR_SIZE = 24;
           ELECTRON_OZONE_PLATFORM_HINT = "wayland";
           QT_QPA_PLATFORM = lib.mkForce "wayland";
           QS_ICON_THEME = "Papirus";
@@ -125,7 +127,7 @@
 
           cursor = {
             xcursor-theme = "Bibata-Modern-Ice";
-            xcursor-size = 28;
+            xcursor-size = 24;
           };
 
           xwayland-satellite.path = lib.getExe pkgs.xwayland-satellite;
