@@ -12,7 +12,6 @@
         virtualisation = {
           podman = {
             enable = true;
-            spiceUSBRedirection.enable = true;
 
             extraPackages = with pkgs; [
               podman-tui
