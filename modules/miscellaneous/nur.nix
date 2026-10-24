@@ -1,4 +1,5 @@
 {
+  inputs,
   ...
 }:
 
@@ -6,7 +7,6 @@
   den.aspects.miscellaneous.nur = {
     nixos =
       {
-        inputs,
         ...
       }:
       {
@@ -17,7 +17,6 @@
 
     homeManager =
       {
-        inputs,
         ...
       }:
 
