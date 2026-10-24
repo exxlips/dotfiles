@@ -2,7 +2,7 @@
 
 ## Good evening, viewers! This is my personal dotfile repository and collection on GitLab, hope you will like it!!~
 
-> NOTE: Do not blindly `git clone` this repository. It contains hardware-specific settings that your device may not support. Explore the files first and remove the things you dont need from my hardware, especially that I use nixos-hardware. I'm also not responsible for anything that you've done wrong. Your hands don't depend on mine.
+> NOTE: This repository is considered "BETA". Until this mark would be deleted, it would update nearly every hour and day. I won't forget.
 
 ## What's on here?!
 

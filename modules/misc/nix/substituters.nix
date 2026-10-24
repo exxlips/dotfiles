@@ -3,7 +3,7 @@
 }:
 
 {
-  den.aspects.miscellaneous.nix.substituters = {
+  den.aspects.misc.nix.substituters = {
     nixos =
       {
         ...

@@ -1,13 +1,12 @@
 # home.nix..~
 
 {
-  den,
   ...
 }:
 
 # main aspect
 {
-  den.aspects.miscellaneous.home = {
+  den.aspects.misc.home = {
 
     # type
     homeManager =

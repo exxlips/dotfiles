@@ -25,12 +25,12 @@
 
       files.sops
 
-      miscellaneous.nur
+      misc.nur
 
-      miscellaneous.nix.settings
-      miscellaneous.nix.substituters
+      misc.nix.settings
+      misc.nix.substituters
 
-      miscellaneous.users.main
+      misc.users.main
 
       programs.cli.helper
       programs.cli.flatpak
@@ -45,14 +45,16 @@
       hardware.boot.kernel
 
       hardware.networking
-      hardware.networking.zapret
+
+      services.zapret
+      services.login.qylock
+      services.login.sddm
 
       hardware.battery
       hardware.packages
       hardware.hostname
 
       styles.stylix
-      styles.qylock
       styles.gtk
       styles.qt
 

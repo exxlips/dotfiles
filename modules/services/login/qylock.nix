@@ -21,9 +21,6 @@ in
 
       services.displayManager.defaultSession = "niri";
 
-      services.displayManager.sddm.enable = true;
-      services.displayManager.sddm.wayland.enable = true;
-
       # cool collection of sddm themes
       programs.qylock = {
         enable = true;

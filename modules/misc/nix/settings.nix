@@ -7,7 +7,7 @@
 
 # main aspect
 {
-  den.aspects.miscellaneous.nix.settings = {
+  den.aspects.misc.nix.settings = {
 
     # type
     nixos =

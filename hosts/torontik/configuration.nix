@@ -36,13 +36,13 @@
       programs.gui.ayugram
       programs.gui.zen
 
-      miscellaneous.home
-      miscellaneous.nur
+      misc.home
+      misc.nur
 
-      miscellaneous.nix.settings
-      miscellaneous.nix.substituters
+      misc.nix.settings
+      misc.nix.substituters
 
-      miscellaneous.users.main
+      misc.users.main
 
       files.sops
 
@@ -53,7 +53,8 @@
       hardware.boot.kernel
 
       hardware.networking
-      hardware.networking.zapret
+
+      hardware
 
       hardware.virtualization.main
       hardware.virtualization.podman
@@ -62,9 +63,13 @@
       hardware.bluetooth
       hardware.packages
       hardware.hostname
-      hardware
 
-      styles.qylock
+      services.login.sddm
+      services.login.qylock
+
+      services.tlp
+      services.zapret
+
       styles.stylix
       styles.qt
       styles.gtk

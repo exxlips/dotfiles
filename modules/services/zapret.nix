@@ -3,7 +3,7 @@
 }:
 
 {
-  den.aspects.hardware.networking.zapret = {
+  den.aspects.services.zapret = {
     nixos =
       {
         ...

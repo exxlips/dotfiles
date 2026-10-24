@@ -7,7 +7,7 @@
 
 # main aspect
 {
-  den.aspects.miscellaneous.users.main = {
+  den.aspects.misc.users.main = {
 
     # type
     nixos =

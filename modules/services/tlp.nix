@@ -1,13 +1,12 @@
 # battery.nix..~
 
 {
-  den,
   ...
 }:
 
 # main aspect
 {
-  den.aspects.hardware.battery = {
+  den.aspects.services.tlp = {
 
     # type
     nixos =

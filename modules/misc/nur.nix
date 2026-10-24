@@ -4,7 +4,7 @@
 }:
 
 {
-  den.aspects.miscellaneous.nur = {
+  den.aspects.misc.nur = {
     nixos =
       {
         ...
