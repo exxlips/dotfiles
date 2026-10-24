@@ -13,12 +13,6 @@
         system.stateVersion = lib.mkDefault "26.11";
         system.nixos.tags = [ config.networking.hostName ];
       };
-    homeManager =
-      {
-        ...
-      }:
-      {
-        home.stateVersion = lib.mkDefault "26.11";
-      };
+    den.default.homeManager.home.stateVersion = lib.mkDefault "26.11";
   };
 }
