@@ -1,12 +1,12 @@
-# My dotfiles git repository.
+# exxlips/dotfiles
 
-## This repository contains my personal dotfiles, used for everyday use!~
+## Good evening, viewers! This is my personal dotfile repository and collection on GitLab, hope you will like it!!~
 
 > NOTE: Do not blindly `git clone` this repository. It contains hardware-specific settings that your device may not support. Explore the files first and remove the things you dont need from my hardware. I'm also not responsible for anything that you've done wrong. Your hands don't depend on mine.
 
 ## What's on here?!
 
-- **OS:**: NixOS 26.11
+- **OS:** NixOS 26.11 _(unstable)_
 - **WM:** Niri
 - **Shell:** Fish **(+ starship)**
 - **Editor:** Helix **(my beloved)**
@@ -16,12 +16,12 @@
 ## Hosts:
 
 - `torontik`: My beloved x1 carbon gen 8
-- `boxik`: My grandpa toilet hp proone g1 400 aio **(its just really old)**
+- `boxik`: My grandpa toilet hp proone g1 400 aio **(its just old)**
 
 ### Requirements:
 
-- `git` (the only mandatory one)
-- a working nix system
+- `git`
+- a working nixOs system
 
 Clone the `dotfiles`:
 
