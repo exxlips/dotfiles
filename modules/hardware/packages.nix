@@ -44,8 +44,7 @@
           discord
           mpv
           vlc
-          adb
-          fastboot
+          android-tools
 
           # formatters
           nixfmt
