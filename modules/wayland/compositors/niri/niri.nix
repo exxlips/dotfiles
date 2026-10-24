@@ -92,7 +92,6 @@
       pkgs,
       lib,
       self',
-      config,
       ...
     }:
 
