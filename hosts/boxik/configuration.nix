@@ -34,6 +34,7 @@
 
       programs.cli.helper
       programs.cli.flatpak
+      programs.cli.mov-cli
 
       programs.gui.ayugram
 
