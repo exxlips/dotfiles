@@ -30,8 +30,8 @@
                  }
               '';
             };
-            networkmanager.enable = true;
           };
+          networkmanager.enable = true;
         };
       };
   };
