@@ -30,6 +30,13 @@
       repo = "flake-file";
     };
 
+    tinted-schemes = {
+      type = "github";
+      owner = "tinted-theming";
+      repo = "schemes";
+      flake = false;
+    };
+
     import-tree = {
       type = "github";
       owner = "vic";

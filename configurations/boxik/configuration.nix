@@ -26,6 +26,7 @@
       files.sops
 
       misc.nur
+      misc.version
 
       misc.nix.settings
       misc.nix.substituters
