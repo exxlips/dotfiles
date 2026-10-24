@@ -11,7 +11,7 @@
     den.batteries.inputs'
   ];
 
-  den.hosts.x86_64-linux.boxik = {
+  den.hosts.boxik = {
     users.vadya = {
       userName = "vadya";
       classes = [ "homeManager" ];
@@ -82,7 +82,6 @@
     boxik.configuration = {
       nixos =
         {
-          pkgs,
           lib,
           ...
         }:
