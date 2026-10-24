@@ -1,13 +1,12 @@
-# network(ing).nix..~
+# default.nix..~
 
 {
-  den,
   ...
 }:
 
 # main aspect
 {
-  den.aspects.hardware.networking.network = {
+  den.aspects.hardware.networking = {
 
     # type
     nixos =
@@ -32,6 +31,15 @@
             };
           };
           networkmanager.enable = true;
+          nameservers = [
+            "1.1.1.1#one.one.one.one"
+            "9.9.9.9#dns.quad9.net"
+          ];
+        };
+        services.resolved = {
+          enable = true;
+          domains = [ "~." ];
+          dnsovertls = "true";
         };
       };
   };
