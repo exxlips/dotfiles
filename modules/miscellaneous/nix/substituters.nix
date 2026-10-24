@@ -15,7 +15,6 @@
             "https://mirror.yandex.ru/nixos"
             "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
             "https://nix-community.cachix.org"
-            "cache.nixos.org"
           ];
 
           trusted-public-keys = [
