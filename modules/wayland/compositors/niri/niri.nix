@@ -116,17 +116,17 @@
         # vimjoyer forgot this shit in the vid lol
         inherit pkgs;
 
-        environment-variables = {
-          XCURSOR_THEME = "Bibata";
-          XCURSOR_SIZE = "28";
-        };
-
         settings = {
           prefer-no-csd = { };
 
           spawn-at-startup = [
             (lib.getExe self'.packages.noctalia)
           ];
+
+          cursor = {
+            xcursor-theme = "Bibata";
+            xcursor-size = 28;
+          };
 
           xwayland-satellite.path = lib.getExe pkgs.xwayland-satellite;
 
