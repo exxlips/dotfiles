@@ -5,13 +5,13 @@
   den.aspects.hardware = {
     nixos =
       {
-        nixos-hardware,
+        inputs,
         ...
       }:
 
       {
         imports = [
-          nixos-hardware.nixosModules.lenovo-thinkpad-x1-8th-gen
+          inputs.nixos-hardware.nixosModules.lenovo-thinkpad-x1-8th-gen
         ];
       };
   };
