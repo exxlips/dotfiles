@@ -21,8 +21,9 @@
               "share"
               "icons"
               "hicolor"
-              "48x48"
+              "64x64"
               "apps"
+              "nix-snowflake-white.png"
             ];
           };
         };

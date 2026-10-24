@@ -1,7 +1,6 @@
 # packages.nix..~
 
 {
-  den,
   ...
 }:
 
@@ -30,6 +29,7 @@
           gst_all_1.gst-plugins-ugly
           fzf
 
+          # someshit
           ripgrep
           fish
           eza
@@ -42,6 +42,8 @@
           bat
           waydroid
           discord
+          mpv
+          vlc
 
           # formatters
           nixfmt
