@@ -1,5 +1,4 @@
 {
-  den,
   ...
 }:
 
@@ -13,6 +12,7 @@
         services = {
           zapret = {
             enable = true;
+            configureFirewall = false;
 
             params = [
               "--dpi-desync=fake,disorder2"
