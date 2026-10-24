@@ -54,7 +54,7 @@
       hardware.boot.plymouth
       hardware.boot.kernel
 
-      hardware.networking.network
+      hardware.networking
       hardware.networking.zapret
 
       hardware.virtualization.main
