@@ -1,9 +1,6 @@
 # configuration.nix..~
 
 {
-  self,
-  inputs,
-  config,
   den,
   ...
 }:
@@ -67,8 +64,10 @@
       hardware.hostname
       hardware
 
-      styling.qylock
-      styling.stylix
+      styles.qylock
+      styles.stylix
+      styles.qt
+      styles.gtk
 
       compositors.niri
     ];

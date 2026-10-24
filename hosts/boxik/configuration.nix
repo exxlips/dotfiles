@@ -51,8 +51,10 @@
       hardware.packages
       hardware.hostname
 
-      styling.stylix
-      styling.qylock
+      styles.stylix
+      styles.qylock
+      styles.gtk
+      styles.qt
 
       compositors.niri
     ];
