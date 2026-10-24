@@ -4,7 +4,6 @@
   inputs,
   ...
 }:
-
 # main aspect
 {
   den.aspects.compositors.niri = {
@@ -16,7 +15,6 @@
         self',
         ...
       }:
-
       {
 
         # settings for niri, below (perSystem) is the main configuration (like config.kdl)
@@ -24,7 +22,7 @@
           inputs.hjem.nixosModules.default
         ];
 
-        # CRITICAL
+        # niri duh
         programs.niri = {
           enable = true;
           package = self'.packages.niri;
@@ -53,7 +51,7 @@
           ];
         };
 
-        # ESSENTIAL
+        # environment variables
         environment.variables = {
           NIXOS_OZONE_WL = "1";
           XCURSOR_THEME = "Bibata-Modern-Ice";
@@ -78,26 +76,13 @@
           nemo
 
           gsettings-desktop-schemas
+          qogir-theme
           bibata-cursors
           papirus-icon-theme
 
           self'.packages.noctalia
         ];
 
-        # gtk tweaks
-        hjem.users.vadya.files.".config/gtk-4.0/settings.ini".text = ''
-          [Settings]
-          gtk-theme-name=Yaru-remix-dark
-          gtk-icon-theme-name=Yaru-remix
-          gtk-application-prefer-dark-theme=1
-        '';
-
-        hjem.users.vadya.files.".config/gtk-3.0/settings.ini".text = ''
-          [Settings]
-          gtk-theme-name=Yaru-remix-dark
-          gtk-icon-theme-name=Yaru-remix
-          gtk-application-prefer-dark-theme=1
-        '';
       };
   };
 
