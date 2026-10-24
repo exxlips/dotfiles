@@ -124,7 +124,7 @@
           ];
 
           cursor = {
-            xcursor-theme = "Bibata";
+            xcursor-theme = "Bibata-Modern-Ice";
             xcursor-size = 28;
           };
 
