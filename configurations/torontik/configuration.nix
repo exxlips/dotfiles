@@ -74,7 +74,6 @@
       services.tlp
       services.zapret
 
-      styles.stylix
       styles.qt
       styles.gtk
 
