@@ -27,6 +27,9 @@
 
       misc.nur
       misc.version
+      misc.chaotic
+      misc.finix
+      misc.locales
 
       misc.nix.settings
       misc.nix.substituters

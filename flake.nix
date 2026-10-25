@@ -24,6 +24,13 @@
       repo = "files";
     };
 
+    chaotic-nyx = {
+      type = "github";
+      owner = "chaotic-cx";
+      repo = "nyx";
+      ref = "nixpkgs-unstable";
+    };
+
     flake-file = {
       type = "github";
       owner = "vic";
@@ -147,6 +154,18 @@
       type = "github";
       owner = "FreesmTeam";
       repo = "FreesmLauncher";
+    };
+
+    finix = {
+      type = "github";
+      owner = "finix-community";
+      repo = "finix";
+    };
+
+    finix-community = {
+      type = "github";
+      owner = "finix-community";
+      repo = "community-modules";
     };
   };
 
