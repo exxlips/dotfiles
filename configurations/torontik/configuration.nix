@@ -127,8 +127,9 @@
             tunMode.enable = true;
           };
 
-          # nixpkgs setting to prevent errors
+          # prevent errors
           nixpkgs.hostPlatform = lib.mkForce "x86_64-linux";
+          hardware.enableRedistributableFirmware = lib.mkForce true;
         };
     };
   };
