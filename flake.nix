@@ -88,7 +88,7 @@
       };
     };
 
-    tinted-schemes = {
+    tinted-theming = {
       type = "github";
       owner = "tinted-theming";
       repo = "schemes";
