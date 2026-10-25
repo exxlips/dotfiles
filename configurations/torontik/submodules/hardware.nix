@@ -10,8 +10,7 @@
       }:
       {
         imports = [
-          inputs.nixpkgs.nixosModules.notDetected
-          inputs.nixos-hardware.nixosModules.lenovo-thinkpad-x1-carbon-gen-7th
+          inputs.nixos-hardware.nixosModules.lenovo-thinkpad-x1-7th-gen
         ];
 
         boot = {
