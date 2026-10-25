@@ -13,7 +13,7 @@
           description = "Network";
           runlevel = "2345";
           conditions = "service/syslogd/ready";
-          command = "${pkgs.networkanager}/bin/NetworkManager -n";
+          command = "${pkgs.networkmanager}/bin/NetworkManager -n";
         };
       };
   };
