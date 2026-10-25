@@ -1,7 +1,6 @@
 # sops.nix..~
 
 {
-  den,
   inputs,
   ...
 }:
@@ -33,7 +32,7 @@
           secrets = {
             roblox = { };
 
-            gitlab_pat = { };
+            github_pat = { };
           };
         };
       };
