@@ -28,7 +28,7 @@
       type = "github";
       owner = "chaotic-cx";
       repo = "nyx";
-      ref = "nixpkgs-unstable";
+      ref = "nyxpkgs-unstable";
     };
 
     flake-file = {
