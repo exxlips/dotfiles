@@ -1,11 +1,11 @@
 {
+  inputs,
   ...
 }:
 {
   den.aspects.torontik = {
     nixos =
       {
-        inputs,
         ...
       }:
       {
