@@ -18,7 +18,6 @@
         ];
 
         disko = {
-          enableConfig = false;
           devices.disk.main = {
             type = "disk";
             device = "/dev/disk/by-id/ata-Samsung_SSD_870_EVO_250GB_S6PENX0T335658N";
