@@ -95,6 +95,15 @@
       };
     };
 
+    tinted-theming = {
+      type = "github";
+      owner = "tinted-theming";
+      repo = "schemes";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+      };
+    };
+
     nur = {
       type = "github";
       owner = "nix-community";
