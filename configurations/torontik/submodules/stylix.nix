@@ -1,5 +1,4 @@
 {
-  pkgs,
   lib,
   inputs,
   ...
@@ -9,6 +8,7 @@
   den.aspects.torontik = {
     nixos =
       {
+        pkgs,
         ...
       }:
 
