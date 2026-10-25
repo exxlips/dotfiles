@@ -15,7 +15,6 @@
 
         boot = {
           tmp.cleanOnBoot = true;
-          consoleLogLevel = 0;
 
           kernelModules = [
             "ntsync"
