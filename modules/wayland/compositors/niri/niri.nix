@@ -126,12 +126,12 @@
           };
 
           window-rule = {
-            geometry-corner-radius = 25;
+            geometry-corner-radius = 12;
             clip-to-geometry = true;
           };
 
           layout = {
-            gaps = 10;
+            gaps = 8;
             border = {
               off = { };
               width = 4;
