@@ -1,14 +1,19 @@
 {
+  inputs,
   ...
 }:
 
 {
   den.aspects.torontik = {
-    disko =
+    nixos =
       {
         ...
       }:
       {
+        imports = [
+          inputs.disko.nixosModules.disko
+        ];
+
         disko.devices.disk.main = {
           type = "disk";
           device = "/dev/disk/by-id/nvme-WD_PC_SN740_SDDPMQD-512G-1101_2338EX402191";
