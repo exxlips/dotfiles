@@ -18,7 +18,7 @@
           enable = true;
 
           # hamas' theme
-          base16Scheme = lib.mkForce "${inputs.tinted-theming}/base16/classic-dark.yaml";
+          base16Scheme = lib.mkForce "${inputs.tinted-theming.flakeModules}/base16/classic-dark.yaml";
 
           icons = {
             enable = true;
