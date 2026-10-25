@@ -2,7 +2,7 @@
   ...
 }:
 {
-  den.aspects.hosts.torontik = {
+  den.aspects.torontik = {
     nixos =
       {
         inputs,
