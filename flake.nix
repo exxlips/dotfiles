@@ -160,12 +160,18 @@
       type = "github";
       owner = "finix-community";
       repo = "finix";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+      };
     };
 
     finix-community = {
       type = "github";
       owner = "finix-community";
       repo = "community-modules";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+      };
     };
   };
 
