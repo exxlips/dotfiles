@@ -93,9 +93,6 @@
       owner = "tinted-theming";
       repo = "schemes";
       flake = false;
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-      };
     };
 
     nur = {
