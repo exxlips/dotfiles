@@ -25,10 +25,8 @@
 
             partitions = {
               ESP = {
-                label = "esp-${host.hostName}";
-                priority = 1;
-                start = "4096s";
-                end = "2101247s";
+                label = "esp";
+
                 size = "1G";
                 type = "EF00";
 
@@ -36,6 +34,7 @@
                   type = "filesystem";
                   format = "vfat";
                   mountpoint = "/boot";
+
                   mountOptions = [
                     "fmask=0077"
                     "dmask=0077"
@@ -44,11 +43,9 @@
               };
 
               root = {
-                label = "root-${host.hostName}";
-                priority = 2;
-                start = "2101248s";
-                end = "964679871s";
-                size = "459G";
+                label = "nixos-${host.hostName}";
+
+                size = "100%";
                 type = "8300";
 
                 content = {
@@ -62,16 +59,15 @@
                   };
                 };
               };
-
               swap = {
-                label = "root-${host.hostName}";
-                priority = 3;
-                start = "964679872s";
-                end = "1000215143s";
-                size = "17G";
+                label = "swap-${host.hostName}";
+                size = "16.9G";
                 type = "8200";
 
-                content.type = "swap";
+                content = {
+                  type = "swap";
+                  resumeDevice = true;
+                };
               };
             };
           };
