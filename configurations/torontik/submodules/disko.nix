@@ -4,7 +4,7 @@
 
 {
   den.aspects.torontik = {
-    nixos =
+    disko =
       {
         ...
       }:
