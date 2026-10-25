@@ -14,10 +14,6 @@
       {
         boot = {
           kernelPackages = lib.mkDefault pkgs.linuxPackages_zen;
-
-          consoleLogLevel = 0;
-
-          initrd.verbose.enable = false;
         };
       };
   };
