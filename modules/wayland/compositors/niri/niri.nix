@@ -131,7 +131,7 @@
           };
 
           layout = {
-            gaps = 8;
+            gaps = 16;
             border = {
               off = { };
               width = 4;
