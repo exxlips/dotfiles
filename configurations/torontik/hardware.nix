@@ -1,7 +1,5 @@
 # hardware-configuration.nix..~
 {
-  config,
-  den,
   ...
 }:
 
@@ -9,8 +7,6 @@
 {
   den.aspects.torontik.hardware =
     {
-      host,
-      user,
       ...
     }:
 
@@ -20,7 +16,6 @@
         {
           config,
           lib,
-          pkgs,
           modulesPath,
           ...
         }:
@@ -45,37 +40,6 @@
             "thinkpad_acpi"
           ];
           boot.extraModulePackages = [ ];
-
-          # filesystems/partitions
-          fileSystems."/" = {
-            device = "/dev/disk/by-uuid/56a12ba0-1857-4ba6-8a3f-fcc2441c2c72";
-            fsType = "btrfs";
-          };
-
-          fileSystems."/home" = {
-            device = "/dev/disk/by-uuid/56a12ba0-1857-4ba6-8a3f-fcc2441c2c72";
-            fsType = "btrfs";
-            options = [ "subvol=home" ];
-          };
-
-          fileSystems."/nix" = {
-            device = "/dev/disk/by-uuid/56a12ba0-1857-4ba6-8a3f-fcc2441c2c72";
-            fsType = "btrfs";
-            options = [ "subvol=nix" ];
-          };
-
-          fileSystems."/boot" = {
-            device = "/dev/disk/by-uuid/02AD-1BA2";
-            fsType = "vfat";
-            options = [
-              "fmask=0077"
-              "dmask=0077"
-            ];
-          };
-
-          swapDevices = [
-            { device = "/dev/disk/by-uuid/cfa29b3b-6dce-4567-99a2-59ead840ffbf"; }
-          ];
 
           # miscellaneous
           nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";

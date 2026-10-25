@@ -43,6 +43,15 @@
       repo = "import-tree";
     };
 
+    disko = {
+      type = "github";
+      owner = "nix-community";
+      repo = "disko";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+      };
+    };
+
     den = {
       type = "github";
       owner = "denful";
@@ -160,18 +169,12 @@
       type = "github";
       owner = "finix-community";
       repo = "finix";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-      };
     };
 
     finix-community = {
       type = "github";
       owner = "finix-community";
       repo = "community-modules";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-      };
     };
   };
 
