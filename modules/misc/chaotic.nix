@@ -1,4 +1,5 @@
 {
+  inputs,
   ...
 }:
 {
@@ -10,7 +11,6 @@
 
     nixos =
       {
-        inputs,
         ...
       }:
       {
@@ -21,7 +21,6 @@
 
     homeManager =
       {
-        inputs,
         ...
       }:
       {
