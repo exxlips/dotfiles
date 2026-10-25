@@ -21,26 +21,39 @@
           }:
           inputs.finix.lib.finixSystem {
             inherit modules;
-
             lib = inputs.nixpkgs.lib;
             specialArgs = { inherit inputs; };
           };
 
         intoAttr = [
-          "finixConfigurations"
+          "nixosConfigurations"
           config.name
         ];
       }
     )
   ];
 
+  den.policies.nixos-to-finix =
+    {
+      host,
+      ...
+    }:
+    lib.optional ((host.class or null) == "finix") (
+      den.lib.policy.route {
+        fromClass = "nixos";
+        intoClass = "finix";
+        path = [ ];
+      }
+    );
+
   den.default.includes = [
+    den.policies.nixos-to-finix
+
     (
       {
         host,
         ...
       }:
-
       {
         name = "finix/nixpkgs-shim";
       }
