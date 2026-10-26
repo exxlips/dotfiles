@@ -141,19 +141,12 @@
             };
           };
 
-          layer-rules = [
-            {
-              match = {
-                namespace = "^noctalia-osd$";
-              };
-
-              geometry-corner-radius = 0;
-
-              shadow = {
-                enable = false;
-              };
+          extraConfig = ''
+            layer-rule {
+                match namespace="^noctalia-osd$"
+                geometry-corner-radius 0
             }
-          ];
+          '';
 
           # binds
           binds = {
