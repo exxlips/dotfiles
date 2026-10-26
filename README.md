@@ -26,7 +26,7 @@
 Clone the `dotfiles`:
 
 ```
-$ git clone https://gitlab.com/groups4042743/dotfiles.git
+$ git clone https://github.com/exxlips/dotfiles.git
 $ cd dotfiles
 ```
 
