@@ -19,17 +19,14 @@
 
             right_format = "$battery";
 
-            format =
-              [
-                "$username"
-                "$directory"
-                "$git_branch"
-                "$cmd_duration"
-                "$line_break"
-                "$character"
-              ]
-              |> lib.concatStrings;
-
+            format = [
+              "$username"
+              "$directory"
+              "$git_branch"
+              "$cmd_duration"
+              "$line_break"
+              "$character"
+            ];
             username = {
               format = "[$user]($style) in ";
               style_root = "bold red";
