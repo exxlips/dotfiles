@@ -145,12 +145,7 @@
             {
               match-namespace = "^noctalia-osd$";
 
-              geometry-corner-radius = {
-                top-left = 0;
-                top-right = 0;
-                bottom-left = 0;
-                bottom-right = 0;
-              };
+              geometry-corner-radius = 0;
 
               shadow.enable = false;
             }
