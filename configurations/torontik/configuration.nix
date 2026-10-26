@@ -53,6 +53,7 @@
       hardware.boot.limine
       hardware.boot.plymouth
       hardware.boot.kernel
+      hardware.boot.udev
 
       hardware.networking
 
