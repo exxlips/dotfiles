@@ -141,6 +141,21 @@
             };
           };
 
+          layer-rules = [
+            {
+              match-namespace = "^noctalia-osd$";
+
+              geometry-corner-radius = {
+                top-left = 0;
+                top-right = 0;
+                bottom-left = 0;
+                bottom-right = 0;
+              };
+
+              shadow.enable = false;
+            }
+          ];
+
           # binds
           binds = {
             "Mod+T".spawn-sh = lib.getExe pkgs.kitty;
