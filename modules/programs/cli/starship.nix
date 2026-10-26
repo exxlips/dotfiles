@@ -6,18 +6,20 @@
   den.aspects.programs.cli.starship = {
     homeManager =
       {
-        lib,
+        config,
         ...
       }:
+      let
+        colors = config.lib.stylix.colors.withHashtags;
+      in
       {
         programs.starship = {
           enable = true;
+          enableFishIntegration = true;
           enableTransience = true;
 
           settings = {
             add_newline = true;
-
-            right_format = "$battery";
 
             format = [
               "$username"
@@ -29,7 +31,7 @@
             ];
             username = {
               format = "[$user]($style) in ";
-              style_root = "bold red";
+              style_root = colors.base0E;
               style_user = "bold purple";
 
               show_always = true;
@@ -73,23 +75,6 @@
               format = "$symbol ";
               success_symbol = "[❯](bold green)";
               error_symbol = "[✗](bold red)";
-            };
-
-            battery = {
-              format = "[$symbol $percentage]($style)";
-
-              full_symbol = "󰁹";
-              unknown_symbol = "󰁽";
-              empty_symbol = "󰂎";
-              charging_symbol = "󰂄";
-              discharging_symbol = "󰂃";
-
-              display = [
-                {
-                  threshold = 25;
-                  style = "bold red";
-                }
-              ];
             };
           };
         };
