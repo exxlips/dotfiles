@@ -143,11 +143,15 @@
 
           layer-rules = [
             {
-              match-namespace = "^noctalia-osd$";
+              match = {
+                namespace = "^noctalia-osd$";
+              };
 
               geometry-corner-radius = 0;
 
-              shadow.enable = false;
+              shadow = {
+                enable = false;
+              };
             }
           ];
 
