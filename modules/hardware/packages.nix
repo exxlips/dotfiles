@@ -39,6 +39,7 @@
           luau-lsp
           vim
           fastfetch
+          macchina
           rojo
           bat
           waydroid
