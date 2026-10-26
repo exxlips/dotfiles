@@ -33,6 +33,7 @@
                 "video"
                 "networkmanager"
                 "libvirtd"
+                "plugdev"
                 "gamemode"
                 "input"
               ];
