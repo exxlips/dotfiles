@@ -18,7 +18,7 @@
             enable = true;
             package = pkgs.wezterm;
 
-            options = {
+            settings = {
               font = {
                 font = "CaskaydiaCove Nerd Font";
                 size = 11;
