@@ -127,6 +127,12 @@
 
           window-rule = {
             geometry-corner-radius = 16;
+
+            match = {
+              app-id = "^(?!noctalia).*$";
+            };
+
+            clip-to-geometry = true;
           };
 
           layout = {
@@ -145,10 +151,6 @@
                 match namespace="^noctalia-osd$"
                 geometry-corner-radius 0
 
-                background-effect {
-                    xray false
-                    blur false
-                }
             }
           '';
 
