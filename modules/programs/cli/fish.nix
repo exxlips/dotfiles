@@ -35,6 +35,8 @@
 
       {
         programs.fish = {
+          enable = true;
+
           interactiveShellInit = ''
             pfetch
           '';
