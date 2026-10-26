@@ -144,7 +144,6 @@
             layer-rule {
                 match namespace="^noctalia-osd$"
                 geometry-corner-radius 0
-                clip-to-geometry false
 
                 background-effect {
                     xray false
