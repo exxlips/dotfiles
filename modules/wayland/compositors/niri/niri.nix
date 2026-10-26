@@ -127,7 +127,6 @@
 
           window-rule = {
             geometry-corner-radius = 16;
-            clip-to-geometry = true;
           };
 
           layout = {
@@ -149,6 +148,7 @@
 
                 background-effect {
                     xray false
+                    blur false
                 }
             }
           '';
