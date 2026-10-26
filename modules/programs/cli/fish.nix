@@ -38,7 +38,7 @@
           enable = true;
 
           interactiveShellInit = ''
-            pfetch
+            fastfetch
           '';
 
           shellInitLast = ''
