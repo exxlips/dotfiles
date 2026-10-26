@@ -1,15 +1,10 @@
-# limine.nix..~
-
 {
-  den,
   ...
 }:
 
-# main aspect
 {
   den.aspects.hardware.boot.limine = {
 
-    # type
     nixos =
       {
         pkgs,
@@ -18,10 +13,8 @@
 
       {
 
-        # stop stylix targeting limine
         stylix.targets.limine.enable = false;
 
-        # boot config
         boot = {
           loader = {
             limine = {
@@ -29,7 +22,7 @@
               maxGenerations = 15;
 
               style = {
-                wallpapers = [ ../../../wallpapers/0f6oxa9y9jlb1.png ];
+                wallpapers = [ ../../../wallpapers/anime-nix-for-limine.png ];
               };
               extraConfig = ''
                 default_entry: 1
@@ -50,5 +43,3 @@
       };
   };
 }
-
-# end

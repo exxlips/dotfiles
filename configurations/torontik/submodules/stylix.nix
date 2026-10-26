@@ -16,25 +16,25 @@
           polarity = "dark";
           enable = true;
 
-          # hamas' theme
+          # my own theme
           base16Scheme = lib.mkForce {
-            name = "Paradise";
-            author = "https://github.com/manas140";
+            name = "Mossier";
+            author = "https://github.com/exxlips";
             base00 = "#151515";
             base01 = "#1f1f1f";
             base02 = "#2e2e2e";
             base03 = "#424242";
-            base04 = "#bbb6b6";
+            base04 = "#bab7b6";
             base05 = "#e8e3e3";
-            base06 = "#e8e3e3";
-            base07 = "#e8e3e3";
-            base08 = "#b66467";
-            base09 = "#d9bc8c";
-            base0A = "#d9bc8c";
-            base0B = "#8c977d";
-            base0C = "#8aa6a2";
-            base0D = "#8da3b9";
-            base0E = "#a988b0";
+            base06 = "#cfcaca";
+            base07 = "#bfbbbb";
+            base08 = "#855f5f";
+            base09 = "#8c8a6c";
+            base0A = "#7e9973";
+            base0B = "#738b8c";
+            base0C = "#8892a6";
+            base0D = "#8f7f99";
+            base0E = "#8f818d";
             base0F = "#bbb6b6";
           };
 
