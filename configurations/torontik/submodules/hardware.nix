@@ -27,6 +27,8 @@
             "mem_sleep_default=deep"
             "quiet"
           ];
+
+          blacklistedKernelModules = [ "qcaux" ];
         };
       };
   };
