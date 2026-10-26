@@ -10,12 +10,11 @@
         ...
       }:
       let
-        colors = config.lib.stylix.colors.withHashtags;
+        colors = config.lib.stylix.colors.withHashtag;
       in
       {
         programs.starship = {
           enable = true;
-          enableFishIntegration = true;
           enableTransience = true;
 
           settings = {
@@ -31,18 +30,18 @@
             ];
             username = {
               format = "[$user]($style) in ";
-              style_root = colors.base0E;
-              style_user = "bold purple";
+              style_root = colors.base08;
+              style_user = colors.base0E;
 
               show_always = true;
             };
 
             directory = {
               format = "[$path]($style) [$read_only]($read_only_style)";
-              style = "bold fg:blue";
+              style = colors.base0C;
 
               read_only = "[ ] ";
-              read_only_style = "bold red";
+              read_only_style = colors.base08;
               home_symbol = "home";
 
               truncation_length = 1;
@@ -51,7 +50,7 @@
 
             git_branch = {
               format = "on [$symbol$branch]($style) ";
-              style = "bold italic fg:green";
+              style = colors.base0B;
 
               symbol = " ";
 
@@ -61,8 +60,8 @@
 
             git_metrics = {
               format = "[+$added]($added_style)/[-$deleted]($deleted_style) ";
-              added_style = "bold fg:green";
-              deleted_style = "bold fg:red";
+              added_style = colors.base0B;
+              deleted_style = colors.base08;
             };
 
             cmd_duration = {

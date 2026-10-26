@@ -16,25 +16,24 @@
           polarity = "dark";
           enable = true;
 
-          # my own theme
           base16Scheme = lib.mkForce {
-            name = "Mossier";
-            author = "https://github.com/exxlips";
+            name = "Paradise";
+            author = "https://github.com/manas140";
             base00 = "#151515";
             base01 = "#1f1f1f";
             base02 = "#2e2e2e";
             base03 = "#424242";
             base04 = "#bbb6b6";
             base05 = "#e8e3e3";
-            base06 = "#ccc8c8";
-            base07 = "#bab6b6";
-            base08 = "#b37f81";
-            base09 = "#b5a996";
-            base0A = "#b8a78c";
-            base0B = "#929e82";
-            base0C = "#8da8a4";
-            base0D = "#a7b9c9";
-            base0E = "#ac97b0";
+            base06 = "#e8e3e3";
+            base07 = "#e8e3e3";
+            base08 = "#b66467";
+            base09 = "#d9bc8c";
+            base0A = "#d9bc8c";
+            base0B = "#8c977d";
+            base0C = "#8aa6a2";
+            base0D = "#8da3b9";
+            base0E = "#a988b0";
             base0F = "#bbb6b6";
           };
 
