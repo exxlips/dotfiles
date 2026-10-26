@@ -16,8 +16,6 @@
 
   # homes
   den.hosts.x86_64-linux.torontik = {
-    class = "finix";
-
     users.vadya = {
       userName = "vadya";
       classes = [ "homeManager" ];
@@ -41,7 +39,6 @@
       misc.nur
       misc.version
       misc.chaotic
-      misc.finix
       misc.locales
 
       misc.nix.settings
