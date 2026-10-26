@@ -32,7 +32,6 @@
       programs.cli.helper
       programs.cli.flatpak
       programs.cli.mov-cli
-      programs.cli.fastfetch
 
       programs.gui.ayugram
       programs.gui.zen
@@ -99,6 +98,8 @@
       programs.gui.kitty
       programs.gui.wezterm
       programs.gui.throne
+
+      programs.cli.fastfetch
     ];
 
     torontik.configuration = {

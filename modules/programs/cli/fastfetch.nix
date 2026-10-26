@@ -3,7 +3,7 @@
 }:
 {
   den.aspects.programs.cli.fastfetch = {
-    nixos =
+    homeManager =
       {
         ...
       }:
