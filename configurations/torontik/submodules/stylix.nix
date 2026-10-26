@@ -24,17 +24,17 @@
             base01 = "#1f1f1f";
             base02 = "#2e2e2e";
             base03 = "#424242";
-            base04 = "#bab7b6";
+            base04 = "#bbb6b6";
             base05 = "#e8e3e3";
-            base06 = "#cfcaca";
-            base07 = "#bfbbbb";
-            base08 = "#855f5f";
-            base09 = "#8c8a6c";
-            base0A = "#7e9973";
-            base0B = "#738b8c";
-            base0C = "#8892a6";
-            base0D = "#8f7f99";
-            base0E = "#8f818d";
+            base06 = "#ccc8c8";
+            base07 = "#bab6b6";
+            base08 = "#b37f81";
+            base09 = "#b5a996";
+            base0A = "#b8a78c";
+            base0B = "#97a683";
+            base0C = "#8da8a4";
+            base0D = "#a7b9c9";
+            base0E = "#ac97b0";
             base0F = "#bbb6b6";
           };
 
