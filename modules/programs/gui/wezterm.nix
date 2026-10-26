@@ -1,12 +1,12 @@
 {
-  pkgs,
-  config,
   ...
 }:
 {
   den.aspects.programs.gui.wezterm = {
     homeManager =
       {
+        pkgs,
+        config,
         ...
       }:
       let
