@@ -64,6 +64,7 @@
                   colors.base0D
                   colors.base0F
                 ];
+              };
             };
           };
         };
