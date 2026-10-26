@@ -20,14 +20,8 @@
           settings = {
             add_newline = true;
 
-            format = [
-              "$username"
-              "$directory"
-              "$git_branch"
-              "$cmd_duration"
-              "$line_break"
-              "$character"
-            ];
+            format = "$username$directory$git_branch$cmd_duration$line_break$character";
+
             username = {
               format = "[$user]($style) in ";
               style_root = colors.base08;
