@@ -46,6 +46,10 @@
           mpv
           vlc
           android-tools
+          python3
+          python314
+          python313
+          pipx
 
           # formatters
           nixfmt
