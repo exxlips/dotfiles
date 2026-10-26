@@ -96,6 +96,7 @@
       programs.gui.spotify
       programs.gui.vesktop
       programs.gui.kitty
+      programs.gui.wezterm
       programs.gui.throne
     ];
 
@@ -104,7 +105,6 @@
       # type
       nixos =
         {
-          pkgs,
           lib,
           ...
         }:
