@@ -73,6 +73,7 @@
 
       styles.qt
       styles.gtk
+      styles.stylix
 
       compositors.niri
     ];
