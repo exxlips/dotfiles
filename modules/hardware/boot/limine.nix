@@ -22,7 +22,7 @@
               maxGenerations = 15;
 
               style = {
-                wallpapers = [ ../../../wallpapers/anime-nix-for-limine.png ];
+                wallpapers = [ ../../../wallpapers/nix-wallpaper-nineish-dark-gray.png ];
               };
               extraConfig = ''
                 default_entry: 1
