@@ -33,26 +33,26 @@
 
             # settings for starship (for example, settings, hostname, username, directory.)
             settings = {
-              format = "[$username$directory$git_branch$git_status$line_break$character](colors.base0C)";
+              format = "[$username$directory$git_branch$git_status$line_break$character][#8da8a4]";
 
               username = {
                 show_always = true;
-                format = "$user, ";
+                format = "$user ";
               };
 
               directory = {
                 truncation_length = 3;
-                format = "$path branch ";
+                format = "$path ";
               };
 
               git_branch = {
                 symbol = " ";
-                format = "$symbol$branch";
+                format = "branch $symbol$branch";
               };
 
               character = {
-                success_symbol = "[❯](colors.base0B)";
-                error_symbol = "[❯](colors.base08)";
+                success_symbol = "[❯](#a7b09b)";
+                error_symbol = "[❯](#b37f81)";
               };
             };
           };

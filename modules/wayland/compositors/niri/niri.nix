@@ -143,7 +143,8 @@
 
           # binds
           binds = {
-            "Mod+T".spawn-sh = lib.getExe pkgs.kitty;
+            "Mod+T".spawn-sh = lib.getExe pkgs.wezterm;
+            "Mod+Shift+T".spawn-sh = lib.getExe pkgs.kitty;
             "Mod+Q".close-window = { };
 
             "Mod+Space".spawn-sh = "${self'.packages.noctalia}/bin/noctalia msg panel-toggle launcher";
