@@ -1,7 +1,6 @@
 # kitty.nix..~
 
 {
-  den,
   ...
 }:
 
@@ -71,7 +70,7 @@
 
             font = {
               name = "CaskaydiaCove Nerd Font";
-              size = 11;
+              size = 14;
             };
           };
         };
