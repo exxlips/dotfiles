@@ -126,15 +126,13 @@
           };
 
           window-rule = {
-            clip-to-geometry = true;
-
             geometry-corner-radius = 16;
           };
 
           layout = {
-            gaps = 12;
+            gaps = 16;
             border = {
-              off = { };
+              on = { };
               width = 2;
               active-color = "#9a849c";
               inactive-color = "#424242";
