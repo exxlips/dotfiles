@@ -126,7 +126,7 @@
           };
 
           window-rule = {
-            geometry-corner-radius = 16;
+            geometry-corner-radius = 2;
           };
 
           layout = {
