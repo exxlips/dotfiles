@@ -29,6 +29,21 @@
           gst_all_1.gst-plugins-ugly
           fzf
 
+          # pythonshit
+          python3Packages.capstone
+          python3Packages.colorama
+          python3Packages.fusepy
+          python3Packages.keystone-engine
+          python3Packages.pycryptodome
+          python3Packages.pycryptodomex
+          python3Packages.pyserial
+          python3Packages.pyside6
+          python3Packages.pyusb
+          python3Packages.setuptools
+          python3Packages.shiboken6
+          python3Packages.unicorn
+          python3Packages.wheel
+
           # someshit
           ripgrep
           fish
