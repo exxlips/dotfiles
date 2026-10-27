@@ -33,6 +33,8 @@
             roblox = { };
 
             github_pat = { };
+            deepseek_apiA = { };
+            deepseek_apiB = { };
           };
         };
       };
