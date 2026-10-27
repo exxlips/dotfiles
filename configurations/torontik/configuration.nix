@@ -92,6 +92,7 @@
       programs.cli.git
       programs.cli.starship
       programs.cli.fish
+      programs.cli.aider
 
       programs.gui.spotify
       programs.gui.vesktop
