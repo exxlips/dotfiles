@@ -125,6 +125,12 @@
             };
           };
 
+          output = {
+            "eDP-1" = {
+              scale = 2.0;
+            };
+          };
+
           window-rule = {
             geometry-corner-radius = 3;
           };
