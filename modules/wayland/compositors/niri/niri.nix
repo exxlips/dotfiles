@@ -125,10 +125,6 @@
             };
           };
 
-          window-rule = {
-            geometry-corner-radius = 3;
-          };
-
           layout = {
             gaps = 16;
             border = {
