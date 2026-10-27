@@ -126,7 +126,7 @@
           };
 
           window-rule = {
-            clip-to-geometry = false;
+            clip-to-geometry = true;
 
             geometry-corner-radius = 16;
           };
@@ -135,7 +135,9 @@
             gaps = 12;
             border = {
               off = { };
-              width = 4;
+              width = 2;
+              active-color = "#9a849c";
+              inactive-color = "#424242";
             };
             focus-ring = {
               off = { };
