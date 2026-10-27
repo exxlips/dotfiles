@@ -125,6 +125,12 @@
             };
           };
 
+          window-rule = {
+            clip-to-geometry = false;
+
+            geometry-corner-radius = 16;
+          };
+
           layout = {
             gaps = 12;
             border = {
@@ -137,12 +143,6 @@
           };
 
           extraConfig = ''
-            window-rule {
-                match-not app-id-regex="^dev\.noctalia\."
-                geometry-corner-radius 16
-                clip-to-geometry true
-            }
-
             layer-rule {
                 match namespace="^noctalia-osd$"
                 geometry-corner-radius 0
