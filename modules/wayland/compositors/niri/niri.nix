@@ -142,13 +142,6 @@
             };
           };
 
-          extraConfig = ''
-            layer-rule {
-                match namespace="^noctalia-osd$"
-                geometry-corner-radius 0
-            }
-          '';
-
           # binds
           binds = {
             "Mod+T".spawn-sh = lib.getExe pkgs.kitty;
