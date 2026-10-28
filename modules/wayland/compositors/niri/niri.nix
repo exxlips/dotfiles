@@ -125,6 +125,11 @@
             };
           };
 
+          window-rule = {
+            geometry-corner-radius = 6;
+            clip-to-geometry = true;
+          };
+
           layout = {
             gaps = 16;
             border = {
