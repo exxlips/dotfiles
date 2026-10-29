@@ -83,6 +83,7 @@
   # main configuration
   den.aspects = {
     vadya.includes = with den.aspects; [
+      styles.walogram
       misc.home
 
       editors.helix.languages
@@ -101,6 +102,9 @@
       programs.gui.throne
 
       programs.cli.fastfetch
+
+      compositors.driftwm.shaders
+      compositors.driftwm.settings
     ];
 
     torontik.configuration = {

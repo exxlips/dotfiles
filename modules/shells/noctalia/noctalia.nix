@@ -6,19 +6,18 @@
 
 {
   perSystem =
-  {
-    system,
-    ...
-  }:
+    {
+      system,
+      ...
+    }:
 
-  {
-    packages.noctalia = inputs.noctalia.packages.${system}.default;
-  };
+    {
+      packages.noctalia = inputs.noctalia.packages.${system}.default;
+    };
 
   den.aspects.shells.noctalia = {
     description = ''
-      amazing shit man
-      best thing i've ever used in a such while (mogs hyprland + quickshell)
+      amazing shit
       niri noctalia >>>>>>>>> hyprland qs
     '';
 

@@ -48,7 +48,7 @@ writeShellApplication {
     mkdir -p "$cachedir"
 
     cat << EOF > "$tempdir/colors.tdesktop-theme"
-    ${import ./theme.nix colors}
+    ${import ./_theme.nix colors}
     EOF
 
     magick -size 256x256 \

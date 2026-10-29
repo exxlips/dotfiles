@@ -3,6 +3,7 @@
 }:
 {
   den.aspects.styles.qt = {
+    description = "just shit";
     homeManager =
       {
         ...

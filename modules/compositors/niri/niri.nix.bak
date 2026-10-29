@@ -1,13 +1,9 @@
-# niri.nix..~
-
 {
   inputs,
   ...
 }:
-# main aspect
 {
   den.aspects.compositors.niri = {
-    # type
     nixos =
       {
         pkgs,
@@ -17,12 +13,10 @@
       }:
       {
 
-        # settings for niri, below (perSystem) is the main configuration (like config.kdl)
         imports = [
           inputs.hjem.nixosModules.default
         ];
 
-        # niri duh
         programs.niri = {
           enable = true;
           package = self'.packages.niri;
@@ -30,7 +24,6 @@
 
         services.upower.enable = true;
 
-        # portals for extra-compatibility
         xdg.portal = {
           enable = true;
           config = {
@@ -51,7 +44,6 @@
           ];
         };
 
-        # environment variables
         environment.variables = {
           NIXOS_OZONE_WL = "1";
           XCURSOR_THEME = "Bibata-Modern-Ice";
@@ -66,7 +58,6 @@
           nerd-fonts.caskaydia-cove
         ];
 
-        # needed pkgs
         environment.systemPackages = with pkgs; [
           gtk3
           xwayland-satellite
@@ -86,7 +77,6 @@
       };
   };
 
-  # main niri configuration
   perSystem =
     {
       pkgs,
@@ -98,7 +88,6 @@
     {
       packages.niri = inputs.wrapper-modules.wrappers.niri.wrap {
 
-        # vimjoyer forgot this shit in the vid lol
         inherit pkgs;
 
         settings = {
@@ -149,7 +138,6 @@
             }
           '';
 
-          # binds
           binds = {
             "Mod+T".spawn-sh = lib.getExe pkgs.kitty;
             "Mod+Q".close-window = { };
@@ -213,4 +201,3 @@
     };
 }
 
-# end

@@ -4,11 +4,7 @@
 }:
 
 {
-  zen.styles.walogram = {
-    includes = [
-      den.aspects.custom.walogram
-    ];
-
+  den.aspects.styles.walogram = {
     homeManager =
       {
         self',

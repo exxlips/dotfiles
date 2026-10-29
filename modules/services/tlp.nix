@@ -1,27 +1,20 @@
-# battery.nix..~
-
 {
   ...
 }:
 
-# main aspect
 {
   den.aspects.services.tlp = {
 
-    # type
     nixos =
       {
         ...
       }:
 
       {
-        # tlp top tier
         services = {
 
-          # ppd protest
           power-profiles-daemon.enable = false;
 
-          # my beloved
           tlp = {
             enable = true;
             settings = {
@@ -37,7 +30,7 @@
               CPU_MIN_PERF_ON_AC = 0;
               CPU_MAX_PERF_ON_AC = 100;
               CPU_MIN_PERF_ON_BAT = 0;
-              CPU_MAX_PERF_ON_BAT = 25;
+              CPU_MAX_PERF_ON_BAT = 45;
 
             };
           };

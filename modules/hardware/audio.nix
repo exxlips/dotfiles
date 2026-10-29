@@ -1,15 +1,14 @@
-# audio.nix..~
-
 {
-  den,
   ...
 }:
 
-# main aspect
 {
   den.aspects.hardware.audio = {
+    description = ''
+      pov when audio doesnt work
+      (youre on arch/nix)
+    '';
 
-    # type
     nixos =
       {
         ...
@@ -17,7 +16,6 @@
 
       {
 
-        # pipewire config (ANTI PULSEAUDIO TEAM)
         services = {
           pulseaudio.enable = false;
           pipewire = {

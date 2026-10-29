@@ -1,17 +1,15 @@
 {
   ...
 }:
+
 {
-  den.aspects.custom.walogram = {
-    nixos =
-      {
-        ...
-      }:
-      {
-        imports = [
-          ./package.nix
-          ./theme.nix
-        ];
-      };
-  };
+  perSystem =
+    {
+      pkgs,
+      ...
+    }:
+
+    {
+      packages.walogram = pkgs.callPackage ./_package.nix { };
+    };
 }
