@@ -1,4 +1,5 @@
 {
+  inputs,
   ...
 }:
 
@@ -6,7 +7,6 @@
   den.aspects.compositors.mangowc = {
     nixos =
       {
-        inputs,
         pkgs,
         ...
       }:
@@ -24,13 +24,12 @@
 
     homeManager =
       {
-        inputs,
         osConfig,
         ...
       }:
       {
         imports = [
-          inputs.mangowc.hmModules.mango
+          inputs.mango.hmModules.mango
         ];
 
         wayland.windowManager.mango = {
