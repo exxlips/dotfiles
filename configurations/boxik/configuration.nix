@@ -59,8 +59,6 @@
       styles.stylix
       styles.gtk
       styles.qt
-
-      compositors.niri
     ];
   };
 

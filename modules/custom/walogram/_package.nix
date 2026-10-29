@@ -2,7 +2,6 @@
   writeShellApplication,
   imagemagick,
   zip,
-  outputDir ? toString null,
   colors ? {
     base00 = "#151515";
     base01 = "#1f1f1f";
@@ -20,13 +19,6 @@
     base0D = "#8da3b9";
     base0E = "#a988b0";
     base0F = "#bbb6b6";
-    base10 = "#151515";
-    base11 = "#151515";
-    base12 = "#b66467";
-    base13 = "#d9bc8c";
-    base14 = "#8c977d";
-    base15 = "#8aa6a2";
-    base16 = "#8da3b9";
   },
 }:
 
@@ -39,15 +31,17 @@ writeShellApplication {
   ];
 
   text = ''
-    tempdir="$(mktemp -d)"
-    cachedir="${outputDir}"
+    outdir="''${1:-''${XDG_CACHE_HOME:-$HOME/.cache}/walogram}"
     themename="stylix.tdesktop-theme"
     walname="background.jpg"
 
-    rm -f "$cachedir/$themename"
-    mkdir -p "$cachedir"
+    tempdir="$(mktemp -d)"
+    trap 'rm -rf "$tempdir"' EXIT
 
-    cat << EOF > "$tempdir/colors.tdesktop-theme"
+    mkdir -p "$outdir"
+    rm -f "$outdir/$themename"
+
+    cat << 'EOF' > "$tempdir/colors.tdesktop-theme"
     ${import ./_theme.nix colors}
     EOF
 
@@ -56,8 +50,10 @@ writeShellApplication {
       "$tempdir/$walname"
 
     zip -jq -FS \
-      "$cachedir/$themename" \
+      "$outdir/$themename" \
       "$tempdir"/*
+
+    echo "wrote $outdir/$themename"
   '';
 
   derivationArgs = {
