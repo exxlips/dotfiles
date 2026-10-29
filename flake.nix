@@ -43,6 +43,12 @@
       repo = "import-tree";
     };
 
+    mango = {
+      type = "github";
+      owner = "mangowm";
+      repo = "mango";
+    };
+
     disko = {
       type = "github";
       owner = "nix-community";

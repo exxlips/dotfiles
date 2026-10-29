@@ -1,5 +1,4 @@
 {
-  den,
   ...
 }:
 
@@ -7,15 +6,16 @@
   den.aspects.styles.walogram = {
     homeManager =
       {
+        config,
         self',
         ...
       }:
       {
-        stylix.targets = {
-          walogram = {
-            package = self'.packages.walogram;
-          };
-        };
+        home.packages = [
+          (self'.packages.walogram.override {
+            colors = config.lib.stylix.colors.withHashtag;
+          })
+        ];
       };
   };
 }

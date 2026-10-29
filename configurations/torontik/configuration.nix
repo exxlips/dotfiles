@@ -86,6 +86,9 @@
       styles.walogram
       misc.home
 
+      compositors.mangowc
+      compositors.mangowc.settings
+
       editors.helix.languages
       editors.helix.themes
       editors.helix.settings
