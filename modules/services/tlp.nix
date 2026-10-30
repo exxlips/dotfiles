@@ -15,6 +15,8 @@
 
           power-profiles-daemon.enable = false;
 
+          upower.enable = true;
+
           tlp = {
             enable = true;
             settings = {

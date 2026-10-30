@@ -40,6 +40,8 @@
       misc.version
       misc.chaotic
       misc.locales
+      misc.users.xdg
+      misc.variables
 
       misc.nix.settings
       misc.nix.substituters
@@ -75,8 +77,6 @@
       styles.qt
       styles.gtk
       styles.stylix
-
-      compositors.niri
     ];
   };
 
@@ -84,10 +84,16 @@
   den.aspects = {
     vadya.includes = with den.aspects; [
       styles.walogram
+
       misc.home
+      misc.fonts
 
       compositors.mangowc
       compositors.mangowc.settings
+
+      compositors.niri.settings
+      compositors.niri.rules
+      compositors.niri.binds
 
       editors.helix.languages
       editors.helix.themes
@@ -96,6 +102,7 @@
       programs.cli.git
       programs.cli.starship
       programs.cli.fish
+      programs.cli.fastfetch
       programs.cli.aider
 
       programs.gui.spotify
@@ -103,8 +110,9 @@
       programs.gui.kitty
       programs.gui.wezterm
       programs.gui.throne
-
-      programs.cli.fastfetch
+      programs.gui.swaylock
+      programs.gui.tofi
+      programs.gui.waybar
     ];
 
     torontik.configuration = {

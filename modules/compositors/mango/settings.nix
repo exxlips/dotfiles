@@ -31,98 +31,107 @@
 
             xkb_rules_layout = "us, ru";
 
-            autostart_sh = ''
-              waybar &
-              swaybg 
-            '';
-
             bind = [
-              "SUPER,Return,spawn,kitty"
+              # Applications
               "SUPER,space,spawn,tofi"
-              "SUPER,q,kill_window"
+              "SUPER,T,spawn,kitty"
 
-              "SUPER,Left,focus_column_left"
-              "SUPER,Right,focus_column_right"
-              "SUPER,Up,focus_window_up"
-              "SUPER,Down,focus_window_down"
-              "SUPER,h,focus_column_left"
-              "SUPER,l,focus_column_right"
-              "SUPER,k,focus_window_up"
-              "SUPER,j,focus_window_down"
+              # Exit
+              "SUPER+SHIFT,m,quit"
+              "SUPER,q,killclient,"
 
-              "SUPER_CTRL,Left,move_column_left"
-              "SUPER_CTRL,Right,move_column_right"
-              "SUPER_CTRL,Up,move_window_up"
-              "SUPER_CTRL,Down,move_window_down"
-              "SUPER_CTRL,h,move_column_left"
-              "SUPER_CTRL,l,move_column_right"
-              "SUPER_CTRL,k,move_window_up"
-              "SUPER_CTRL,j,move_window_down"
+              # Switch window focus
+              "SUPER,Tab,focusstack,next"
+              "SUPER,Left,focusdir,left"
+              "SUPER,Right,focusdir,right"
+              "SUPER,Up,focusdir,up"
+              "SUPER,Down,focusdir,down"
 
-              "SUPER,Home,focus_column_first"
-              "SUPER,End,focus_column_last"
-              "SUPER_CTRL,Home,move_column_to_first"
-              "SUPER_CTRL,End,move_column_to_last"
+              # Swap windows
+              "SUPER+SHIFT,Up,exchange_client,up"
+              "SUPER+SHIFT,Down,exchange_client,down"
+              "SUPER+SHIFT,Left,exchange_client,left"
+              "SUPER+SHIFT,Right,exchange_client,right"
 
-              "SUPER_SHIFT,Left,focus_monitor_left"
-              "SUPER_SHIFT,Right,focus_monitor_right"
-              "SUPER_SHIFT,h,focus_monitor_left"
-              "SUPER_SHIFT,l,focus_monitor_right"
-              "SUPER_SHIFT_CTRL,Left,move_column_to_monitor_left"
-              "SUPER_SHIFT_CTRL,Right,move_column_to_monitor_right"
-              "SUPER_SHIFT_CTRL,h,move_column_to_monitor_left"
-              "SUPER_SHIFT_CTRL,l,move_column_to_monitor_right"
+              # Switch window status
+              "SUPER,g,toggleglobal,"
+              "ALT,Tab,toggleoverview,"
+              "SUPER,v,togglefloating,"
+              "ALT,a,togglemaximizescreen,"
+              "SUPER,f,togglefullscreen,"
+              "ALT+SHIFT,f,togglefakefullscreen,"
+              "SUPER,i,minimized,"
+              "SUPER,o,toggleoverlay,"
+              "SUPER+SHIFT,I,restore_minimized"
+              "ALT,z,toggle_scratchpad"
 
-              "SUPER,1,focus_workspace,1"
-              "SUPER,2,focus_workspace,2"
-              "SUPER,3,focus_workspace,3"
-              "SUPER,4,focus_workspace,4"
-              "SUPER,5,focus_workspace,5"
-              "SUPER,6,focus_workspace,6"
-              "SUPER,7,focus_workspace,7"
-              "SUPER,8,focus_workspace,8"
-              "SUPER,9,focus_workspace,9"
+              # Scroller layout
+              "ALT,e,set_proportion,1.0"
+              "ALT,x,switch_proportion_preset,"
 
-              "SUPER_CTRL,1,move_column_to_workspace,1"
-              "SUPER_CTRL,2,move_column_to_workspace,2"
-              "SUPER_CTRL,3,move_column_to_workspace,3"
-              "SUPER_CTRL,4,move_column_to_workspace,4"
-              "SUPER_CTRL,5,move_column_to_workspace,5"
-              "SUPER_CTRL,6,move_column_to_workspace,6"
-              "SUPER_CTRL,7,move_column_to_workspace,7"
-              "SUPER_CTRL,8,move_column_to_workspace,8"
-              "SUPER_CTRL,9,move_column_to_workspace,9"
+              # Switch layout
+              "SUPER,n,switch_layout"
 
-              "SUPER_SHIFT,1,move_window_to_workspace,1"
-              "SUPER_SHIFT,2,move_window_to_workspace,2"
-              "SUPER_SHIFT,3,move_window_to_workspace,3"
-              "SUPER_SHIFT,4,move_window_to_workspace,4"
-              "SUPER_SHIFT,5,move_window_to_workspace,5"
-              "SUPER_SHIFT,6,move_window_to_workspace,6"
-              "SUPER_SHIFT,7,move_window_to_workspace,7"
-              "SUPER_SHIFT,8,move_window_to_workspace,8"
-              "SUPER_SHIFT,9,move_window_to_workspace,9"
+              # Tag switching
+              # Use CTRL+ALT instead of SUPER+SHIFT to avoid
+              # conflicts with the window-swapping bindings.
+              "CTRL+ALT,Left,viewtoleft,0"
+              "CTRL,Left,viewtoleft_have_client,0"
+              "CTRL+ALT,Right,viewtoright,0"
+              "CTRL,Right,viewtoright_have_client,0"
 
-              "SUPER,minus,set_column_width,-10%"
-              "SUPER,equal,set_column_width,+10%"
-              "SUPER_SHIFT,minus,set_window_height,-10%"
-              "SUPER_SHIFT,equal,set_window_height,+10%"
-              "SUPER,r,reset_window_size"
+              "CTRL+SUPER,Left,tagtoleft,0"
+              "CTRL+SUPER,Right,tagtoright,0"
 
-              "SUPER,f,toggle_fullscreen"
-              "SUPER,m,toggle_maximize"
-              "SUPER,c,center_window"
+              # View tags
+              "SUPER,1,view,1,0"
+              "SUPER,2,view,2,0"
+              "SUPER,3,view,3,0"
+              "SUPER,4,view,4,0"
+              "SUPER,5,view,5,0"
+              "SUPER,6,view,6,0"
+              "SUPER,7,view,7,0"
+              "SUPER,8,view,8,0"
+              "SUPER,9,view,9,0"
 
-              "SUPER,comma,consume_window_into_column"
-              "SUPER,period,expel_window_from_column"
-              "SUPER,bracketleft,consume_or_expel_left"
-              "SUPER,bracketright,consume_or_expel_right"
+              # Move client to tag
+              "SUPER+SHIFT,1,tag,1,0"
+              "SUPER+SHIFT,2,tag,2,0"
+              "SUPER+SHIFT,3,tag,3,0"
+              "SUPER+SHIFT,4,tag,4,0"
+              "SUPER+SHIFT,5,tag,5,0"
+              "SUPER+SHIFT,6,tag,6,0"
+              "SUPER+SHIFT,7,tag,7,0"
+              "SUPER+SHIFT,8,tag,8,0"
+              "SUPER+SHIFT,9,tag,9,0"
 
-              "SUPER_SHIFT,e,quit"
-              "SUPER_SHIFT,r,reload_config"
-              "SUPER,Print,spawn,grim"
+              # Monitor switching
+              "ALT+SHIFT,Left,focusmon,left"
+              "ALT+SHIFT,Right,focusmon,right"
+
+              # Move client to another monitor
+              "CTRL+ALT+SHIFT,Left,tagmon,left"
+              "CTRL+ALT+SHIFT,Right,tagmon,right"
+
+              "ALT+SHIFT,X,incgaps,1"
+              "ALT+SHIFT,Z,incgaps,-1"
+              "ALT+SHIFT,R,togglegaps"
+
+              "CTRL+SHIFT,Up,movewin,+0,-50"
+              "CTRL+SHIFT,Down,movewin,+0,+50"
+              "CTRL+SHIFT,Left,movewin,-50,+0"
+              "CTRL+SHIFT,Right,movewin,+50,+0"
+
+              "SUPER+ALT,Up,resizewin,+0,-50"
+              "SUPER+ALT,Down,resizewin,+0,+50"
+              "SUPER+ALT,Left,resizewin,-50,+0"
+              "SUPER+ALT,Right,resizewin,+50,+0"
             ];
           };
+
+          autostart_sh = ''
+            swaybg -m fill -i "$HOME/dotfiles/wallpapers/some-city-i-dont-remember.jpg" &
+          '';
         };
       };
   };

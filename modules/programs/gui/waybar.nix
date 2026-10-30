@@ -3,16 +3,16 @@
 }:
 
 {
-  den.aspects.programs.cli.waybar = {
+  den.aspects.programs.gui.waybar = {
     homeManager =
       {
         ...
       }:
       {
         programs.waybar = {
-          enable = true;
+          enable = false;
 
-          systemd.enable = true;
+          systemd.enable = false;
         };
 
         stylix = {
