@@ -41,6 +41,7 @@
       misc.chaotic
       misc.locales
       misc.users.xdg
+      misc.fonts
       misc.variables
 
       misc.nix.settings
@@ -86,7 +87,6 @@
       styles.walogram
 
       misc.home
-      misc.fonts
 
       compositors.mangowc
       compositors.mangowc.settings
@@ -94,6 +94,7 @@
       compositors.niri.settings
       compositors.niri.rules
       compositors.niri.binds
+      compositors.niri.default
 
       editors.helix.languages
       editors.helix.themes

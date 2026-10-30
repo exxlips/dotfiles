@@ -19,8 +19,6 @@ in
 
       services.displayManager.gdm.enable = lib.mkForce false;
 
-      services.displayManager.defaultSession = "niri";
-
       # cool collection of sddm themes
       programs.qylock = {
         enable = true;

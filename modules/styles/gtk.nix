@@ -1,4 +1,5 @@
 {
+  inputs,
   ...
 }:
 {
@@ -8,6 +9,10 @@
         ...
       }:
       {
+        imports = [
+          inputs.hjem.nixosModules.default
+        ];
+
         # gtk tweaks
         hjem.users.vadya.files.".config/gtk-4.0/settings.ini".text = ''
           [Settings]

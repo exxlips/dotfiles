@@ -3,7 +3,7 @@
 }:
 {
   den.aspects.misc.fonts = {
-    homeManager =
+    nixos =
       {
         pkgs,
         ...
