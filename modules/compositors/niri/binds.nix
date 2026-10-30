@@ -1,94 +1,100 @@
 {
   ...
 }:
+
 {
   den.aspects.compositors.niri.binds = {
     homeManager =
       {
-        lib,
-        config,
         ...
       }:
       {
         wayland.windowManager.niri = {
-          settings.binds =
-            let
-              actions = config.lib.niri.actions;
+          settings = {
+            binds = {
+              "Mod+Space".spawn-sh = "noctalia msg panel-toggle launcher";
+              "Mod+Shift+Tab".spawn-sh = "noctalia msg panel-toggle clipboard";
 
-              bind = name: action: {
-                inherit
-                  name
-                  ;
-                value = {
-                  inherit
-                    action
-                    ;
-                };
-              };
-            in
-            [
-              (bind "Mod+Space" (actions.spawn-sh "noctalia ipc panel-toggle launcher"))
-              (bind "Mod+Shift+Tab" (actions.spawn-sh "noctalia ipc panel-toggle clipboard"))
+              "Mod+W".spawn-sh = "noctalia msg window-switcher";
+              "Mod+Alt+Space".spawn-sh = "noctalia msg dock-toggle";
+              "Mod+T".spawn = [ "kitty" ];
 
-              (bind "Mod+W" (actions.spawn-sh "noctalia ipc window-switcher"))
-              (bind "Mod+Alt+Space" (actions.spawn-sh "noctalia ipc dock-toggle"))
+              "Mod+Shift+Slash".show-hotkey-overlay = { };
 
-              (bind "Mod+T" (actions.spawn-sh "kitty"))
+              "Mod+Q".close-window = { };
 
-              (bind "Mod+Shift+Slash" actions.show-hotkey-overlay) # no help for you
+              "Mod+C".center-window = { };
+              "Mod+Shift+C".center-column = { };
 
-              (bind "Mod+Q" actions.close-window)
+              "Mod+O".toggle-overview = { };
+              "Mod+Shift+Space".toggle-window-floating = { };
 
-              (bind "Mod+C" actions.center-window)
-              (bind "Mod+Shift+C" actions.center-column)
+              "Mod+F".maximize-column = { };
+              "Mod+Shift+F".fullscreen-window = { };
 
-              (bind "Mod+Space" actions.toggle-overview)
-              (bind "Mod+Shift+Space" actions.toggle-window-floating)
+              "Mod+S".switch-preset-column-width = { };
+              "Mod+Shift+S".switch-preset-window-height = { };
 
-              (bind "Mod+F" actions.fullscreen-window)
-              (bind "Mod+Shift+F" actions.maximize-column)
+              "Mod+Minus".set-column-width = "-10%";
+              "Mod+Equal".set-column-width = "+10%";
+              "Mod+Shift+Minus".set-window-height = "-10%";
+              "Mod+Shift+Equal".set-window-height = "+10%";
 
-              (bind "Mod+S" actions.switch-preset-column-width)
-              (bind "Mod+Shift+S" actions.switch-preset-window-height)
+              "Mod+Comma".consume-window-into-column = { };
+              "Mod+Period".expel-window-from-column = { };
 
-              (bind "Mod+Minus" (actions.set-column-width "-10%"))
-              (bind "Mod+Equal" (actions.set-column-width "+10%"))
-              (bind "Mod+Shift+Minus" (actions.set-window-height "-10%"))
-              (bind "Mod+Shift+Equal" (actions.set-window-height "+10%"))
+              "Mod+H".focus-column-left = { };
+              "Mod+J".focus-window-or-workspace-down = { };
+              "Mod+K".focus-window-or-workspace-up = { };
+              "Mod+L".focus-column-right = { };
 
-              (bind "Mod+Comma" actions.consume-window-into-column)
-              (bind "Mod+Period" actions.expel-window-from-column)
+              "Mod+Left".focus-column-left = { };
+              "Mod+Down".focus-window-or-workspace-down = { };
+              "Mod+Up".focus-window-or-workspace-up = { };
+              "Mod+Right".focus-column-right = { };
 
-              (bind "Mod+H" actions.focus-column-left)
-              (bind "Mod+J" actions.focus-window-or-workspace-down)
-              (bind "Mod+K" actions.focus-window-or-workspace-up)
-              (bind "Mod+L" actions.focus-column-right)
+              "Mod+Shift+H".move-column-left = { };
+              "Mod+Shift+J".move-column-to-workspace-down = { };
+              "Mod+Shift+K".move-column-to-workspace-up = { };
+              "Mod+Shift+L".move-column-right = { };
 
-              (bind "Mod+Left" actions.focus-column-left)
-              (bind "Mod+Down" actions.focus-window-or-workspace-down)
-              (bind "Mod+Up" actions.focus-window-or-workspace-up)
-              (bind "Mod+Right" actions.focus-column-right)
+              "Mod+Shift+Left".move-column-left = { };
+              "Mod+Shift+Down".move-column-to-workspace-down = { };
+              "Mod+Shift+Up".move-column-to-workspace-up = { };
+              "Mod+Shift+Right".move-column-right = { };
 
-              (bind "Mod+Shift+H" actions.move-column-left)
-              (bind "Mod+Shift+J" actions.move-column-to-workspace-down)
-              (bind "Mod+Shift+K" actions.move-column-to-workspace-up)
-              (bind "Mod+Shift+L" actions.move-column-right)
+              "Mod+Ctrl+J".move-window-down-or-to-workspace-down = { };
+              "Mod+Ctrl+K".move-window-up-or-to-workspace-up = { };
 
-              (bind "Mod+Shift+Left" actions.move-column-left)
-              (bind "Mod+Shift+Down" actions.move-column-to-workspace-down)
-              (bind "Mod+Shift+Up" actions.move-column-to-workspace-up)
-              (bind "Mod+Shift+Right" actions.move-column-right)
+              "Mod+Ctrl+Down".move-window-down-or-to-workspace-down = { };
+              "Mod+Ctrl+Up".move-window-up-or-to-workspace-up = { };
 
-              (bind "Mod+Ctrl+J" actions.move-window-down-or-to-workspace-down)
-              (bind "Mod+Ctrl+K" actions.move-window-up-or-to-workspace-up)
+              "Mod+1".focus-workspace = 1;
+              "Mod+2".focus-workspace = 2;
+              "Mod+3".focus-workspace = 3;
+              "Mod+4".focus-workspace = 4;
+              "Mod+5".focus-workspace = 5;
+              "Mod+6".focus-workspace = 6;
+              "Mod+7".focus-workspace = 7;
+              "Mod+8".focus-workspace = 8;
+              "Mod+9".focus-workspace = 9;
+              "Mod+0".focus-workspace = 10;
 
-              (bind "Mod+Ctrl+Down" actions.move-window-down-or-to-workspace-down)
-              (bind "Mod+Ctrl+Up" actions.move-window-up-or-to-workspace-up)
+              "Mod+Shift+1".move-column-to-workspace = 1;
+              "Mod+Shift+2".move-column-to-workspace = 2;
+              "Mod+Shift+3".move-column-to-workspace = 3;
+              "Mod+Shift+4".move-column-to-workspace = 4;
+              "Mod+Shift+5".move-column-to-workspace = 5;
+              "Mod+Shift+6".move-column-to-workspace = 6;
+              "Mod+Shift+7".move-column-to-workspace = 7;
+              "Mod+Shift+8".move-column-to-workspace = 8;
+              "Mod+Shift+9".move-column-to-workspace = 9;
+              "Mod+Shift+0".move-column-to-workspace = 10;
 
-              (bind "Print" (actions.spawn-sh "noctalia ipc screenshot-region"))
-              (bind "Shift+Print" (actions.spawn-sh "noctalia ipc screenshot-fullscreen"))
-            ]
-            |> lib.listToAttrs;
+              "Print".spawn-sh = "noctalia msg screenshot-region";
+              "Shift+Print".spawn-sh = "noctalia msg screenshot-fullscreen";
+            };
+          };
         };
       };
   };

@@ -1,6 +1,7 @@
 # noctalia.nix..~
 {
   inputs,
+  self',
   ...
 }:
 
@@ -21,18 +22,32 @@
       niri noctalia >>>>>>>>> hyprland qs
     '';
 
-    homeManager = {
-      programs = {
-        noctalia = {
-          "bar.default" = {
-            margin_ends = 120;
+    environment.systemPackages = [
+      self'.packages.noctalia
+    ];
 
-            thickness = 41;
+    homeManager =
+      {
+        ...
+      }:
+      {
+        wayland.windowManager.niri.settings._children = [
+          {
+            spawn-at-startup._args = [ "noctalia" ];
+          }
+        ];
 
-            position = "bottom";
+        programs = {
+          noctalia = {
+            settings = {
+              bar = {
+                margin_ends = 120;
+
+                thickness = 41;
+              };
+            };
           };
         };
       };
-    };
   };
 }

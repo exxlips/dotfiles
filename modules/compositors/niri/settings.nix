@@ -8,6 +8,7 @@
       honestly one of the best wms i have ever tried
       im heavily impressed
     '';
+
     homeManager =
       {
         pkgs,
@@ -17,248 +18,227 @@
       }:
       let
         colors = config.lib.stylix.colors.withHashtag;
-        actions = config.lib.niri.actions;
       in
       {
-        wayland.windowManager.niri = {
-          settings = {
-            screenshot-path = "~/Pictures/ScreenSh_%d-%m-%y_%H:%M:%S.png";
+        wayland.windowManager.niri.settings = {
+          screenshot-path = "~/Pictures/Screen_Sh_%d-%m-%y_%H:%M:%S.png";
 
-            outputs = {
-              "eDP-1".scale = 1.0;
+          input = {
+            keyboard.xkb = {
+              layout = "us,ru";
+              options = "grp:alt_shift_toggle";
             };
 
-            input = {
-              keyboard.xkb = {
-                layout = "us,ru";
-                options = "grp:shift_alt_toggle";
-              };
-
-              mouse = {
-                scroll-method = "no-scroll";
-                accel-profile = "adaptive";
-              };
-
-              trackpoint = {
-                scroll-method = "on-button-down";
-                accel-profile = "flat";
-              };
-
-              touchpad = {
-                tap = true;
-                dwt = true;
-                dwtp = true;
-
-                natural-scroll = false;
-
-                click-method = "clickfinger";
-                scroll-method = "two-finger";
-                accel-profile = "adaptive";
-              };
-
-              power-key-handling.enable = false;
-              focus-follows-mouse.enable = false;
-              workspace-auto-back-and-forth = false;
+            mouse = {
+              scroll-method = "no-scroll";
+              accel-profile = "adaptive";
             };
 
-            cursor = {
-              hide-when-typing = false;
-              hide-after-inactive-ms = 1000;
+            trackpoint = {
+              scroll-method = "on-button-down";
+              accel-profile = "flat";
             };
 
-            layout = {
-              background-color = colors.base01;
+            touchpad = {
+              click-method = "clickfinger";
+              scroll-method = "two-finger";
+              accel-profile = "adaptive";
 
-              border = {
-                enable = true;
-                width = 5;
-
-                active = {
-                  gradient = {
-                    from = colors.base0B;
-                    to = colors.base0A;
-                    relative-to = "workspace-view";
-                    angle = 45;
-                  };
-                };
-
-                inactive = {
-                  gradient = {
-                    from = colors.base0B;
-                    to = colors.base0A;
-                    relative-to = "workspace-view";
-                    angle = 45;
-                  };
-                };
-
-                urgent = {
-                  gradient = {
-                    from = colors.base08;
-                    to = colors.base09;
-                    relative-to = "workspace-view";
-                    angle = 45;
-                  };
-                };
-              };
-
-              insert-hint = {
-                display.color = colors.base01 + "CC";
-              };
-
-              gaps = 8;
-
-              shadow = {
-                enable = true;
-                softness = 30;
-                draw-behind-window = true;
-
-                color = colors.base00 + "70";
-                inactive-color = colors.base00 + "70";
-              };
-
-              default-column-width.proportion = 0.9;
-
-              preset-column-widths = [
-                { proportion = 0.4; }
-                { proportion = 0.5; }
-                { proportion = 0.9; }
-                { proportion = 1.0; }
+              _children = [
+                { tap._args = [ ]; }
+                { dwt._args = [ ]; }
+                { dwtp._args = [ ]; }
               ];
-
-              preset-window-heights = [
-                { proportion = 0.4; }
-                { proportion = 0.5; }
-                { proportion = 1.0; }
-              ];
-
-              center-focused-column = "on-overflow";
-              always-center-single-column = true;
             };
 
-            recent-windows = {
-              enable = true;
-
-              debounce-ms = 750;
-              open-delay-ms = 150;
-
-              highlight = {
-                active-color = "${colors.base04}ff";
-                urgent-color = "${colors.base08}ff";
-                corner-radius = 12;
-                padding = 30;
-              };
-
-              previews = {
-                max-height = 480;
-                max-scale = 0.5;
-              };
-
-              binds =
-                let
-                  rewin = lib.mergeAttrsList actions.recent-windows;
-                in
-                {
-                  "Alt+Tab".action = rewin.next-window;
-                  "Alt+Shift+Tab".action = rewin.previous-window;
-                };
-            };
-
-            animations = {
-              "horizontal-view-movement" = {
-                kind.easing = {
-                  duration-ms = 150;
-                  curve = "ease-out-quad";
-                };
-              };
-              "window-resize" = {
-                kind.easing = {
-                  duration-ms = 150;
-                  curve = "ease-out-quad";
-                };
-              };
-              "window-close" = {
-                kind.easing = {
-                  duration-ms = 150;
-                  curve = "ease-out-expo";
-                };
-              };
-              "window-open" = {
-                kind.easing = {
-                  duration-ms = 150;
-                  curve = "ease-out-expo";
-                };
-              };
-              "window-movement" = {
-                kind.easing = {
-                  duration-ms = 150;
-                  curve = "ease-out-expo";
-                };
-              };
-              "workspace-switch" = {
-                kind.easing = {
-                  duration-ms = 150;
-                  curve = "ease-out-expo";
-                };
-              };
-            };
-
-            window-rules = [
+            _children = [
               {
-                clip-to-geometry = true;
-                geometry-corner-radius = lib.genAttrs [
-                  "top-left"
-                  "top-right"
-                  "bottom-left"
-                  "bottom-right"
-                ] (_: 12.0);
+                disable-power-key-handling._args = [ ];
               }
             ];
-
-            layer-rules = [
-              {
-                block-out-from = "screencast";
-                matches = [
-                  {
-                    namespace = "^notifications$";
-                  }
-                ];
-              }
-              {
-                place-within-backdrop = true;
-                matches = [
-                  {
-                    namespace = "dms:blurwallpaper";
-                  }
-                ];
-              }
-            ];
-
-            workspaces = (_: { }) |> lib.genAttrs ((lib.range 1 5) |> map toString);
-
-            overview = {
-              zoom = 0.95;
-              backdrop-color = colors.base00;
-
-              workspace-shadow = {
-                softness = 20;
-                spread = 14;
-
-                color = colors.base00;
-              };
-            };
-
-            clipboard.disable-primary = true;
-
-            gestures.hot-corners.enable = false;
-
-            hotkey-overlay.skip-at-startup = true;
-
-            prefer-no-csd = true;
-
-            debug.deactivate-unfocused-windows = true;
-
-            xwayland-satellite.path = lib.getExe pkgs.xwayland-satellite;
           };
+
+          cursor = {
+            hide-after-inactive-ms = 1000;
+          };
+
+          layout = {
+            background-color = colors.base01;
+
+            focus-ring._children = [
+              { off._args = [ ]; }
+            ];
+
+            border._children = [
+              { off._args = [ ]; }
+            ];
+
+            insert-hint.color = colors.base01 + "CC";
+
+            gaps = 8;
+
+            shadow = {
+              softness = 30;
+              draw-behind-window = true;
+              color = colors.base00 + "70";
+              inactive-color = colors.base00 + "70";
+
+              _children = [
+                { on._args = [ ]; }
+              ];
+            };
+            default-column-width.proportion = 0.5;
+
+            preset-column-widths._children = [
+              { proportion = 0.33333; }
+              { proportion = 0.5; }
+              { proportion = 0.66667; }
+            ];
+
+            preset-window-heights._children = [
+              { proportion = 0.4; }
+              { proportion = 0.5; }
+              { proportion = 1.0; }
+            ];
+
+            center-focused-column = "never";
+          };
+
+          recent-windows = {
+            debounce-ms = 750;
+            open-delay-ms = 150;
+
+            highlight = {
+              active-color = "${colors.base04}ff";
+              urgent-color = "${colors.base08}ff";
+              corner-radius = 12;
+              padding = 30;
+            };
+
+            previews = {
+              max-height = 480;
+              max-scale = 0.5;
+            };
+          };
+
+          animations = {
+            "horizontal-view-movement" = {
+              duration-ms = 150;
+              curve = "ease-out-quad";
+            };
+
+            "window-resize" = {
+              duration-ms = 150;
+              curve = "ease-out-quad";
+            };
+
+            "window-close" = {
+              duration-ms = 150;
+              curve = "ease-out-expo";
+            };
+
+            "window-open" = {
+              duration-ms = 150;
+              curve = "ease-out-expo";
+            };
+
+            "window-movement" = {
+              duration-ms = 150;
+              curve = "ease-out-expo";
+            };
+
+            "workspace-switch" = {
+              duration-ms = 150;
+              curve = "ease-out-expo";
+            };
+          };
+
+          overview = {
+            zoom = 0.75;
+            backdrop-color = colors.base00;
+
+            workspace-shadow = {
+              softness = 20;
+              spread = 14;
+              color = colors.base00;
+
+              _children = [
+                { on._args = [ ]; }
+              ];
+            };
+          };
+
+          xwayland-satellite.path = lib.getExe pkgs.xwayland-satellite;
+
+          _children = [
+            {
+              output = {
+                _args = [ "eDP-1" ];
+                scale = 1.0;
+              };
+            }
+
+            {
+              window-rule = {
+                clip-to-geometry = true;
+                geometry-corner-radius._args = [ 12.0 ];
+              };
+            }
+
+            {
+              layer-rule = {
+                block-out-from = "screencast";
+
+                _children = [
+                  {
+                    match._props.namespace = "^notifications$";
+                  }
+                ];
+              };
+            }
+
+            {
+              layer-rule = {
+                place-within-backdrop = true;
+
+                _children = [
+                  {
+                    match._props.namespace = "dms:blurwallpaper";
+                  }
+                ];
+              };
+            }
+
+            {
+              gestures = {
+                hot-corners._children = [
+                  { off._args = [ ]; }
+                ];
+              };
+            }
+
+            {
+              clipboard._children = [
+                { disable-primary._args = [ ]; }
+              ];
+            }
+
+            {
+              hotkey-overlay._children = [
+                { skip-at-startup._args = [ ]; }
+              ];
+            }
+
+            {
+              prefer-no-csd._args = [ ];
+            }
+
+            {
+              debug._children = [
+                { deactivate-unfocused-windows._args = [ ]; }
+              ];
+            }
+          ];
         };
       };
   };

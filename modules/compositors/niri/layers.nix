@@ -6,156 +6,143 @@
   den.aspects.compositors.niri.rules = {
     homeManager =
       {
-        config,
         ...
       }:
-      let
-        colors = config.lib.stylix.colors.withHashtag;
-      in
       {
-        wayland.windowManager.niri = {
-          settings.window-rules = [
-            {
-              opacity = 0.6;
-              draw-border-with-background = true;
-              matches = [
-                {
-                  is-focused = false;
-                }
-              ];
-            }
-            {
+        wayland.windowManager.niri.settings._children = [
+          {
+            window-rule = {
               open-maximized = false;
               open-fullscreen = false;
-            }
-            {
-              open-on-workspace = toString 3;
-              matches = [ { app-id = "spotify"; } ];
-            }
-            {
-              open-on-workspace = toString 4;
-              matches = [ { app-id = "^*.ayugram.*$"; } ];
-            }
-            {
-              open-on-workspace = toString 5;
-              matches = [ { app-id = "^steam$"; } ];
-            }
-            {
+            };
+          }
+
+          {
+            window-rule = {
               default-column-width.proportion = 0.5;
-              matches = [
+
+              _children = [
                 {
-                  app-id = "kitty_small";
+                  match._props.app-id = "kitty_small";
                 }
+
                 {
-                  app-id = "foot_small";
+                  match._props.app-id = "foot_small";
                 }
               ];
-            }
-            {
-              default-column-width.proportion = 0.5;
-              block-out-from = "screen-capture";
-            }
-            {
-              open-floating = true;
-              open-focused = true;
-              default-column-width.fixed = 501;
-              default-window-height.fixed = 1041;
-            }
-            {
-              open-floating = true;
-              open-focused = true;
-              block-out-from = "screen-capture";
-              default-column-width.proportion = 0.4;
-              default-window-height.proportion = 0.4;
-            }
-            {
-              open-floating = true;
-              geometry-corner-radius = {
-                top-left = 4.0;
-                top-right = 4.0;
-                bottom-left = 4.0;
-                bottom-right = 4.0;
-              };
-              border = {
-                active.color = colors.base08;
-                inactive.color = colors.base08;
-                urgent.color = colors.base08;
-              };
-            }
-            {
-              open-floating = true;
+            };
+          }
+
+          {
+            window-rule.block-out-from = "screen-capture";
+          }
+
+          {
+            window-rule.geometry-corner-radius._args = [
+              4.0
+              4.0
+              4.0
+              4.0
+            ];
+          }
+
+          {
+            window-rule = {
               default-column-width.fixed = 360;
               default-window-height.fixed = 640;
-              matches = [
+
+              _children = [
                 {
-                  app-id = "^firefox$";
-                  title = "^Picture-in-Picture";
+                  match._props = {
+                    app-id = "^firefox$";
+                    title = "^Picture-in-Picture";
+                  };
                 }
               ];
-            }
-            {
+            };
+          }
+
+          {
+            window-rule = {
               block-out-from = "screencast";
-              matches = [
+
+              _children = [
                 {
-                  app-id = "^*ayugram*$";
+                  match._props.app-id = ".*ayugram.*";
                 }
               ];
-            }
-            {
+            };
+          }
+
+          {
+            window-rule = {
               open-fullscreen = true;
-              matches = [
+
+              _children = [
                 {
-                  app-id = "ayugram";
-                  title = "Media viewer";
+                  match._props = {
+                    app-id = "ayugram";
+                    title = "Media viewer";
+                  };
                 }
               ];
-            }
-            {
-              default-column-width.fixed = 470;
-              default-window-height.fixed = 960;
-            }
-            {
+            };
+          }
+
+          {
+            window-rule = {
               default-column-width.proportion = 0.7;
               default-window-height.proportion = 0.7;
-              matches = [
+
+              _children = [
                 {
-                  app-id = "^org.freesmlauncher.FreesmLauncher$";
-                  title = "^New Instance";
+                  match._props = {
+                    app-id = "^org.freesmlauncher.FreesmLauncher$";
+                    title = "^New Instance";
+                  };
                 }
               ];
-            }
-            {
+            };
+          }
+
+          {
+            window-rule = {
               default-column-width.proportion = 0.3;
-              matches = [
+
+              _children = [
                 {
-                  app-id = "^steam$";
-                  title = "^Friends List$";
+                  match._props = {
+                    app-id = "^steam$";
+                    title = "^Friends List$";
+                  };
                 }
               ];
-            }
-            {
+            };
+          }
+
+          {
+            window-rule = {
               open-focused = false;
               clip-to-geometry = true;
-              geometry-corner-radius = {
-                top-left = 4.0;
-                top-right = 4.0;
-                bottom-left = 4.0;
-                bottom-right = 4.0;
-              };
-              default-floating-position = {
-                x = -10;
-                y = -10;
-                relative-to = "bottom-right";
-              };
-              matches = [
+
+              geometry-corner-radius._args = [
+                4.0
+                4.0
+                4.0
+                4.0
+              ];
+
+              _children = [
                 {
-                  app-id = "^steam$";
-                  title = "^notificationtoasts_\\d+_desktop$";
+                  match._props = {
+                    app-id = "^steam$";
+                    title = "^notificationtoasts_\\d+_desktop$";
+                  };
                 }
               ];
-            }
-          ];
-        };
+            };
+          }
+        ];
       };
   };
 }
