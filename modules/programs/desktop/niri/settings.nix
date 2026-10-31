@@ -3,7 +3,7 @@
 }:
 
 {
-  den.aspects.compositors.niri.settings = {
+  den.aspects.programs.desktop.niri.settings = {
     description = ''
       honestly one of the best wms i have ever tried
       im heavily impressed
@@ -21,7 +21,7 @@
       in
       {
         wayland.windowManager.niri.settings = {
-          screenshot-path = "~/Pictures/Screen_Sh_%d-%m-%y_%H:%M:%S.png";
+          screenshot-path = "~/Pictures/Screen_Sh_%d-%m-%y_%H:%M.png";
 
           input = {
             keyboard.xkb = {
@@ -200,12 +200,6 @@
             {
               layer-rule = {
                 place-within-backdrop = true;
-
-                _children = [
-                  {
-                    match._props.namespace = "dms:blurwallpaper";
-                  }
-                ];
               };
             }
 

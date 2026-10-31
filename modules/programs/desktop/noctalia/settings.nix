@@ -16,7 +16,7 @@
       packages.noctalia = inputs.noctalia.packages.${system}.default;
     };
 
-  den.aspects.shells.noctalia.settings = {
+  den.aspects.programs.desktop.noctalia.settings = {
     description = ''
       amazing shit
       niri noctalia >>>>>>>>> hyprland qs

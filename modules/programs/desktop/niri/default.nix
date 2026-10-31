@@ -4,7 +4,7 @@
 }:
 
 {
-  den.aspects.compositors.niri.default = {
+  den.aspects.programs.desktop.niri = {
     includes = with den.aspects; [
       compositors.niri.binds
       compositors.niri.rules

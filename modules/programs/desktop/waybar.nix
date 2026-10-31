@@ -3,7 +3,7 @@
 }:
 
 {
-  den.aspects.programs.gui.waybar = {
+  den.aspects.programs.desktop.waybar = {
     homeManager =
       {
         ...

@@ -3,7 +3,7 @@
 }:
 
 {
-  den.aspects.compositors.niri.rules = {
+  den.aspects.programs.desktop.niri.rules = {
     homeManager =
       {
         ...

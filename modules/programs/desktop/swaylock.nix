@@ -3,7 +3,7 @@
 }:
 
 {
-  den.aspects.programs.gui.swaylock = {
+  den.aspects.programs.desktop.swaylock = {
     homeManager =
       {
         config,

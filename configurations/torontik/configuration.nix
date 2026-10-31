@@ -1,12 +1,9 @@
-# configuration.nix..~
-
 {
   den,
   ...
 }:
 
 {
-  # batteries
   den.default.includes = [
     den.batteries.primary-user
     den.batteries.self'
@@ -14,14 +11,12 @@
     den.batteries.inputs'
   ];
 
-  # homes
   den.hosts.x86_64-linux.torontik = {
     users.vadya = {
       userName = "vadya";
       classes = [ "homeManager" ];
     };
 
-    # systems
     includes = with den.aspects; [
       torontik.hardware
       torontik.configuration
@@ -81,20 +76,11 @@
     ];
   };
 
-  # main configuration
   den.aspects = {
     vadya.includes = with den.aspects; [
       styles.walogram
 
       misc.home
-
-      compositors.mangowc
-      compositors.mangowc.settings
-
-      compositors.niri.settings
-      compositors.niri.rules
-      compositors.niri.binds
-      compositors.niri.default
 
       editors.helix.languages
       editors.helix.themes
@@ -111,14 +97,25 @@
       programs.gui.kitty
       programs.gui.wezterm
       programs.gui.throne
-      programs.gui.swaylock
-      programs.gui.tofi
-      programs.gui.waybar
+
+      programs.desktop.mangowc
+      programs.desktop.mangowc.settings
+
+      programs.desktop.niri
+      programs.desktop.niri.binds
+      programs.desktop.niri.rules
+      programs.desktop.niri.settings
+
+      programs.desktop.noctalia
+      programs.desktop.noctalia.settings
+
+      programs.desktop.swaylock
+      programs.desktop.waybar
+      programs.desktop.tofi
     ];
 
     torontik.configuration = {
 
-      # type
       nixos =
         {
           lib,
@@ -127,17 +124,13 @@
 
         {
 
-          # main
           system.stateVersion = "26.11";
           time.timeZone = "Europe/Moscow";
 
-          # time/locales
           i18n.defaultLocale = "en_US.UTF-8";
 
-          # services
           security.rtkit.enable = true;
 
-          # programs (for now, throne only)
           programs.throne = {
             enable = true;
             tunMode.enable = true;
@@ -150,5 +143,3 @@
     };
   };
 }
-
-# end

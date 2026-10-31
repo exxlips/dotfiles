@@ -4,7 +4,7 @@
 }:
 
 {
-  den.aspects.shells.noctalia.default = {
+  den.aspects.programs.desktop.noctalia = {
     includes = [
       den.aspects.shells.noctalia.settings
     ];

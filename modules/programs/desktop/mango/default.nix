@@ -4,7 +4,12 @@
 }:
 
 {
-  den.aspects.compositors.mangowc = {
+  den.aspects.programs.desktop.mangowc = {
+    description = ''
+      i tried this
+      kinda ass ngl
+    '';
+
     nixos =
       {
         pkgs,

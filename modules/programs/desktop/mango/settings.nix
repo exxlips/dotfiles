@@ -3,7 +3,7 @@
 }:
 
 {
-  den.aspects.compositors.mangowc.settings = {
+  den.aspects.programs.desktop.mangowc.settings = {
     homeManager =
       {
         ...
@@ -32,28 +32,23 @@
             xkb_rules_layout = "us, ru";
 
             bind = [
-              # Applications
               "SUPER,space,spawn,tofi"
               "SUPER,T,spawn,kitty"
 
-              # Exit
               "SUPER+SHIFT,m,quit"
               "SUPER,q,killclient,"
 
-              # Switch window focus
               "SUPER,Tab,focusstack,next"
               "SUPER,Left,focusdir,left"
               "SUPER,Right,focusdir,right"
               "SUPER,Up,focusdir,up"
               "SUPER,Down,focusdir,down"
 
-              # Swap windows
               "SUPER+SHIFT,Up,exchange_client,up"
               "SUPER+SHIFT,Down,exchange_client,down"
               "SUPER+SHIFT,Left,exchange_client,left"
               "SUPER+SHIFT,Right,exchange_client,right"
 
-              # Switch window status
               "SUPER,g,toggleglobal,"
               "ALT,Tab,toggleoverview,"
               "SUPER,v,togglefloating,"
@@ -65,16 +60,11 @@
               "SUPER+SHIFT,I,restore_minimized"
               "ALT,z,toggle_scratchpad"
 
-              # Scroller layout
               "ALT,e,set_proportion,1.0"
               "ALT,x,switch_proportion_preset,"
 
-              # Switch layout
               "SUPER,n,switch_layout"
 
-              # Tag switching
-              # Use CTRL+ALT instead of SUPER+SHIFT to avoid
-              # conflicts with the window-swapping bindings.
               "CTRL+ALT,Left,viewtoleft,0"
               "CTRL,Left,viewtoleft_have_client,0"
               "CTRL+ALT,Right,viewtoright,0"
@@ -83,7 +73,6 @@
               "CTRL+SUPER,Left,tagtoleft,0"
               "CTRL+SUPER,Right,tagtoright,0"
 
-              # View tags
               "SUPER,1,view,1,0"
               "SUPER,2,view,2,0"
               "SUPER,3,view,3,0"
@@ -94,7 +83,6 @@
               "SUPER,8,view,8,0"
               "SUPER,9,view,9,0"
 
-              # Move client to tag
               "SUPER+SHIFT,1,tag,1,0"
               "SUPER+SHIFT,2,tag,2,0"
               "SUPER+SHIFT,3,tag,3,0"
@@ -105,14 +93,10 @@
               "SUPER+SHIFT,8,tag,8,0"
               "SUPER+SHIFT,9,tag,9,0"
 
-              # Monitor switching
               "ALT+SHIFT,Left,focusmon,left"
               "ALT+SHIFT,Right,focusmon,right"
-
-              # Move client to another monitor
               "CTRL+ALT+SHIFT,Left,tagmon,left"
               "CTRL+ALT+SHIFT,Right,tagmon,right"
-
               "ALT+SHIFT,X,incgaps,1"
               "ALT+SHIFT,Z,incgaps,-1"
               "ALT+SHIFT,R,togglegaps"

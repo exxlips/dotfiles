@@ -3,7 +3,7 @@
 }:
 
 {
-  den.aspects.programs.gui.tofi = {
+  den.aspects.programs.desktop.tofi = {
     homeManager =
       {
         config,
