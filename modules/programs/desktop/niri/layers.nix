@@ -39,10 +39,10 @@
 
           {
             window-rule.geometry-corner-radius._args = [
-              4.0
-              4.0
-              4.0
-              4.0
+              12.0
+              12.0
+              12.0
+              12.0
             ];
           }
 
@@ -51,26 +51,17 @@
               default-column-width.fixed = 360;
               default-window-height.fixed = 640;
 
-              _children = [
-                {
-                  match._props = {
-                    app-id = "^firefox$";
-                    title = "^Picture-in-Picture";
-                  };
-                }
-              ];
+              match._props = {
+                app-id = "^firefox$";
+                title = "^Picture-in-Picture";
+              };
             };
           }
 
           {
             window-rule = {
               block-out-from = "screencast";
-
-              _children = [
-                {
-                  match._props.app-id = ".*ayugram.*";
-                }
-              ];
+              match._props.app-id = ".*ayugram.*";
             };
           }
 
@@ -78,14 +69,10 @@
             window-rule = {
               open-fullscreen = true;
 
-              _children = [
-                {
-                  match._props = {
-                    app-id = "ayugram";
-                    title = "Media viewer";
-                  };
-                }
-              ];
+              match._props = {
+                app-id = "ayugram";
+                title = "Media viewer";
+              };
             };
           }
 
@@ -94,14 +81,10 @@
               default-column-width.proportion = 0.7;
               default-window-height.proportion = 0.7;
 
-              _children = [
-                {
-                  match._props = {
-                    app-id = "^org.freesmlauncher.FreesmLauncher$";
-                    title = "^New Instance";
-                  };
-                }
-              ];
+              match._props = {
+                app-id = "^org.freesmlauncher.FreesmLauncher$";
+                title = "^New Instance";
+              };
             };
           }
 
@@ -109,14 +92,10 @@
             window-rule = {
               default-column-width.proportion = 0.3;
 
-              _children = [
-                {
-                  match._props = {
-                    app-id = "^steam$";
-                    title = "^Friends List$";
-                  };
-                }
-              ];
+              match._props = {
+                app-id = "^steam$";
+                title = "^Friends List$";
+              };
             };
           }
 
@@ -132,14 +111,10 @@
                 4.0
               ];
 
-              _children = [
-                {
-                  match._props = {
-                    app-id = "^steam$";
-                    title = "^notificationtoasts_\\d+_desktop$";
-                  };
-                }
-              ];
+              match._props = {
+                app-id = "^steam$";
+                title = "^notificationtoasts_\\d+_desktop$";
+              };
             };
           }
         ];

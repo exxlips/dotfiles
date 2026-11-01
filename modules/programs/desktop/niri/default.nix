@@ -6,11 +6,13 @@
 {
   den.aspects.programs.desktop.niri = {
     includes = with den.aspects; [
-      compositors.niri.binds
-      compositors.niri.rules
-      compositors.niri.settings
-      shells.noctalia.default
-      shells.noctalia.settings
+      programs.desktop.niri.binds
+      programs.desktop.niri.rules
+      programs.desktop.niri.settings
+
+      programs.desktop.noctalia
+      programs.desktop.noctalia.settings
+
       misc.uwsm
     ];
 

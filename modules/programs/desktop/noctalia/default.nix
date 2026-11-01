@@ -6,7 +6,7 @@
 {
   den.aspects.programs.desktop.noctalia = {
     includes = [
-      den.aspects.shells.noctalia.settings
+      den.aspects.programs.desktop.noctalia.settings
     ];
 
     meta = {

@@ -23,6 +23,16 @@
         wayland.windowManager.niri.settings = {
           screenshot-path = "~/Pictures/Screen_Sh_%d-%m-%y_%H:%M.png";
 
+          gestures.hot-corners.off = { };
+
+          clipboard.disable-primary = { };
+
+          hotkey-overlay.skip-at-startup = { };
+
+          prefer-no-csd = { };
+
+          debug.deactivate-unfocused-windows = { };
+
           input = {
             keyboard.xkb = {
               layout = "us,ru";
@@ -44,34 +54,21 @@
               scroll-method = "two-finger";
               accel-profile = "adaptive";
 
-              _children = [
-                { tap._args = [ ]; }
-                { dwt._args = [ ]; }
-                { dwtp._args = [ ]; }
-              ];
+              tap = { };
+              dwt = { };
+              dwtp = { };
             };
 
-            _children = [
-              {
-                disable-power-key-handling._args = [ ];
-              }
-            ];
+            disable-power-key-handling = { };
           };
 
-          cursor = {
-            hide-after-inactive-ms = 1000;
-          };
+          cursor.hide-after-inactive-ms = 2300;
 
           layout = {
-            background-color = colors.base01;
+            background-color = "transparent";
 
-            focus-ring._children = [
-              { off._args = [ ]; }
-            ];
-
-            border._children = [
-              { off._args = [ ]; }
-            ];
+            focus-ring.off = { };
+            border.off = { };
 
             insert-hint.color = colors.base01 + "CC";
 
@@ -82,11 +79,9 @@
               draw-behind-window = true;
               color = colors.base00 + "70";
               inactive-color = colors.base00 + "70";
-
-              _children = [
-                { on._args = [ ]; }
-              ];
+              on = { };
             };
+
             default-column-width.proportion = 0.5;
 
             preset-column-widths._children = [
@@ -161,76 +156,35 @@
               softness = 20;
               spread = 14;
               color = colors.base00;
-
-              _children = [
-                { on._args = [ ]; }
-              ];
+              on = { };
             };
           };
 
           xwayland-satellite.path = lib.getExe pkgs.xwayland-satellite;
 
+          output = {
+            _args = [ "eDP-1" ];
+            scale = 1.0;
+          };
+
+          window-rule = {
+            clip-to-geometry = true;
+            geometry-corner-radius._args = [ 12.0 ];
+          };
+
           _children = [
-            {
-              output = {
-                _args = [ "eDP-1" ];
-                scale = 1.0;
-              };
-            }
-
-            {
-              window-rule = {
-                clip-to-geometry = true;
-                geometry-corner-radius._args = [ 12.0 ];
-              };
-            }
-
             {
               layer-rule = {
                 block-out-from = "screencast";
-
-                _children = [
-                  {
-                    match._props.namespace = "^notifications$";
-                  }
-                ];
+                match._props.namespace = "^notifications$";
               };
             }
 
             {
               layer-rule = {
                 place-within-backdrop = true;
+                match._props.namespace = "^noctalia-wallpaper";
               };
-            }
-
-            {
-              gestures = {
-                hot-corners._children = [
-                  { off._args = [ ]; }
-                ];
-              };
-            }
-
-            {
-              clipboard._children = [
-                { disable-primary._args = [ ]; }
-              ];
-            }
-
-            {
-              hotkey-overlay._children = [
-                { skip-at-startup._args = [ ]; }
-              ];
-            }
-
-            {
-              prefer-no-csd._args = [ ];
-            }
-
-            {
-              debug._children = [
-                { deactivate-unfocused-windows._args = [ ]; }
-              ];
             }
           ];
         };
