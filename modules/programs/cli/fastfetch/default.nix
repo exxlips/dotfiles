@@ -5,9 +5,7 @@
 {
   den.aspects.programs.cli.fastfetch = {
     homeManager =
-      {
-        ...
-      }:
+      { ... }:
       {
         programs.fastfetch = {
           enable = true;
@@ -19,6 +17,7 @@
               type = "kitty";
               source = ./haunter.gif;
               animationFrame = 0;
+              width = 40;
 
               padding = {
                 top = 1;
@@ -87,7 +86,11 @@
               }
 
               "break"
-              "colors"
+
+              {
+                type = "colors";
+                symbol = "circle";
+              }
             ];
           };
         };

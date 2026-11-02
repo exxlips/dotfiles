@@ -101,6 +101,15 @@
       };
     };
 
+    plasma-manager = {
+      type = "github";
+      owner = "nix-community";
+      repo = "plasma-manager";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+      };
+    };
+
     stylix = {
       type = "github";
       owner = "nix-community";

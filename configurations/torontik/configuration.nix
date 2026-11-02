@@ -101,6 +101,9 @@
       programs.desktop.mangowc
       programs.desktop.mangowc.settings
 
+      programs.desktop.plasma
+      programs.desktop.plasma.settings
+
       programs.desktop.niri
       programs.desktop.niri.binds
       programs.desktop.niri.rules

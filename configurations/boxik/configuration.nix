@@ -78,6 +78,9 @@
       programs.gui.vesktop
       programs.gui.kitty
       programs.gui.throne
+
+      programs.desktop.plasma
+      programs.desktop.plasma.settings
     ];
 
     boxik.configuration = {
