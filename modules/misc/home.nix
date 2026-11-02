@@ -1,23 +1,23 @@
-# home.nix..~
-
 {
   lib,
+  pkgs,
   ...
 }:
 
-# main aspect
 {
   den.aspects.misc.home = {
+    description = ''
+      ironic im using home manager
+      simultaneously along hjem and hjem-rum
+      (i dont even use hjem-rum xd fuck)
+    '';
 
-    # type
     homeManager =
       {
         ...
       }:
 
       {
-        # home settings
-
         home.username = "vadya";
         home.homeDirectory = "/home/vadya";
 
