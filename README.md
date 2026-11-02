@@ -2,9 +2,7 @@
 
 ## Good evening, viewers! This is my personal dotfile repository and collection on GitLab, hope you will like it!!~
 
-> NOTE: This repository is considered "BETA". Until this mark would be deleted, it would update nearly every hour and day. I won't forget.
-
-## What's on here?!
+### What's on here?!
 
 - **OS:** NixOS 26.11 _(unstable)_
 - **WM:** Niri
@@ -13,7 +11,7 @@
 - **Terminal:** Kitty
 - **Desktop-Shell:** Noctalia-Shell _(V5)_
 
-## Hosts:
+### Hosts:
 
 - `torontik`: My space heater x1 carbon gen 8
 - `boxik`: My grandpa toilet hp proone g1 400 aio **(its just old)**
