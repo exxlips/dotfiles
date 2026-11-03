@@ -1,19 +1,14 @@
-# kitty.nix..~
-
 {
   ...
 }:
 
-# main aspect
 {
-  den.aspects.programs.gui.kitty = {
-    # cool description
+  den.aspects.programs.desktop.kitty = {
     description = ''
       BEST TERMINAL EVER
       i dont care what anyone says
     '';
 
-    # type
     homeManager =
       {
         config,
@@ -24,10 +19,8 @@
       in
       {
 
-        # stop stylix targetting kitty
         stylix.targets.kitty.enable = false;
 
-        # main configuration
         programs = {
           kitty = {
             enable = true;

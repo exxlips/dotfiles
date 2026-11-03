@@ -1,14 +1,10 @@
-# packages.nix..~
-
 {
   ...
 }:
 
-# main aspect
 {
   den.aspects.hardware.packages = {
 
-    # type
     nixos =
       {
         pkgs,
@@ -16,7 +12,6 @@
       }:
 
       {
-        # pkgs
         environment.systemPackages = with pkgs; [
           kdePackages.sddm
           qt6.qtdeclarative
@@ -48,6 +43,7 @@
           ripgrep
           fish
           cargo
+          zoxide
           eza
           tree
           neovim
@@ -83,5 +79,3 @@
       };
   };
 }
-
-# end

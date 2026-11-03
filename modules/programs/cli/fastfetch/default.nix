@@ -16,6 +16,7 @@
             logo = {
               type = "kitty";
               source = ./aerodactyl-mega.gif;
+              width = 42;
               animationFrame = 0;
 
               padding = {

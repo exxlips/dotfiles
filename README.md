@@ -42,6 +42,5 @@ $ cd dotfiles
 ### Aliases:
 
 - **ll** = `eza --tree`
-- **sops-edit** = `sudo -E SOPS_AGE_KEY_FILE=/var/lib/sops-nix/keys.txt sops secrets/api-keys.yaml`
 
 ### [insert end]

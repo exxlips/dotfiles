@@ -21,7 +21,6 @@
               "hicolor"
               "64x64"
               "apps"
-              "nix-snowflake-white.png"
             ];
           };
         };

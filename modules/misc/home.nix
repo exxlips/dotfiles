@@ -1,6 +1,5 @@
 {
   lib,
-  pkgs,
   ...
 }:
 
@@ -11,6 +10,14 @@
       simultaneously along hjem and hjem-rum
       (i dont even use hjem-rum xd fuck)
     '';
+
+    nixos =
+      {
+        ...
+      }:
+      {
+        home-manager.useUserPackages = true;
+      };
 
     homeManager =
       {

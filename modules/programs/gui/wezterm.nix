@@ -3,6 +3,11 @@
 }:
 {
   den.aspects.programs.gui.wezterm = {
+    description = ''
+      dont use this config please
+      this is so bad
+      it doesnt even work properly
+    '';
     homeManager =
       {
         pkgs,
@@ -15,7 +20,7 @@
       {
         programs = {
           wezterm = {
-            enable = true;
+            # enable = true;
             package = pkgs.wezterm;
 
             settings = {

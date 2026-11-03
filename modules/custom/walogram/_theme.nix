@@ -1,3 +1,5 @@
+# stole the config from unazikx haha
+
 colors:
 
 # tdesktop-theme

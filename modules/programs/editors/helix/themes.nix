@@ -1,15 +1,15 @@
-# themes.nix..~
-
 {
-  den,
   ...
 }:
 
-# main aspect
 {
   den.aspects.editors.helix.themes = {
+    description = ''
+      fuck you all neovim users
+      after helix gets plugin support
+      they will Demolish you.
+    '';
 
-    # type
     homeManager =
       {
         config,
@@ -18,7 +18,6 @@
 
       {
 
-        # main configuration
         programs = {
           helix = {
             settings.theme = "base16-stylix";
