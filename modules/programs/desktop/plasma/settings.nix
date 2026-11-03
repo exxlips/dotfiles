@@ -19,72 +19,68 @@
           inputs.plasma-manager.homeModules.plasma-manager
         ];
 
-        programs = {
-          plasma = {
-            enable = true;
+        programs.plasma = {
+          enable = true;
 
-            # overrideConfig = true;
+          # overrideConfig = true;
 
-            panels = [
-              {
-                location = "top";
-                height = 40;
-                floating = false;
+          panels = [
+            {
+              location = "top";
+              height = 40;
+              floating = false;
 
-                widgets = [
-                  {
-                    kickoff = {
-                      icon = "nix-snowflake-white";
-                      sortAlphabetically = true;
-                    };
-                  }
+              widgets = [
+                {
+                  kickoff = {
+                    icon = "nix-snowflake-white";
+                    sortAlphabetically = true;
+                  };
+                }
 
-                  "org.kde.plasma.pager"
-                ];
-              }
-            ];
+                "org.kde.plasma.pager"
+              ];
+            }
+          ];
 
-            shortcuts = {
-              "kwin" = {
-                "Window Maximize" = "Meta+F";
-                "Window Close" = "Meta+Q";
-                "Window Minimize" = "Meta+E";
+          kwin = {
+            virtualDesktops = {
+              number = 10;
+              rows = 2;
+            };
+          };
 
-                "Window Quick Tile Left" = "Meta+Left";
-                "Window Quick Tile Right" = "Meta+Right";
-                "Toggle Night Color" = "Meta+N";
+          workspace = {
+            cursor.theme = "Breeze_Snow";
+            iconTheme = "breeze-dark";
+          };
 
-                "Switch to Desktop 1" = "Meta+1";
-                "Switch to Desktop 2" = "Meta+2";
-                "Switch to Desktop 3" = "Meta+3";
-                "Switch to Desktop 4" = "Meta+4";
-                "Switch to Desktop 5" = "Meta+5";
-                "Switch to Desktop 6" = "Meta+6";
-                "Switch to Desktop 7" = "Meta+7";
-                "Switch to Desktop 8" = "Meta+8";
-                "Switch to Desktop 9" = "Meta+9";
-                "Switch to Desktop 10" = "Meta+0";
+          shortcuts = {
+            kwin = {
+              "Window Maximize" = "Meta+F";
+              "Window Close" = "Meta+Q";
+              "Window Minimize" = "Meta+E";
 
-                "Setup Window Tiling" = "none";
-              };
+              "Window Quick Tile Left" = "Meta+Left";
+              "Window Quick Tile Right" = "Meta+Right";
+              "Toggle Night Color" = "Meta+N";
 
-              kwin = {
-                edgeTiling = true;
-                virtualDesktops = {
-                  number = 10;
-                  rows = 2;
-                };
-              };
+              "Switch to Desktop 1" = "Meta+1";
+              "Switch to Desktop 2" = "Meta+2";
+              "Switch to Desktop 3" = "Meta+3";
+              "Switch to Desktop 4" = "Meta+4";
+              "Switch to Desktop 5" = "Meta+5";
+              "Switch to Desktop 6" = "Meta+6";
+              "Switch to Desktop 7" = "Meta+7";
+              "Switch to Desktop 8" = "Meta+8";
+              "Switch to Desktop 9" = "Meta+9";
+              "Switch to Desktop 10" = "Meta+0";
 
-              workspace = {
-                cursorTheme = "Breeze_Snow";
-                iconTheme = "breeze-dark";
-              };
+              "Setup Window Tiling" = "none";
+            };
 
-              "kitty.desktop" = {
-                "_launch" = "Meta+T";
-              };
-
+            "kitty.desktop" = {
+              "_launch" = "Meta+T";
             };
           };
         };

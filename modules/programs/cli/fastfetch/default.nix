@@ -15,9 +15,8 @@
 
             logo = {
               type = "kitty";
-              source = ./haunter.gif;
+              source = ./aerodactyl-mega.gif;
               animationFrame = 0;
-              width = 40;
 
               padding = {
                 top = 1;

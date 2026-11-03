@@ -1,5 +1,6 @@
 {
   den,
+  lib,
   ...
 }:
 
@@ -21,6 +22,8 @@
         ...
       }:
       {
+        services.displayManager.defaultSession = lib.mkForce "niri";
+
         programs.niri = {
           enable = true;
           useNautilus = false;
