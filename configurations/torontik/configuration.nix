@@ -94,7 +94,6 @@
 
       programs.gui.spotify
       programs.gui.vesktop
-      programs.gui.kitty
       programs.gui.wezterm
       programs.gui.throne
 
@@ -112,6 +111,7 @@
       programs.desktop.swaylock
       programs.desktop.waybar
       programs.desktop.tofi
+      programs.desktop.kitty
     ];
 
     torontik.configuration = {

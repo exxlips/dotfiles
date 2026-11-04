@@ -17,7 +17,7 @@ in
 
       programs.qylock = {
         enable = true;
-        theme = "field";
+        theme = "terraria";
         sddm.enable = true;
         quickshell.enable = true;
       };

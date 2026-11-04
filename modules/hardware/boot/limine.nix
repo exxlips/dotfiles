@@ -7,7 +7,6 @@
 
     nixos =
       {
-        pkgs,
         ...
       }:
 
@@ -38,7 +37,6 @@
             efi.canTouchEfiVariables = true;
             systemd-boot.enable = false;
           };
-          kernelPackages = pkgs.linuxPackages_latest;
         };
       };
   };

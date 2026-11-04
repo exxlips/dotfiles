@@ -126,6 +126,13 @@
       flake = false;
     };
 
+    nix-cachyos-kernel = {
+      type = "github";
+      owner = "xddxdd";
+      repo = "nix-cachyos-kernel";
+      ref = "release";
+    };
+
     nur = {
       type = "github";
       owner = "nix-community";

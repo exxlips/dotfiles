@@ -19,7 +19,6 @@
 
         programs.fish.shellAliases = {
           ll = "eza --tree";
-          cd = "z";
         };
       };
 

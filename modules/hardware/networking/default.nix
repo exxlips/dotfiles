@@ -1,14 +1,10 @@
-# default.nix..~
-
 {
   ...
 }:
 
-# main aspect
 {
   den.aspects.hardware.networking = {
 
-    # type
     nixos =
       {
         config,
@@ -16,7 +12,6 @@
       }:
 
       {
-        # networking settings (don't really matter tbh)
         networking = {
           nftables = {
             enable = true;
@@ -38,11 +33,14 @@
         };
         services.resolved = {
           enable = true;
-          domains = [ "~." ];
-          dnsovertls = "true";
+
+          settings = {
+            Resolve = {
+              DNSOverTLS = true;
+              Domains = [ "~." ];
+            };
+          };
         };
       };
   };
 }
-
-# end
