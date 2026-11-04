@@ -17,9 +17,6 @@
           set -g fish_greeting ""
         '';
 
-        programs.fish.shellAliases = {
-          ll = "eza --tree";
-        };
       };
 
     homeManager =

@@ -1,15 +1,11 @@
-# sops.nix..~
-
 {
   inputs,
   ...
 }:
 
-# main aspect
 {
   den.aspects.files.sops = {
 
-    # type
     nixos =
       {
         ...
@@ -20,7 +16,6 @@
       in
       {
 
-        # sops settings
         imports = [ sopsModule ];
 
         sops = {
@@ -28,7 +23,6 @@
           age.keyFile = "/var/lib/sops-nix/keys.txt";
           age.generateKey = true;
 
-          # secrets so sops could see the secrets lol
           secrets = {
             roblox = { };
 
@@ -40,5 +34,3 @@
       };
   };
 }
-
-# end
